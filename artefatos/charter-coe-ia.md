@@ -43,10 +43,10 @@ Cada métrica deve ter unidade, baseline e meta documentadas, revisadas anualmen
 
 ## 7. Cadência de governança
 
-Revisão quinzenal de portfólio, comitê mensal com sponsor executivo, revisão trimestral de padrões e avaliação semestral do modelo operacional do CoE.
+Revisão quinzenal de portfólio (convocador: CoE), comitê mensal com sponsor executivo (convocador: CoE), revisão trimestral de padrões (convocador: CoE com participação de Plataforma) e avaliação semestral do modelo operacional do CoE (convocador: Sponsor executivo).
 
 ### Cadência da comunidade de prática
 
-- **Fórum mensal de comunidade de IA:** facilitado pelo CoE; aberto a squads de produto, plataforma e dados. Objetivo: socializar lições, novos padrões e casos de uso em produção. Dono: CoE (R/A); convocadores: squads voluntários.
+- **Fórum mensal de comunidade de IA:** facilitado pelo CoE; aberto a squads de produto, plataforma e dados. Objetivo: socializar lições, novos padrões e casos de uso em produção. Dono e convocador primário: CoE (R/A); squads atuam como co-facilitadores e podem propor pautas. Se nenhum squad propuser pauta, CoE garante conteúdo mínimo (release notes, métricas de adoção).
 - **Comunicação de mudança de padrão:** todo padrão novo ou alteração material publicada pelo CoE deve ser comunicada via release notes + sessão dedicada no fórum mensal. SLA: até 30 dias entre publicação e socialização ativa.
 

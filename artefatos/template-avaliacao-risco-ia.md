@@ -49,6 +49,6 @@ Ele não substitui parecer jurídico, avaliação regulatória formal ou revisã
 - Os evals mínimos foram executados ou planejados com critério de aceite.
 - Os controles obrigatórios têm responsável e evidência verificável.
 - O risco residual foi aceito pelo(s) papel(éis) accountable correspondente(s) à classificação interna do caso (ver "Matriz operacional de decisão"), com registro nominal (nome + função) e data no bloco "Decisão" da ficha.
-- **AI literacy operacional:** operadores e responsáveis pela revisão humana receberam capacitação proporcional ao risco do sistema, registrada (data + lista de participantes). Em escopo EU AI Act, obrigação documentada por Art. 4 (vigente desde 02/02/2025).
+- **AI literacy operacional:** operadores e responsáveis pela revisão humana receberam capacitação proporcional ao risco do sistema, registrada (data + lista de participantes). **Para sistemas sem operador humano (totalmente automatizados), registrar "N/A" com justificativa explícita — Art. 4 EU AI Act ainda exige literacy de quem opera/desenvolve o sistema na organização.** Em escopo EU AI Act, obrigação documentada por Art. 4 (vigente desde 02/02/2025).
 - O plano de operação inclui monitoramento, incidente, fallback, rollback e critério de desligamento.
 
