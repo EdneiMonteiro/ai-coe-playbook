@@ -9,6 +9,23 @@ Esta página registra a memória operacional das referências do AI CoE Playbook
 - **Correção registrada** = quando uma fonte foi citada incorretamente (revogada, mislabeled, número errado), a correção e a origem do erro ficam documentadas.
 - **Verificação de vigência** = validar existência **e** vigência de uma norma; o anti-pattern *validator search* (confirmar só existência) foi a causa de duas regressões na história do playbook.
 
+### Política bibliográfica para normas citadas no crosswalk
+
+Nem toda menção normativa em `referencias/crosswalk-normativo.md` exige entrada própria em `bibliografia.bib`/`bibliografia.json`.
+
+**Entrada bibliográfica obrigatória** quando a fonte for:
+- norma, framework ou guia central do crosswalk principal (ex.: NIST AI RMF, ISO/IEC 42001, EU AI Act, LGPD, GDPR, ANPD Res. 15/2024 e 19/2024, OWASP LLM Top 10);
+- instrumento citado por número/identificador oficial como fundamento direto de obrigação operacional no assessment;
+- fonte usada no artigo principal como referência narrativa ou justificativa central.
+
+**Registro em auditoria ou leituras complementares é suficiente** quando a fonte for:
+- menção setorial em anexo/overview (ex.: CMN, BCB, CVM, ANS) sem análise artigo-a-artigo;
+- norma revogada citada apenas para explicar substituição histórica;
+- lei estrangeira ou jurisprudência mencionada como gatilho contextual de análise jurídica, salvo quando virar seção operacional própria;
+- referência de backlog ou universo consultado não citada no artigo principal.
+
+**Escalonamento:** se uma menção setorial ou jurisprudencial passar a sustentar gate, controle, checklist ou decisão operacional específica, ela deve ser promovida para entrada bibliográfica Tier 1 na próxima revisão.
+
 ## Referências removidas e por quê
 
 | Fonte | Tipo | Motivo da remoção | Quando | Substituta |
@@ -80,6 +97,7 @@ Estas fontes apareceram nas revisões do comitê mas **não foram citadas no art
 | 2026-05 (diagramas-referencias rev-04) | Patch v4 (P-Q) | 3 novas entradas BibTeX/CSL-JSON para normas/instrumentos já citados nos artefatos mas ausentes da bibliografia: `nist2025-sp800-61r3` (NIST SP 800-61 Rev. 3, abr/2025); `euaioffice2025-gpai-cop` (GPAI Code of Practice, EU AI Office, 10/07/2025; aplicável desde 02/08/2025); `anpd2024-res15` (Resolução CD/ANPD Nº 15/2024, DOU 26/04/2024). Bibliografia agora tem 28 entradas (era 25). |
 | 2026-05 (diagramas-referencias rev-05) | Patch v5 (P-R) | Substituídas 2 URLs com soft-404/404 (`euaioffice2025-gpai-cop`: `/policies/general-purpose-ai-code-practice` → `/policies/contents-code-gpai`; `anpd2024-res15`: `gov.br/anpd/.../resolucao-cd-anpd-no-15-...` → URL canônica DOU `in.gov.br/.../556243024`); adicionada nova entrada `owasp2024-llm-top10-v2` (OWASP Top 10 for LLM Applications 2025 v2.0, 18/11/2024) que era citada no crosswalk sem BibTeX. Bibliografia passa de 28 para 29 entradas. |
 | 2026-05 (diagramas-referencias rev-06) | Patch v6 (P-S) | 3 novas entradas BibTeX/JSON para normas citadas no crosswalk sem entrada formal: `brasil2018-lgpd` (Lei 13.709/2018 LGPD); `eu2016-gdpr` (Regulamento UE 2016/679 GDPR); `anpd2024-res19` (Res. CD/ANPD Nº 19/2024 transferência internacional). Fecha gap pré-existente em auditoria + gap residual identificado por Ag.07 em rev-06 e validado pelo RD. Bibliografia passa de 29 para 32 entradas. |
+| 2026-05 (diagramas-referencias rev-07) | Patch v7 (P-T) | Corrige URL `eu2016-gdpr` (EUR-Lex retorna HTTP 202 com WAF challenge → Publications Office canônica `publications.europa.eu/resource/celex/32016R0679` retorna HTTP 200 + RDF Tier 1, mesmo CELEX/ELI/OJ); adiciona seção "Política bibliográfica para normas citadas no crosswalk" separando entradas obrigatórias (frameworks centrais) de menções setoriais/contextuais (anexos, normas revogadas, leis estrangeiras-gatilho, jurisprudência), com critério explícito de escalonamento. Limita criterion creep do Ag.07 sem inflar a bibliografia além do escopo operacional. |
 
 ## Histórico de revisão deste documento
 
@@ -92,3 +110,4 @@ Estas fontes apareceram nas revisões do comitê mas **não foram citadas no art
 | 1.4 | 2026-05-23 | Patch v4 (rev-04 diagramas/referências): adiciona 3 entradas BibTeX/JSON para normas já citadas (NIST SP 800-61 Rev. 3, GPAI Code of Practice, Res. CD/ANPD Nº 15/2024). Bibliografia passa de 25 para 28 entradas. |
 | 1.5 | 2026-05-23 | Patch v5 (rev-05 diagramas/referências): substitui 2 URLs com soft-404/404 (GPAI CoP → /contents-code-gpai; ANPD Res. 15 → DOU canônica) e adiciona entrada `owasp2024-llm-top10-v2`. Bibliografia passa de 28 para 29 entradas. |
 | 1.6 | 2026-05-23 | Patch v6 (rev-06 diagramas/referências): adiciona 3 entradas (`brasil2018-lgpd`, `eu2016-gdpr`, `anpd2024-res19`) para normas que eram citadas no crosswalk sem entrada formal. Bibliografia passa de 29 para 32 entradas. |
+| 1.7 | 2026-05-23 | Patch v7 (rev-07 diagramas/referências): corrige URL `eu2016-gdpr` (EUR-Lex 202 WAF → Publications Office 200 RDF) e introduz seção "Política bibliográfica para normas citadas no crosswalk" delimitando entradas obrigatórias × menções setoriais/contextuais. |
