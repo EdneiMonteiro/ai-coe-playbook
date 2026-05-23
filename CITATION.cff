@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Se você usar este trabalho, por favor cite-o como descrito abaixo."
+title: "AI CoE Playbook: Guia Prático para Estruturar, Operar e Escalar um Centro de Excelência em IA"
+abstract: >-
+  Playbook prático para estruturar, governar e evoluir Centros de Excelência
+  em IA (AI CoE), incluindo artigo principal, artefatos operacionais
+  (charter, RACI, template de avaliação de risco) e mecanismo de assessment
+  de maturidade com gates go/no-go e board pack executivo.
+type: dataset
+authors:
+  - family-names: Monteiro
+    given-names: Ednei
+    orcid: "https://orcid.org/0009-0006-0765-4201"
+repository-code: "https://github.com/EdneiMonteiro/ai-coe-playbook"
+url: "https://github.com/EdneiMonteiro/ai-coe-playbook"
+license: CC-BY-4.0
+keywords:
+  - AI Center of Excellence
+  - AI CoE
+  - AI governance
+  - responsible AI
+  - LLMOps
+  - MLOps
+  - NIST AI RMF
+  - ISO/IEC 42001
+  - EU AI Act
+  - maturity assessment
+date-released: 2026-05-23
+preferred-citation:
+  type: generic
+  title: "Centro de Excelência em IA: Guia Prático para Estruturar, Operar e Escalar"
+  authors:
+    - family-names: Monteiro
+      given-names: Ednei
+      orcid: "https://orcid.org/0009-0006-0765-4201"
+  year: 2026
+  url: "https://github.com/EdneiMonteiro/ai-coe-playbook/blob/main/artigos/coe-ia-playbook.md"
