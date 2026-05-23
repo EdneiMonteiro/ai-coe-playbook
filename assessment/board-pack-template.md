@@ -20,6 +20,8 @@
 
 **Racional financeiro mínimo:** [custo unitário atual, custo unitário alvo, variação vs baseline, volume esperado, custo de evals/regressão, impacto de SaaS/licenças de IA e impacto financeiro do custo de inação]
 
+**Síntese financeira (uma frase):** investimento de **R$ [X]** retorna **[benefício/eficiência Y]** em **[Z meses]**, com risco regulatório residual **[W]** e custo de inação estimado em **[valor/faixa]**.
+
 | Métrica financeira | Atual | Alvo | Variação vs baseline | Observações |
 |---|---:|---:|---:|---|
 | Custo unitário principal | [ex.: R$/resolução] | [valor] | [%] | [obs] |
@@ -56,11 +58,13 @@
 
 ## 7. Custo de inação
 
-| Horizonte | Consequência provável se nada mudar |
-|---|---|
-| 30 dias | [consequência] |
-| 90 dias | [consequência] |
-| 180 dias | [consequência] |
+Quando o custo de inação não puder ser estimado diretamente, usar proxies explícitos: (a) custo de oportunidade do projeto/iniciativa deslocado pelo retrabalho, (b) multa regulatória estimada por exposição (com referência ao artigo aplicável), (c) churn/perda estimada da unidade de negócio impactada, (d) custo de remediação caso veto operacional persista. Não deixar o campo em branco; declarar o proxy usado.
+
+| Horizonte | Consequência provável se nada mudar | Proxy usado |
+|---|---|---|
+| 30 dias | [consequência] | [oportunidade / multa / churn / remediação / direto] |
+| 90 dias | [consequência] | [oportunidade / multa / churn / remediação / direto] |
+| 180 dias | [consequência] | [oportunidade / multa / churn / remediação / direto] |
 
 ## 8. Próximos 30 dias
 

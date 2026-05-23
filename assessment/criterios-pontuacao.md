@@ -144,8 +144,8 @@ Em organizações reguladas, pode-se usar pesos maiores para governança, risco,
 | Regulação ou contexto que justifica pesos | Ex.: setor financeiro regulado, saúde, infraestrutura crítica, exigência interna de risco. |
 | Racional por dimensão alterada | Por que o peso foi elevado ou reduzido. |
 | Comparação com peso padrão | Pontuação e nível com 10% por dimensão versus pontuação ponderada. |
-| Análise de sensibilidade | Se pequenas mudanças de peso alteram nível geral, contenções ou decisão executiva. |
-| Aprovação | Owner metodológico e sponsor que aceitaram o esquema de pesos. |
+| Análise de sensibilidade | Variação obrigatória de ±2pp por dimensão crítica e três cenários (worst/expected/best); registrar se decisão muda entre cenários. |
+| Aprovação | Owner metodológico nominado; em modo auditoria/investimento, aprovador dos pesos deve ser **avaliador independente diferente do sponsor avaliado**; em modo diagnóstico interno, declarar explicitamente no board pack quando os pesos foram aprovados pelo próprio sponsor avaliado. |
 
 ## Evidência, amostragem e confiança
 
