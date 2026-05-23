@@ -215,6 +215,36 @@
     "note": "Fonte oficial OWASP/GenAI; datePublished 2024-11-18. Citado em referencias/crosswalk-normativo.md (tabela 'Versionamento normativo')."
   },
   {
+    "id": "brasil2018-lgpd",
+    "type": "legislation",
+    "title": "Lei Nº 13.709, de 14 de agosto de 2018 — Lei Geral de Proteção de Dados Pessoais (LGPD)",
+    "author": [{"literal": "Brasil"}],
+    "issued": {"date-parts": [[2018, 8, 14]]},
+    "URL": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/L13709.htm",
+    "accessed": {"date-parts": [[2026, 5]]},
+    "note": "Alterada pela Lei Nº 13.853/2019. DOU Seção 1 p. 59 15/08/2018. Citada em referencias/crosswalk-normativo.md."
+  },
+  {
+    "id": "eu2016-gdpr",
+    "type": "legislation",
+    "title": "Regulation (EU) 2016/679 — General Data Protection Regulation (GDPR)",
+    "author": [{"literal": "European Parliament and Council of the European Union"}],
+    "issued": {"date-parts": [[2016, 4, 27]]},
+    "URL": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02016R0679",
+    "accessed": {"date-parts": [[2026, 5]]},
+    "note": "OJ L 119, 04/05/2016. Em vigor 24/05/2016; aplicável desde 25/05/2018. Citado em referencias/crosswalk-normativo.md."
+  },
+  {
+    "id": "anpd2024-res19",
+    "type": "legislation",
+    "title": "Resolução CD/ANPD Nº 19, de 23 de agosto de 2024 — Regulamento de Transferência Internacional de Dados e cláusulas-padrão contratuais",
+    "author": [{"literal": "Autoridade Nacional de Proteção de Dados"}],
+    "issued": {"date-parts": [[2024, 8, 23]]},
+    "URL": "https://www.in.gov.br/web/dou/-/resolucao-cd/anpd-n-19-de-23-de-agosto-de-2024-580095396",
+    "accessed": {"date-parts": [[2026, 5]]},
+    "note": "DOU Ed. 163 Seção 1 p. 123 23/08/2024. Prazo 12 meses para incorporação às cláusulas-padrão contratuais. Citada em referencias/crosswalk-normativo.md."
+  },
+  {
     "id": "eu2024-aiact",
     "type": "legislation",
     "title": "Regulation (EU) 2024/1689 — Artificial Intelligence Act",
