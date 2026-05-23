@@ -1,0 +1,247 @@
+[
+  {
+    "id": "ibm2026-coe",
+    "type": "webpage",
+    "title": "AI Center of Excellence",
+    "author": [{"literal": "IBM"}],
+    "container-title": "IBM Think",
+    "issued": {"date-parts": [[2026]]},
+    "URL": "https://www.ibm.com/br-pt/think/topics/ai-center-of-excellence",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "microsoft2025-coe",
+    "type": "webpage",
+    "title": "Establish an AI Center of Excellence",
+    "author": [{"literal": "Microsoft"}],
+    "container-title": "Azure Cloud Adoption Framework",
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/center-of-excellence",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "microsoft2025-landingzone",
+    "type": "webpage",
+    "title": "Azure Landing Zone Architecture",
+    "author": [{"literal": "Microsoft"}],
+    "container-title": "Cloud Adoption Framework",
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "microsoft2026-foundry",
+    "type": "webpage",
+    "title": "What is Microsoft Foundry?",
+    "author": [{"literal": "Microsoft"}],
+    "container-title": "Microsoft Learn",
+    "issued": {"date-parts": [[2026]]},
+    "URL": "https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "microsoft2025-sustainableai",
+    "type": "webpage",
+    "title": "Sustainable AI design for workloads on Azure",
+    "author": [{"literal": "Microsoft"}],
+    "container-title": "Azure Well-Architected Framework",
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://learn.microsoft.com/en-us/azure/well-architected/sustainability/sustainable-ai-design",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "googlecloud2025-adoption",
+    "type": "report",
+    "title": "AI Adoption Framework Whitepaper",
+    "author": [{"literal": "Google Cloud"}],
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://cloud.google.com/resources/cloud-ai-adoption-framework-whitepaper",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "googlecloud2025-opex",
+    "type": "webpage",
+    "title": "Well-Architected Framework — AI and ML Perspective: Operational Excellence",
+    "author": [{"literal": "Google Cloud"}],
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://docs.cloud.google.com/architecture/framework/perspectives/ai-ml/operational-excellence",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "googlecloud2025-sustainability",
+    "type": "webpage",
+    "title": "Well-Architected Framework — Sustainability Pillar",
+    "author": [{"literal": "Google Cloud"}],
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://docs.cloud.google.com/architecture/framework/sustainability",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "aws2025-mllens",
+    "type": "report",
+    "title": "Machine Learning Lens — AWS Well-Architected Framework",
+    "author": [{"literal": "AWS"}],
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/machine-learning-lens.html",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "aws2025-genai",
+    "type": "webpage",
+    "title": "Generative AI Innovation Center",
+    "author": [{"literal": "AWS"}],
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://aws.amazon.com/generative-ai/innovation-center/",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "ibm2025-nationwide",
+    "type": "webpage",
+    "title": "Nationwide Building Society",
+    "author": [{"literal": "IBM"}],
+    "container-title": "IBM Case Studies",
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://www.ibm.com/case-studies/nationwide-building-society",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "kpmg2024-coe",
+    "type": "report",
+    "title": "An Executive's Guide to Establishing an AI Center of Excellence",
+    "author": [{"literal": "KPMG"}],
+    "issued": {"date-parts": [[2024]]},
+    "URL": "https://kpmg.com/us/en/articles/2024/executive-guide-establishing-ai-center-excellence.html",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "deloitte2025-coe",
+    "type": "report",
+    "title": "Is Your AI Center of Excellence Still a Center of Experimentation?",
+    "author": [{"literal": "Deloitte"}],
+    "publisher": "Deloitte Consulting",
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/articles/ai-center-of-excellence.html",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "oracle2026-coe",
+    "type": "report",
+    "title": "How to Build Your AI Center of Excellence — Checklist",
+    "author": [{"literal": "Oracle / CIO"}],
+    "issued": {"date-parts": [[2026]]},
+    "URL": "https://www.oracle.com/a/ocom/docs/cloud/cio-how-to-build-your-ai-coe-checklist.pdf",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "mcp2025-spec",
+    "type": "webpage",
+    "title": "Model Context Protocol — Specification 2025-06-18",
+    "author": [{"literal": "Model Context Protocol"}],
+    "issued": {"date-parts": [[2025, 6, 18]]},
+    "URL": "https://modelcontextprotocol.io/specification/2025-06-18",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "iso2023-42001",
+    "type": "standard",
+    "title": "ISO/IEC 42001:2023 — Information technology — Artificial intelligence — Management system",
+    "author": [{"literal": "ISO"}],
+    "issued": {"date-parts": [[2023]]},
+    "URL": "https://www.iso.org/standard/81230.html",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "nist2023-airmf",
+    "type": "report",
+    "title": "AI Risk Management Framework (AI RMF 1.0)",
+    "author": [{"literal": "NIST"}],
+    "publisher": "National Institute of Standards and Technology",
+    "issued": {"date-parts": [[2023]]},
+    "URL": "https://www.nist.gov/itl/ai-risk-management-framework",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "nist2024-genaiprofile",
+    "type": "report",
+    "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1)",
+    "author": [{"literal": "NIST"}],
+    "publisher": "National Institute of Standards and Technology",
+    "issued": {"date-parts": [[2024]]},
+    "DOI": "10.6028/NIST.AI.600-1",
+    "URL": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "eu2024-aiact",
+    "type": "legislation",
+    "title": "EU AI Act — Artificial Intelligence Act",
+    "author": [{"literal": "European Parliament"}],
+    "issued": {"date-parts": [[2024]]},
+    "URL": "https://www.europarl.europa.eu/news/en/headlines/society/20230601STO93804/eu-ai-act",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "oecd2024-aiprinciples",
+    "type": "webpage",
+    "title": "OECD AI Principles Overview",
+    "author": [{"literal": "OECD.AI"}],
+    "issued": {"date-parts": [[2024]]},
+    "URL": "https://oecd.ai/en/ai-principles",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "google2025-responsibleai",
+    "type": "webpage",
+    "title": "Responsible AI Practices",
+    "author": [{"literal": "Google"}],
+    "issued": {"date-parts": [[2025]]},
+    "URL": "https://cloud.google.com/responsible-ai",
+    "accessed": {"date-parts": [[2026, 5]]}
+  },
+  {
+    "id": "curry2021-bdai-coe",
+    "type": "chapter",
+    "title": "A Best Practice Framework for Centres of Excellence in Big Data and Artificial Intelligence",
+    "author": [{"family": "Curry", "given": "Edward"}],
+    "container-title": "The Elements of Big Data Value",
+    "publisher": "Springer",
+    "issued": {"date-parts": [[2021]]},
+    "page": "203-218",
+    "DOI": "10.1007/978-3-030-68176-0_8"
+  },
+  {
+    "id": "rudko2021-orgstructure",
+    "type": "article-journal",
+    "title": "Organizational Structure and Artificial Intelligence: Modeling the Intraorganizational Response to the AI Contingency",
+    "author": [
+      {"family": "Rudko", "given": "Ihor"},
+      {"family": "Bonab", "given": "Aysan Bashirpour"},
+      {"family": "Bellini", "given": "Francesco"}
+    ],
+    "container-title": "Journal of Theoretical and Applied Electronic Commerce Research",
+    "volume": "16",
+    "issue": "6",
+    "page": "2341-2364",
+    "issued": {"date-parts": [[2021]]},
+    "DOI": "10.3390/jtaer16060129",
+    "URL": "https://api.crossref.org/works/10.3390/jtaer16060129"
+  },
+  {
+    "id": "kolbjornsrud2024-intelligent",
+    "type": "article-journal",
+    "title": "Designing the Intelligent Organization: Six Principles for Human-AI Collaboration",
+    "author": [{"family": "Kolbjørnsrud", "given": "Vegard"}],
+    "container-title": "California Management Review",
+    "issued": {"date-parts": [[2024]]},
+    "URL": "https://cmr.berkeley.edu/assets/documents/promo/kolbjornsrud-2023-designing-the-intelligent-organization-six-principles-for-human-ai-collaboration.pdf"
+  },
+  {
+    "id": "ieee2025-aigovernance",
+    "type": "article",
+    "title": "Toward Effective AI Governance: A Review of Principles",
+    "author": [{"literal": "IEEE/ACM"}],
+    "issued": {"date-parts": [[2025]]},
+    "number": "arXiv:2505.23417",
+    "URL": "https://arxiv.org/pdf/2505.23417"
+  }
+]
