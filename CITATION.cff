@@ -1,4 +1,17 @@
 cff-version: 1.2.0
+# -----------------------------------------------------------------------------
+# Política de co-autoria e contribuição
+#
+# A partir da v1.1, contribuições revisadas e incorporadas são creditadas em:
+#   - release notes da versão correspondente;
+#   - CITATION.cff (campo `authors` quando configurar coautoria substantiva;
+#     menção em comentário ou em `references` quando for contribuição pontual);
+#   - CONTRIBUTORS.md;
+#   - DOI Zenodo próprio da nova versão (citável de forma independente).
+#
+# Detalhes e critérios em CONTRIBUTORS.md.
+# Até v1.0.0: nenhum contribuidor adicional listado. Autoria única.
+# -----------------------------------------------------------------------------
 message: "Se você usar este trabalho, por favor cite-o como descrito abaixo."
 title: "AI CoE Playbook: Guia Prático para Estruturar, Operar e Escalar um Centro de Excelência em IA"
 abstract: >-

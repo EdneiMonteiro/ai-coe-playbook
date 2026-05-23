@@ -56,6 +56,7 @@ ai-coe-playbook/
   README.md
   LICENSE
   CITATION.cff
+  CONTRIBUTORS.md
   artigos/
     coe-ia-playbook.md
     coe-ia-playbook.html
@@ -107,6 +108,14 @@ O repositório não substitui avaliação jurídica, regulatória ou arquitetura
 | Ver os fluxos e modelos em imagem | [`diagramas/`](diagramas/) — 8 diagramas Mermaid |
 | Citar o playbook em outro material | [`referencias/bibliografia.bib`](referencias/bibliografia.bib) ou [`CITATION.cff`](CITATION.cff) |
 | Entender qual norma cobre qual controle | [`referencias/crosswalk-normativo.md`](referencias/crosswalk-normativo.md) |
+
+## Contribuindo
+
+Este projeto distingue **autoria** de **contribuição** e credita ambas formalmente (release notes, `CITATION.cff`, `CONTRIBUTORS.md` e DOI Zenodo próprio de cada versão).
+
+Política completa, critérios para coautoria substantiva e mecanismos de atribuição em [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
+
+A partir da **v1.1**, contribuições revisadas e incorporadas são creditadas nominalmente.
 
 ## Licença
 
