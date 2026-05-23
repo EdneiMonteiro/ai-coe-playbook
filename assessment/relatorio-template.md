@@ -97,9 +97,11 @@
 
 ## 8. Matriz de rastreabilidade pergunta-evidência-nota
 
-| ID | Pergunta resumida | Evidência observada | Evidência negativa | Nota | Confiança | Avaliador | Ressalvas | Ação recomendada |
-|---|---|---|---|---:|---|---|---|---|
-| E1 | [resumo] | [link/artefato] | [lacuna] | [0–4] | [alta/média/baixa] | [nome] | [ressalva] | [ação] |
+Em modo diagnóstico interno, as colunas normativas podem ser preenchidas apenas quando relevantes. Em modo auditoria/investimento, uso externo, regulado, funding, due diligence ou M&A, a matriz normativa é obrigatória para perguntas críticas, gates go/no-go e lacunas materiais.
+
+| ID | Pergunta resumida | Evidência observada | Evidência negativa | Nota | Confiança | Avaliador | Decisão go/no-go | NIST AI RMF | ISO/IEC 42001 Anexo A | EU AI Act artigo | Tipo de exigência | Owner regulatório | Periodicidade | Ressalvas | Ação recomendada |
+|---|---|---|---|---:|---|---|---|---|---|---|---|---|---|---|---|
+| E1 | [resumo] | [link/artefato] | [lacuna] | [0–4] | [alta/média/baixa] | [nome] | [aprovar/restringir/vetar/n/a] | [função/subcategoria] | [controle] | [artigo/n/a] | [lei/norma voluntária/política interna/boa prática] | [owner] | [mensal/trimestral/anual/evento] | [ressalva] | [ação] |
 
 ## 9. Amostragem e protocolo anti-gaming
 
@@ -151,8 +153,13 @@
 
 ## 13. Anexo técnico
 
+Para produção e casos de alto risco, anexar pacote documental mínimo: **model card**, **system card** e, quando houver corpus RAG/datasets críticos, **datasheet**. Esses artefatos devem cobrir intended use, misuse, limitações conhecidas, métricas, vieses conhecidos, mudanças materiais, logs relevantes, owners e risco residual.
+
 | Artefato técnico | Evidência | Observações |
 |---|---|---|
+| Model card | [link] | Intended use, limitações, métricas, vieses conhecidos, versões e mudanças materiais. |
+| System card | [link] | Arquitetura do sistema, integrações, guardrails, riscos, incidentes, logs e controles operacionais. |
+| Datasheet de corpus RAG/dataset crítico | [link] | Proveniência, finalidade, base legal, retenção, limitações, atualização, expurgo e owner. |
 | Versões de modelos | [link] | [obs] |
 | Versões de prompts | [link] | [obs] |
 | Embeddings, índices vetoriais e política de recuperação | [link] | [obs] |
@@ -163,13 +170,27 @@
 | Exceções e waivers aprovados | [link] | [obs] |
 | Risco residual por solução | [link] | [obs] |
 
-## 14. Limitações do assessment
+## 14. Pesos e análise de sensibilidade
+
+Preencher quando forem usados pesos diferentes de 10% por dimensão. Se esta seção não for preenchida, o relatório deve usar a média simples.
+
+| Item | Registro |
+|---|---|
+| Esquema de pesos usado | [padrão 10% / regulado / customizado] |
+| Regulação ou contexto que justifica pesos alternativos | [descrição] |
+| Racional por dimensão alterada | [descrição] |
+| Pontuação e nível com pesos padrão | [resultado] |
+| Pontuação e nível com pesos alternativos | [resultado] |
+| Análise de sensibilidade | [mudança de nível/contenção/decisão se pesos variarem] |
+| Owner metodológico | [nome/cargo] |
+| Sponsor que aceitou os pesos | [nome/cargo] |
+
+## 15. Limitações do assessment
 
 [Descrever limitações: áreas não avaliadas, evidências não disponíveis, entrevistas pendentes, baixa confiança em alguma dimensão, escopo geográfico ou regulatório não coberto, ausência de especialista setorial, ausência de revisão jurídica formal.]
 
-## 15. Decisões executivas necessárias
+## 16. Decisões executivas necessárias
 
 | Decisão | Opções | Recomendação | Prazo | Owner executivo |
 |---|---|---|---|---|
 | [decisão] | [opções] | [recomendação] | [prazo] | [owner] |
-

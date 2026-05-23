@@ -7,6 +7,8 @@ O assessment separa duas decisões que não devem ser misturadas:
 
 Uma organização pode ter maturidade razoável e, ainda assim, ter **veto operacional** em um caso específico. A pontuação mede capacidade organizacional; os gates protegem produção, clientes, usuários, dados, conformidade e operação.
 
+Este assessment não certifica conformidade regulatória, não substitui auditoria jurídica, não substitui auditoria de sistema de gestão e não constitui parecer formal de aderência a ISO/IEC 42001, EU AI Act, LGPD, GDPR ou regulações setoriais. Referências normativas são usadas como heurística de medição, rastreabilidade e organização de evidências.
+
 ## Glossário operacional
 
 | Termo | Definição | Efeito no assessment |
@@ -118,7 +120,9 @@ Depois aplique regras de contenção, gates operacionais e regras de consistênc
 
 ## Pesos opcionais
 
-A média simples é recomendada para a primeira aplicação. Em organizações reguladas, pode-se usar pesos maiores para governança, risco, operação e dados:
+A média simples é recomendada para a primeira aplicação. Pesos alternativos só podem ser usados quando o relatório registrar: regulação aplicável, racional de cada alteração, comparação com o peso padrão 10% por dimensão e análise de sensibilidade mostrando se o nível final mudaria com a média simples. Se esse racional não for documentado, use 10% por dimensão.
+
+Em organizações reguladas, pode-se usar pesos maiores para governança, risco, operação e dados:
 
 | Dimensão | Peso padrão | Peso para organização regulada |
 |---|---:|---:|
@@ -132,6 +136,16 @@ A média simples é recomendada para a primeira aplicação. Em organizações r
 | Capacitação e comunidade | 10% | 5% |
 | FinOps e sustentabilidade | 10% | 5% |
 | Operação e melhoria contínua | 10% | 10% |
+
+### Registro obrigatório quando pesos alternativos forem usados
+
+| Item | Deve constar no relatório |
+|---|---|
+| Regulação ou contexto que justifica pesos | Ex.: setor financeiro regulado, saúde, infraestrutura crítica, exigência interna de risco. |
+| Racional por dimensão alterada | Por que o peso foi elevado ou reduzido. |
+| Comparação com peso padrão | Pontuação e nível com 10% por dimensão versus pontuação ponderada. |
+| Análise de sensibilidade | Se pequenas mudanças de peso alteram nível geral, contenções ou decisão executiva. |
+| Aprovação | Owner metodológico e sponsor que aceitaram o esquema de pesos. |
 
 ## Evidência, amostragem e confiança
 
@@ -180,4 +194,3 @@ ID da pergunta → evidência observada → evidência negativa → nota → con
 | Nível 2 — Executor | O CoE existe e entrega, mas ainda concentra execução e conhecimento. | Minimum Viable Standards, plataforma inicial, handoff e capacitação. |
 | Nível 3 — Habilitador | Adoção começa a escalar com padrões e governança distribuída. | Guardrails automatizados, evals contínuos, FinOps, handoff e comunidades. |
 | Nível 4 — Transformador | IA opera como capacidade organizacional, com CoE consultivo. | Otimização contínua, inovação responsável e evolução do modelo operacional. |
-

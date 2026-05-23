@@ -7,6 +7,12 @@ Este diretório contém um mecanismo prático para avaliar a maturidade de um Ce
 3. **Habilitador** — plataforma, padrões, guardrails e squads autônomos.
 4. **Transformador** — CoE consultivo, IA integrada à estratégia e melhoria contínua.
 
+## Escopo e limites
+
+Este assessment mede **maturidade organizacional do CoE de IA**. Ele não certifica conformidade regulatória, não substitui auditoria jurídica, não substitui auditoria de sistema de gestão e não constitui parecer sobre aderência a ISO/IEC 42001, EU AI Act, LGPD, GDPR ou regulações setoriais.
+
+Referências a NIST AI RMF, ISO/IEC 42001, EU AI Act e frameworks similares são usadas como **heurísticas de medição e organização de evidências**. Para uso externo, regulado, due diligence, funding, M&A ou comunicação pública de conformidade, o assessment deve ser complementado por revisão jurídica/regulatória e, quando aplicável, asseguração independente.
+
 ## Arquivos
 
 - [`modelo-maturidade-coe-ia.md`](modelo-maturidade-coe-ia.md) — dimensões avaliadas e descrição dos níveis.

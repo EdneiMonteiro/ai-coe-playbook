@@ -18,6 +18,17 @@
 
 **Racional:** [2–3 frases conectando maturidade, risco, custo de inação e valor esperado]
 
+**Racional financeiro mínimo:** [custo unitário atual, custo unitário alvo, variação vs baseline, volume esperado, custo de evals/regressão, impacto de SaaS/licenças de IA e impacto financeiro do custo de inação]
+
+| Métrica financeira | Atual | Alvo | Variação vs baseline | Observações |
+|---|---:|---:|---:|---|
+| Custo unitário principal | [ex.: R$/resolução] | [valor] | [%] | [obs] |
+| Volume esperado | [n/mês] | [n/mês] | [%] | [obs] |
+| Custo mensal de inferência/uso | [valor] | [valor] | [%] | [obs] |
+| Custo mensal de evals/regressão | [valor] | [valor] | [%] | [frequência e risco coberto] |
+| SaaS/licenças de IA | [valor] | [valor] | [%] | [utilização ativa, reclaim e showback por assento] |
+| Custo de inação estimado | [valor/faixa] | [n/a] | [n/a] | [risco financeiro, operacional ou regulatório] |
+
 ## 4. Opções executivas
 
 | Opção | O que significa | Benefício | Risco/trade-off | Investimento/capacidade |
@@ -53,9 +64,8 @@
 
 ## 8. Próximos 30 dias
 
-| Ação | Owner | Resultado esperado |
-|---|---|---|
-| [ação 1] | [owner] | [resultado] |
-| [ação 2] | [owner] | [resultado] |
-| [ação 3] | [owner] | [resultado] |
-
+| Ação | Owner operacional | Accountable executivo | Bloqueio a remover | Resultado esperado |
+|---|---|---|---|---|
+| [ação 1] | [owner] | [executivo] | [bloqueio] | [resultado] |
+| [ação 2] | [owner] | [executivo] | [bloqueio] | [resultado] |
+| [ação 3] | [owner] | [executivo] | [bloqueio] | [resultado] |
