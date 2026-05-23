@@ -18,7 +18,7 @@ Este repositório começou com o artigo **Centro de Excelência em Inteligência
 ```text
 ai-coe-playbook/
   README.md
-  LICENSE.md
+  LICENSE
   artigos/
     coe-ia-playbook.md
     coe-ia-playbook.html
@@ -48,4 +48,4 @@ O repositório não substitui avaliação jurídica, regulatória ou arquitetura
 
 ## Licença
 
-Conteúdo textual, artigos, diagramas e templates estão licenciados sob **Creative Commons Attribution 4.0 International (CC BY 4.0)**. Consulte [`LICENSE.md`](LICENSE.md).
+Conteúdo textual, artigos, diagramas e templates estão licenciados sob **Creative Commons Attribution 4.0 International (CC BY 4.0)**. Consulte [`LICENSE`](LICENSE).
