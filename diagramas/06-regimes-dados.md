@@ -59,6 +59,7 @@ flowchart LR
     classDef tr fill:#1f6feb,stroke:#0d419d,color:#fff
     classDef inf fill:#1a7f37,stroke:#0a4d20,color:#fff
     classDef lg fill:#9a6700,stroke:#633c01,color:#fff
+    classDef fb fill:#8250df,stroke:#3e1f79,color:#fff
 
     subgraph TR_CTL["Controles — Treino"]
         TC1["Base legal específica<br/>para dados pessoais"]:::tr
@@ -81,7 +82,14 @@ flowchart LR
         LC4["Acesso controlado<br/>(quem lê logs?)"]:::lg
     end
 
-    TR_CTL ~~~ IN_CTL ~~~ LG_CTL
+    subgraph FB_CTL["Controles — Feedback/RLHF"]
+        FC1["Opt-in explícito<br/>antes da coleta"]:::fb
+        FC2["Opt-out reversível<br/>(LGPD Art. 7º I;<br/>GDPR Art. 7(3))"]:::fb
+        FC3["Separação de armazenamento<br/>do Regime 3 (logs)"]:::fb
+        FC4["Auditoria de viés<br/>do anotador"]:::fb
+    end
+
+    TR_CTL ~~~ IN_CTL ~~~ LG_CTL ~~~ FB_CTL
 ```
 
 ## Mapa de risco regulatório
@@ -101,16 +109,19 @@ flowchart TD
     R5["GDPR Art. 17<br/>(direito ao apagamento)"]:::reg
     R6["GDPR Art. 9<br/>(categorias especiais)"]:::reg
     R7["EU AI Act<br/>Art. 10<br/>(data governance)"]:::reg
+    R8["LGPD Art. 7<br/>(bases legais<br/>para tratamento)"]:::reg
 
     AP1["PII em corpus RAG<br/>sem direito de<br/>apagamento implementado"]:::risk
     AP2["Logs com PII<br/>sem classificação<br/>nem retenção"]:::risk
     AP3["Sintéticos usados em eval<br/>sem teste de<br/>reidentificação"]:::risk
     AP4["Treino com dados<br/>pessoais sem base<br/>legal específica"]:::risk
+    AP5["Feedback capturado<br/>sem base legal<br/>explícita"]:::risk
 
     C1["Rebuild de embeddings<br/>+ purge seletivo"]:::ctl
     C2["Mascaramento + retenção<br/>+ tombstone"]:::ctl
     C3["Proveniência declarada<br/>+ aprovação owner"]:::ctl
     C4["Revisão jurídica antes<br/>do treino"]:::ctl
+    C5["Revisão de base legal<br/>antes de cada regime"]:::ctl
 
     R3 --> AP1 --> C1
     R5 --> AP1
@@ -123,6 +134,8 @@ flowchart TD
     R6 --> AP4
     R7 --> AP4
     R4 --> AP4
+    R8 --> AP4
+    R8 --> AP5 --> C5
 ```
 
 ## Como ler

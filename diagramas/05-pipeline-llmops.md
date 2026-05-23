@@ -49,6 +49,7 @@ flowchart TB
         M1["Métricas por<br/>aplicação<br/>(L4)"]:::monitor
         M2["Drift, degradação,<br/>alucinação, custo,<br/>feedback"]:::monitor
         M3["Amostragem +<br/>revisão humana"]:::monitor
+        M4["Eval online<br/>(LLM-as-judge contínuo,<br/>groundedness, faithfulness<br/>por amostra)"]:::monitor
     end
 
     subgraph SAFE["Mecanismos de segurança"]
@@ -126,10 +127,10 @@ stateDiagram-v2
 
 ## Como ler
 
-- **L1 = versionamento total.** Sem versionar embeddings, índices, retriever e tool schemas, não há reprodutibilidade — o release não é auditável.
+- **L1 = versionamento total.** Sem versionar embeddings, índices, retriever e tool schemas, não há reprodutibilidade — o release não é auditável. Prompts versionados em D1 são registrados no catálogo de Diag.04/CP1 (modelos, prompts, templates) — o prompt registry vive na plataforma, não na solução.
 - **L2 = evals com harness integrity.** O judge não pode ser da mesma família do gerador (evita circular evaluation). Hash do golden dataset prova que o teste não foi modificado para passar.
 - **L3 = regressão em toda mudança relevante.** Qualquer um dos 6 gatilhos da segunda figura obriga regressão; sem isso, o release não pode ir para produção (gate bloqueia).
-- **L4 = monitoramento por aplicação.** A plataforma oferece capacidade (P5); a solução tem que instrumentar e usar.
-- **L5 = fallback + rollback + kill switch testados.** Para agentes externos ou de alto risco, o kill switch é obrigatório e por agente/fluxo, não global.
+- **L4 = monitoramento por aplicação.** A plataforma oferece capacidade (P5); a solução tem que instrumentar e usar. **M4 (eval online) é distinto de M1/M2**: M1/M2 são métricas operacionais (latência, custo, drift estatístico); M4 é eval semântica contínua em produção (groundedness, faithfulness, qualidade de resposta) via LLM-as-judge ou amostragem humana. Owner: mesmo da suite de evals offline (EVAL); threshold de amostragem define custo e latência de coleta.
+- **L5 = fallback + rollback + contenção testados.** Para agentes externos ou de alto risco, a contenção é obrigatória e por agente/fluxo, não global.
 
 Referências cruzadas: ver `assessment/questionario-assessment.md` dimensão "LLMOps/MLOps e evals" (L1–L5) e `referencias/crosswalk-normativo.md` (Measure / Manage no NIST AI RMF; A.6.2.5 / A.6.2.7 no ISO 42001).

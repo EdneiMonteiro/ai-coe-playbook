@@ -110,4 +110,5 @@ flowchart LR
 - **Governança é embutida**, não tickada manualmente: policy-as-code, RBAC, guardrails e gates rodam automaticamente no pipeline.
 - **Observabilidade e FinOps** ficam na plataforma porque servem múltiplas soluções; cada solução instrumenta (L4) o que a plataforma oferece (P5) — ver consistência cruzada em `assessment/criterios-pontuacao.md`.
 - A **camada de dados** é separada da camada de plataforma porque tem ciclo de vida e ownership próprios (data owners, retenção, expurgo).
+- **Fluxo de promoção:** EVAL valida → REG registra versão aprovada → CONSUMERS consomem via CAT. Sem esse lifecycle, CONSUMERS podem acessar modelos não validados — o REG é a fronteira entre "candidato" e "produção autorizada".
 - **Sem fundação**, não há plataforma; sem plataforma, não há autoatendimento governado. A maturidade do CoE depende dessas três camadas funcionarem bem.
