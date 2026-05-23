@@ -1,0 +1,118 @@
+# Diagrama 5 — Pipeline LLMOps/MLOps
+
+Este diagrama mostra o ciclo operacional de versionamento, avaliação, regressão e operação segura de uma solução de IA. O foco é **rastreabilidade**: cada release é traceable até modelo, prompt, embedding, corpus, retriever, tool schema, guardrail e resultado de evals. Sem isso, rollback seletivo e auditoria pós-incidente ficam inviáveis.
+
+## Pipeline ponta a ponta
+
+```mermaid
+flowchart TB
+    classDef dev fill:#1f6feb,stroke:#0d419d,color:#fff
+    classDef gate fill:#fff8c5,stroke:#9a6700,color:#24292f
+    classDef prod fill:#1a7f37,stroke:#0a4d20,color:#fff
+    classDef safety fill:#cf222e,stroke:#82071e,color:#fff
+    classDef monitor fill:#8250df,stroke:#3e1f79,color:#fff
+
+    subgraph DEV["Desenvolvimento"]
+        direction LR
+        D1["Versionar:<br/>modelo, prompt,<br/>embeddings, corpus,<br/>retriever, tool schema,<br/>guardrails"]:::dev
+        D2["Build com hash<br/>+ snapshot"]:::dev
+    end
+
+    subgraph EVAL["Avaliação"]
+        direction LR
+        E1["Evals em<br/>golden datasets"]:::dev
+        E2["Métricas:<br/>groundedness,<br/>safety, security,<br/>custo, latência"]:::dev
+        E3["Harness integrity:<br/>judge ≠ família<br/>do gerador"]:::dev
+    end
+
+    G1{"Gate de release<br/>(thresholds por risco)"}:::gate
+
+    subgraph PROD["Produção"]
+        direction LR
+        P1["Deploy<br/>(canary / blue-green)"]:::prod
+        P2["Tráfego real<br/>+ SLO + on-call"]:::prod
+    end
+
+    subgraph MON["Observabilidade"]
+        direction LR
+        M1["Métricas por<br/>aplicação<br/>(L4)"]:::monitor
+        M2["Drift, degradação,<br/>alucinação, custo,<br/>feedback"]:::monitor
+        M3["Amostragem +<br/>revisão humana"]:::monitor
+    end
+
+    subgraph SAFE["Mecanismos de segurança"]
+        direction LR
+        S1["Fallback<br/>(provider alternativo)"]:::safety
+        S2["Rollback<br/>(versão anterior)"]:::safety
+        S3["Kill switch<br/>por agente/fluxo"]:::safety
+    end
+
+    G2{"Mudança<br/>relevante?"}:::gate
+
+    DEV --> EVAL --> G1
+    G1 -->|aprovado| PROD
+    G1 -->|falhou eval / threshold| DEV
+
+    PROD --> MON
+    MON --> G2
+    G2 -->|modelo, prompt,<br/>corpus, retriever,<br/>política mudou| EVAL
+    G2 -->|incidente / degradação| SAFE
+    SAFE -.->|remediação| DEV
+```
+
+## Trigger de regressão
+
+```mermaid
+flowchart LR
+    classDef trigger fill:#fff8c5,stroke:#9a6700,color:#24292f
+    classDef action fill:#1a7f37,stroke:#0a4d20,color:#fff
+
+    T1[/"Troca de modelo<br/>ou versão"/]:::trigger
+    T2[/"Mudança de<br/>prompt"/]:::trigger
+    T3[/"Mudança de<br/>tool schema<br/>ou allowlist"/]:::trigger
+    T4[/"Mudança de<br/>corpus / chunking /<br/>retriever"/]:::trigger
+    T5[/"Mudança de<br/>política de<br/>recuperação"/]:::trigger
+    T6[/"Mudança de<br/>guardrail"/]:::trigger
+
+    REG["<b>Regressão obrigatória</b><br/>contra golden datasets<br/>versionados"]:::action
+
+    T1 --> REG
+    T2 --> REG
+    T3 --> REG
+    T4 --> REG
+    T5 --> REG
+    T6 --> REG
+
+    REG --> GATE{"Thresholds<br/>atendidos?"}
+    GATE -->|sim| OK(["Release autorizada"])
+    GATE -->|não| BLOCK(["Release bloqueada;<br/>volta para iteração"])
+```
+
+## Estados de uma versão em produção
+
+```mermaid
+stateDiagram-v2
+    [*] --> EmDesenvolvimento
+    EmDesenvolvimento --> EmAvaliação: build versionado<br/>com hash
+    EmAvaliação --> RejeitadoNoGate: thresholds não atendidos
+    EmAvaliação --> EmCanary: gate aprovado
+    EmCanary --> EmProdução: rollout completo<br/>sem regressão
+    EmCanary --> RolledBack: regressão detectada<br/>em canary
+    EmProdução --> EmInvestigação: degradação,<br/>drift ou incidente
+    EmInvestigação --> EmProdução: causa contornada
+    EmInvestigação --> RolledBack: rollback acionado
+    EmInvestigação --> KillSwitchAtivado: kill switch<br/>(agente externo /<br/>alto risco)
+    RejeitadoNoGate --> EmDesenvolvimento
+    RolledBack --> EmDesenvolvimento
+    KillSwitchAtivado --> [*]
+```
+
+## Como ler
+
+- **L1 = versionamento total.** Sem versionar embeddings, índices, retriever e tool schemas, não há reprodutibilidade — o release não é auditável.
+- **L2 = evals com harness integrity.** O judge não pode ser da mesma família do gerador (evita circular evaluation). Hash do golden dataset prova que o teste não foi modificado para passar.
+- **L3 = regressão em toda mudança relevante.** Qualquer um dos 6 gatilhos da segunda figura obriga regressão; sem isso, o release não pode ir para produção (gate bloqueia).
+- **L4 = monitoramento por aplicação.** A plataforma oferece capacidade (P5); a solução tem que instrumentar e usar.
+- **L5 = fallback + rollback + kill switch testados.** Para agentes externos ou de alto risco, o kill switch é obrigatório e por agente/fluxo, não global.
+
+Referências cruzadas: ver `assessment/questionario-assessment.md` dimensão "LLMOps/MLOps e evals" (L1–L5) e `referencias/crosswalk-normativo.md` (Measure / Manage no NIST AI RMF; A.6.2.5 / A.6.2.7 no ISO 42001).
