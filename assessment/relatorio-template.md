@@ -157,6 +157,8 @@ Para produção e casos de alto risco, anexar pacote documental mínimo: **model
 
 Em sistemas baseados em **GPAI** sob escopo do EU AI Act, registrar também a divulgação técnica exigida pelo Art. 53 e referências a documentação do provedor.
 
+> **Nota — GPAI e SaaS terceirizado.** Para sistemas baseados em GPAI ou SaaS terceirizado, campos do model card que dependem de internals do modelo (pesos, datasets de treino, métricas internas, ablation studies) podem ser declarados como **N/A — substituído por system card e contrato/SLA do provider**. O system card deve então registrar: identificação do provider, versão do modelo/serviço, escopo de uso, controles contratuais aplicáveis, dependências críticas, plano de saída e referência à documentação técnica pública do provider (incluindo GPAI Art. 53 disclosure quando aplicável).
+
 | Artefato técnico | Owner nominado | Evidência | Observações |
 |---|---|---|---|
 | Model card | [pessoa/email] | [link] | Intended use, limitações, métricas, vieses conhecidos, versões, mudanças materiais, licença e origem (OSS vs proprietary) quando aplicável. |
@@ -230,5 +232,17 @@ Este crosswalk é um mapeamento heurístico derivado de fontes públicas (NIST A
 Observações:
 
 - A correspondência é aproximada e exige verificação para cada implementação. Mudanças regulatórias (faseamento do EU AI Act, atualizações ISO, novas opiniões EDPB/ANPD) podem alterar o mapeamento.
+- **Versionamento normativo.** Referências evolutivas: OWASP Top 10 for LLM Applications v2.0 (2025) como linha de base de segurança aplicada; ISO/IEC 42001:2023 como linha de base do AIMS; NIST AI RMF 1.0 + NIST AI 600-1 (GenAI Profile, 2024) como linha de base de gestão de risco. Este crosswalk deve ser reavaliado a cada release major dessas referências.
 - Para uso externo, regulado, due diligence ou apresentação a regulador, complemente este crosswalk com parecer jurídico setorial.
-- Para setores regulados no Brasil, considerar normas adicionais (ex.: BACEN Res. 4.658, CVM, ANS, ANEEL, ANVISA, defesa, INPI), não cobertas neste crosswalk.
+
+### Anexo C-BR — nota setorial para holdings reguladas no Brasil
+
+Para organizações sob regulação setorial brasileira, mapear cada controle do crosswalk acima ao respectivo dispositivo setorial aplicável. Esta nota é heurística; aplicação específica exige parecer setorial:
+
+| Setor | Regulador / norma principal | Mapeamento típico no assessment |
+|---|---|---|
+| Financeiro (bancos, instituições de pagamento) | BACEN Res. 4.658/2018 (cibersegurança); CMN Res. 4.557/2017 (risco operacional) | Reforçar Governança e risco, Operação e melhoria contínua, Plataforma e arquitetura; gates de incidente integrados ao reporte BACEN. |
+| Mercado de capitais | CVM Res. 35/2021 (gestão de riscos e controles internos) | Reforçar Governança e risco e Portfólio e valor; documentação técnica alinhada ao reporte CVM. |
+| Saúde suplementar | ANS Res. 593/2023 (segurança da informação) | Reforçar Dados e conhecimento (dados sensíveis de saúde) e Governança e risco; FRIA/DPIA obrigatória em casos de alto risco. |
+| Setor elétrico, telecom, água | ANEEL, ANATEL, agências setoriais | Reforçar Operação e melhoria contínua (resiliência, continuidade) e Plataforma e arquitetura (infraestrutura crítica). |
+| Saúde / dispositivos médicos | ANVISA | Reforçar Dados e conhecimento, Governança e risco e LLMOps/MLOps (rastreabilidade clínica e pós-mercado). |

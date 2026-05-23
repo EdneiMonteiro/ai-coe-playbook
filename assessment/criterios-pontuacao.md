@@ -137,6 +137,16 @@ Em organizações reguladas, pode-se usar pesos maiores para governança, risco,
 | FinOps e sustentabilidade | 10% | 5% |
 | Operação e melhoria contínua | 10% | 10% |
 
+### Definição de "dimensão crítica"
+
+Para efeito de análise de sensibilidade, regras de contenção e perguntas marcadas como críticas, considera-se **dimensão crítica** aquela que atende a pelo menos um dos critérios abaixo:
+
+- **(a) Peso nominal ≥ 15%** no esquema de pesos aplicado.
+- **(b) Dimensão diretamente referenciada por exposição regulatória material** ao escopo avaliado (ex.: Governança e risco e Dados e conhecimento quando a organização opera sob LGPD, GDPR, EU AI Act ou regulação setorial).
+- **(c) Dimensão técnica de produção** quando o escopo inclui sistemas generativos, RAG ou agentes (em particular: Plataforma e arquitetura, Dados e conhecimento, LLMOps/MLOps e evals, Operação e melhoria contínua).
+
+A classificação de dimensões críticas deve ser registrada no relatório antes de aplicar análise de sensibilidade, regras de contenção e gates operacionais.
+
 ### Registro obrigatório quando pesos alternativos forem usados
 
 | Item | Deve constar no relatório |

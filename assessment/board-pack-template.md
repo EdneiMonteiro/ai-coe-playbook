@@ -58,7 +58,7 @@
 
 ## 7. Custo de inação
 
-Quando o custo de inação não puder ser estimado diretamente, usar proxies explícitos: (a) custo de oportunidade do projeto/iniciativa deslocado pelo retrabalho, (b) multa regulatória estimada por exposição (com referência ao artigo aplicável), (c) churn/perda estimada da unidade de negócio impactada, (d) custo de remediação caso veto operacional persista. Não deixar o campo em branco; declarar o proxy usado.
+Quando o custo de inação não puder ser estimado diretamente, usar proxies explícitos: (a) custo de oportunidade do projeto/iniciativa deslocado pelo retrabalho, (b) multa regulatória estimada por exposição (com referência ao artigo aplicável) — **quando houver exposição LGPD, dimensionar pelo limite do Art. 52 (até R$ 50 milhões por infração) e pelo regime de urgência aplicável**; sob GDPR, usar o limite de 4% do faturamento global; (c) churn/perda estimada da unidade de negócio impactada, (d) custo de remediação caso veto operacional persista. Não deixar o campo em branco; declarar o proxy usado.
 
 | Horizonte | Consequência provável se nada mudar | Proxy usado |
 |---|---|---|
