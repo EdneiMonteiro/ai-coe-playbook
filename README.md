@@ -1,5 +1,8 @@
 # AI CoE Playbook
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20357199.svg)](https://doi.org/10.5281/zenodo.20357199)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 Guia prático, artigos e artefatos operacionais para estruturar, governar e evoluir Centros de Excelência em Inteligência Artificial (AI CoE / CoE de IA).
 
 Este repositório começou com o artigo **Centro de Excelência em Inteligência Artificial (CoE de IA)** e evoluiu como um playbook vivo: artigo principal + artefatos operacionais (charter, RACI, avaliação de risco) + mecanismo de assessment de maturidade + diagramas + referências consolidadas.
@@ -108,3 +111,14 @@ O repositório não substitui avaliação jurídica, regulatória ou arquitetura
 ## Licença
 
 Conteúdo textual, artigos, diagramas e templates estão licenciados sob **Creative Commons Attribution 4.0 International (CC BY 4.0)**. Consulte [`LICENSE`](LICENSE).
+
+## Como citar
+
+Esta release está arquivada no **Zenodo** com DOI permanente:
+
+- **Concept DOI (sempre aponta para a versão mais recente):** [10.5281/zenodo.20357199](https://doi.org/10.5281/zenodo.20357199)
+- **Version DOI (v1.0.0):** [10.5281/zenodo.20357200](https://doi.org/10.5281/zenodo.20357200)
+
+Metadados de citação em [`CITATION.cff`](CITATION.cff) (use o botão **"Cite this repository"** no canto superior direito desta página). Exemplo de citação:
+
+> Monteiro, E. (2026). *AI CoE Playbook: Guia Prático para Estruturar, Operar e Escalar um Centro de Excelência em IA* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.20357200
