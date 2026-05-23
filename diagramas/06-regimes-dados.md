@@ -9,6 +9,7 @@ flowchart TB
     classDef train fill:#1f6feb,stroke:#0d419d,color:#fff
     classDef infer fill:#1a7f37,stroke:#0a4d20,color:#fff
     classDef log fill:#9a6700,stroke:#633c01,color:#fff
+    classDef feedback fill:#8250df,stroke:#3e1f79,color:#fff
     classDef control fill:#cf222e,stroke:#82071e,color:#fff
 
     subgraph TRAIN["Regime 1 — Treino / Fine-tuning"]
@@ -32,9 +33,19 @@ flowchart TB
         L3["<b>Retenção:</b> mínima necessária<br/>(curta por padrão)<br/><b>Direito de apagamento:</b> purge<br/>com tombstone para auditoria"]:::log
     end
 
+    subgraph FEEDBACK["Regime 4 — Dados de feedback / preferência (RLHF/RLAIF)"]
+        direction TB
+        F1["<b>Finalidade:</b> alinhar modelo via<br/>preferência humana ou de IA<br/>(RLHF/RLAIF, DPO)<br/><b>Base legal:</b> consentimento<br/>específico para nova finalidade<br/>(LGPD Art. 7º, I; GDPR Art. 6(1)(a))"]:::feedback
+        F2["<b>Conteúdo:</b> pares de preferência,<br/>thumbs up/down, comparações,<br/>anotações humanas, sinais<br/>implícitos (reuso, edição)"]:::feedback
+        F3["<b>Retenção:</b> versionada com o<br/>modelo de recompensa<br/><b>Direito de apagamento:</b> exclusão<br/>do par + retreino da policy<br/>quando aplicável"]:::feedback
+        F4["<b>Controles:</b> opt-in explícito,<br/>opt-out reversível, separação<br/>do regime de logs (3),<br/>auditoria de viés do anotador"]:::feedback
+    end
+
     TRAIN -.->|<i>nunca compartilha</i><br/><i>controle de acesso</i>| INFER
     INFER -.->|<i>nunca compartilha</i><br/><i>controle de acesso</i>| LOG
     LOG -.->|<i>nunca alimenta</i><br/><i>treino sem consentimento</i><br/><i>explícito</i>| TRAIN
+    INFER -.->|<i>vira feedback apenas</i><br/><i>com opt-in explícito</i>| FEEDBACK
+    FEEDBACK -.->|<i>alimenta retreino</i><br/><i>do reward model</i><br/><i>com base legal própria</i>| TRAIN
 ```
 
 ## Controles obrigatórios por regime

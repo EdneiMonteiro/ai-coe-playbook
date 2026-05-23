@@ -1073,7 +1073,7 @@ Este template deve ser usado na triagem inicial de casos de uso e atualizado ant
 
 18. **NIST.** *Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile (NIST AI 600-1).* 2024. Disponível em: [nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence). DOI: 10.6028/NIST.AI.600-1.
 
-19. **European Parliament.** *EU AI Act — Artificial Intelligence Act.* 2024. Disponível em: [europarl.europa.eu/news/en/headlines/society/20230601STO93804](https://www.europarl.europa.eu/news/en/headlines/society/20230601STO93804/eu-ai-act). Acesso em: maio 2026.
+19. **European Parliament and Council of the European Union.** *Regulation (EU) 2024/1689 — Artificial Intelligence Act.* 2024. Disponível em: [eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689). Acesso em: maio 2026.
 
 20. **OECD.AI.** *OECD AI Principles Overview.* Atualizado em 2024. Disponível em: [oecd.ai/en/ai-principles](https://oecd.ai/en/ai-principles). Acesso em: maio 2026.
 

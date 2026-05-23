@@ -174,10 +174,10 @@
   {
     "id": "eu2024-aiact",
     "type": "legislation",
-    "title": "EU AI Act — Artificial Intelligence Act",
-    "author": [{"literal": "European Parliament"}],
+    "title": "Regulation (EU) 2024/1689 — Artificial Intelligence Act",
+    "author": [{"literal": "European Parliament and Council of the European Union"}],
     "issued": {"date-parts": [[2024]]},
-    "URL": "https://www.europarl.europa.eu/news/en/headlines/society/20230601STO93804/eu-ai-act",
+    "URL": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
     "accessed": {"date-parts": [[2026, 5]]}
   },
   {
@@ -232,16 +232,20 @@
     "title": "Designing the Intelligent Organization: Six Principles for Human-AI Collaboration",
     "author": [{"family": "Kolbjørnsrud", "given": "Vegard"}],
     "container-title": "California Management Review",
+    "volume": "66",
+    "issue": "2",
     "issued": {"date-parts": [[2024]]},
+    "note": "Versão revisada publicada em CMR 2024; manuscrito promocional disponível desde 2023 (slug 'kolbjornsrud-2023-...' no PDF).",
     "URL": "https://cmr.berkeley.edu/assets/documents/promo/kolbjornsrud-2023-designing-the-intelligent-organization-six-principles-for-human-ai-collaboration.pdf"
   },
   {
-    "id": "ieee2025-aigovernance",
+    "id": "ribeiro2025-aigovernance",
     "type": "article",
     "title": "Toward Effective AI Governance: A Review of Principles",
-    "author": [{"literal": "IEEE/ACM"}],
+    "author": [{"family": "Ribeiro", "given": "Danilo Monteiro"}],
     "issued": {"date-parts": [[2025]]},
     "number": "arXiv:2505.23417",
+    "note": "Preprint, not peer-reviewed. arXiv:2505.23417 [cs.SE].",
     "URL": "https://arxiv.org/pdf/2505.23417"
   }
 ]

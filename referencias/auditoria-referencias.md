@@ -29,6 +29,10 @@ Esta página registra a memória operacional das referências do AI CoE Playbook
 | FOCUS | Versão v1.2 citada | Versão v1.3 atual | Defasagem por release |
 | ISO 19011 | Versão 2018 citada para etapas em revisão 2026 | ISO 19011:2018 cl. 4 mantida onde aplicável; ISO 19011 com revisão em Stage 60 ainda não publicada | Antecipação prematura de versão |
 | EDPB Opinion 28/2024 | URL primária retornou 404 | Conteúdo sustentado por fontes secundárias verificáveis | Mudança de URL após publicação |
+| `ieee2025-aigovernance` autor "IEEE/ACM" | Alucinação de autor institucional para preprint arXiv | Autor real: **Ribeiro, Danilo Monteiro et al.**; chave renomeada para `ribeiro2025-aigovernance`; nota "preprint, not peer-reviewed" adicionada | Citação institucional inferida sem verificação da página arXiv |
+| `eu2024-aiact` URL | URL de notícia do European Parliament | Substituído por **EUR-Lex CELEX 32024R1689** (fonte oficial); autor atualizado para "European Parliament and Council of the European Union" | Fonte secundária no lugar da primária |
+| Crosswalk ISO/IEC 42001 Anexo A — 5 entradas | Cláusulas incorretas (A.6.2.4, A.6.2.5, A.6.2.6, A.7, A.8) | Corrigidas contra fontes Tier 2 (bastion.tech, kimova.ai, watchdog security); coluna A.6.2.7 marcada como "verificar texto oficial" devido a divergência entre fontes secundárias | Não-verificação contra texto oficial ISO/IEC 42001:2023 |
+| `kolbjornsrud2024-intelligent` ano vs slug | Slug do PDF promocional indica 2023; chave indica 2024 | Nota adicionada explicando que CMR publicou versão revisada em 2024 e o manuscrito promocional circulou desde 2023; volume/issue documentados | Divergência entre versão draft e versão final |
 
 ## Política de verificação de URLs
 

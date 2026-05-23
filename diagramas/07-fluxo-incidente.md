@@ -6,12 +6,22 @@ Este diagrama mostra o ciclo de resposta a incidente quando uma solução de IA 
 
 ```mermaid
 flowchart TB
+    classDef prep fill:#1f6feb,stroke:#0d419d,color:#fff
     classDef detect fill:#fff8c5,stroke:#9a6700,color:#24292f
     classDef triage fill:#1f6feb,stroke:#0d419d,color:#fff
     classDef contain fill:#cf222e,stroke:#82071e,color:#fff
     classDef investigate fill:#9a6700,stroke:#633c01,color:#fff
     classDef remediate fill:#1a7f37,stroke:#0a4d20,color:#fff
     classDef learn fill:#8250df,stroke:#3e1f79,color:#fff
+
+    subgraph PREP["Preparation (NIST SP 800-61 §3.1 / SANS PICERL)"]
+        direction LR
+        P1["Runbooks publicados<br/>+ versionados"]:::prep
+        P2["Kill switches testados<br/>(por agente / fluxo)"]:::prep
+        P3["On-call configurado<br/>+ rotações + escalação"]:::prep
+        P4["Comunicações<br/>pré-aprovadas<br/>(jurídico, PR, regulador)"]:::prep
+        P5["Tabletop exercises<br/>+ revisão periódica"]:::prep
+    end
 
     subgraph DETECT["Detecção"]
         direction LR
@@ -51,9 +61,10 @@ flowchart TB
         L1["Postmortem<br/>(sem blame)"]:::learn
         L2["Atualização de<br/>padrões, runbooks,<br/>evals e guardrails"]:::learn
         L3["Comunicação à<br/>comunidade de prática"]:::learn
-        L4["Reporte regulatório<br/>quando aplicável"]:::learn
+        L4["Reporte regulatório:<br/>BACEN Res. 4.893/2021 Art. 6º;<br/>ANPD Res. 15/2024 (≤72h);<br/>EU AI Act Art. 73 (2/10/15 d.);<br/>LGPD Art. 48; GDPR Art. 33"]:::learn
     end
 
+    PREP --> DETECT
     DETECT --> TRIAGE
     TRIAGE -->|crítico ou alto| CONTAIN
     TRIAGE -->|médio ou baixo| INV
@@ -61,6 +72,7 @@ flowchart TB
     INV --> REM
     REM --> LEARN
     LEARN -.->|melhorias no<br/>pipeline| DETECT
+    LEARN -.->|atualiza runbooks,<br/>kill switches, comunicações| PREP
 ```
 
 ## Severidade e SLA de resposta

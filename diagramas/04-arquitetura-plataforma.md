@@ -29,6 +29,7 @@ flowchart TB
     subgraph PLAT["Camada de plataforma de IA (auto-serviço governado)"]
         direction LR
         CAT["Catálogo de<br/>modelos aprovados"]:::platform
+        REG["Model registry<br/>(MLflow / HF / AzureML)<br/>versões + lineage<br/>+ rollback"]:::platform
         TPL["Templates +<br/>blueprints (IaC)"]:::platform
         EVAL["Suite de evals +<br/>regressão CI/CD"]:::platform
         OBS["Observabilidade<br/>(logs, traces,<br/>métricas, custo)"]:::platform

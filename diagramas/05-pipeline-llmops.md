@@ -6,11 +6,20 @@ Este diagrama mostra o ciclo operacional de versionamento, avaliação, regress�
 
 ```mermaid
 flowchart TB
+    classDef ingest fill:#9a6700,stroke:#633c01,color:#fff
     classDef dev fill:#1f6feb,stroke:#0d419d,color:#fff
     classDef gate fill:#fff8c5,stroke:#9a6700,color:#24292f
     classDef prod fill:#1a7f37,stroke:#0a4d20,color:#fff
     classDef safety fill:#cf222e,stroke:#82071e,color:#fff
     classDef monitor fill:#8250df,stroke:#3e1f79,color:#fff
+
+    subgraph INGEST["Ingestão & data prep"]
+        direction LR
+        IN1["Fontes (catálogo<br/>de dados, owners,<br/>classificação)"]:::ingest
+        IN2["Limpeza + lineage<br/>+ deduplicação"]:::ingest
+        IN3["Chunking + embeddings<br/>+ índice vetorial<br/>(versionados com hash)"]:::ingest
+        IN4["Golden datasets<br/>de eval (curados,<br/>com hash)"]:::ingest
+    end
 
     subgraph DEV["Desenvolvimento"]
         direction LR
@@ -51,6 +60,8 @@ flowchart TB
 
     DEV --> EVAL --> G1
     G1 -->|aprovado| PROD
+    INGEST --> DEV
+    INGEST -.->|golden datasets<br/>versionados| EVAL
     G1 -->|falhou eval / threshold| DEV
 
     PROD --> MON

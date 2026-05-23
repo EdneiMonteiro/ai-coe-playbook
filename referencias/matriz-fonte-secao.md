@@ -56,7 +56,7 @@ Esta matriz cruza cada uma das **25 fontes** do artigo principal com as seções
 | `curry2021-bdai-coe` | §3 (Equipe e Papéis-Chave); §5 (Pilares) | Framework de melhores práticas para CoEs em Big Data e IA. | principal |
 | `rudko2021-orgstructure` | §4 (Modelos de Atuação); §4.4 evolução | Resposta organizacional ao "AI contingency"; centralização inicial → descentralização gradual. | principal |
 | `kolbjornsrud2024-intelligent` | §8 (Era GenAI); §10 (Maturidade) | Seis princípios para colaboração humano-IA; design de organização inteligente. | principal |
-| `ieee2025-aigovernance` | §5.2 (Governança); §13 (Roadmap) | Revisão de princípios de governança de IA; convergência entre frameworks. | principal |
+| `ribeiro2025-aigovernance` | §5.2 (Governança); §13 (Roadmap) | Revisão de princípios de governança de IA; convergência entre frameworks. Preprint, não revisado por pares. | principal |
 
 ## Cobertura por seção do artigo
 
@@ -67,7 +67,7 @@ Esta matriz cruza cada uma das **25 fontes** do artigo principal com as seções
 | §4 — Modelos de Atuação | `microsoft2025-coe`, `rudko2021-orgstructure` | Baixo |
 | §4.6 — Vinheta pública | `ibm2025-nationwide` | **Alto** (única vinheta) |
 | §5.1 — Padrões | `deloitte2025-coe`, `kpmg2024-coe` | Baixo |
-| §5.2 — Governança e IA Responsável | `nist2023-airmf`, `iso2023-42001`, `eu2024-aiact`, `oecd2024-aiprinciples`, `google2025-responsibleai`, `ieee2025-aigovernance` | Muito baixo |
+| §5.2 — Governança e IA Responsável | `nist2023-airmf`, `iso2023-42001`, `eu2024-aiact`, `oecd2024-aiprinciples`, `google2025-responsibleai`, `ribeiro2025-aigovernance` | Muito baixo |
 | §5.2.6 — AI red teaming | `nist2024-genaiprofile` | **Alto** (única fonte normativa principal) |
 | §5.2.7 — Evals contínuos | `nist2024-genaiprofile`, `nist2023-airmf` | Baixo |
 | §5.3 — Capacitação e Comunidade | `ibm2026-coe` | **Alto** |
@@ -78,7 +78,7 @@ Esta matriz cruza cada uma das **25 fontes** do artigo principal com as seções
 | §10 — Modelo de Maturidade | `googlecloud2025-adoption`, `microsoft2025-coe`, `kolbjornsrud2024-intelligent` | Baixo |
 | §11 — Métricas e KPIs | `kpmg2024-coe`, `deloitte2025-coe`, `microsoft2025-coe` | Baixo |
 | §12 — Checklist Prático | `oracle2026-coe` | **Alto** (única fonte direta de checklist) |
-| §13 — Roadmap de Implementação | `oracle2026-coe`, `aws2025-genai`, `ieee2025-aigovernance` | Médio |
+| §13 — Roadmap de Implementação | `oracle2026-coe`, `aws2025-genai`, `ribeiro2025-aigovernance` | Médio |
 
 ## Risco de dependência editorial
 
