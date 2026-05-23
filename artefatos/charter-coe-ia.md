@@ -26,7 +26,7 @@ Padrões antes de escala; build-to-transfer; governança embutida na plataforma;
 - **Segurança, risco e compliance:** definem controles obrigatórios e têm poder de veto em casos de alto risco.
 - **Sponsor executivo:** decide trade-offs de investimento, risco residual e go/no-go executivo quando há impacto material.
 
-**Escalada de conflito:** divergência entre CoE e área de veto (Segurança, Risco, Compliance, Jurídico) sobre classificação ou aprovação deve ser registrada, com posicionamento de cada parte, e escalada ao Sponsor Executivo em prazo definido (sugestão: ≤ 5 dias úteis para Alto, ≤ 2 dias úteis para Crítico). O Sponsor decide go/no-go com base nos dois pareceres e formaliza a decisão no instrumento de aprovação.
+**Escalada de conflito:** divergência entre CoE e área de veto (Segurança, Risco, Compliance) sobre classificação ou aprovação deve ser registrada — com **parecer jurídico formal anexado quando aplicável** —, com posicionamento de cada parte, e escalada ao Sponsor Executivo em prazo definido (sugestão: ≤ 5 dias úteis para Alto, ≤ 2 dias úteis para Crítico). O Sponsor decide go/no-go com base nos pareceres e formaliza a decisão no instrumento de aprovação.
 
 ## 6. Métricas de sucesso
 
@@ -44,4 +44,9 @@ Cada métrica deve ter unidade, baseline e meta documentadas, revisadas anualmen
 ## 7. Cadência de governança
 
 Revisão quinzenal de portfólio, comitê mensal com sponsor executivo, revisão trimestral de padrões e avaliação semestral do modelo operacional do CoE.
+
+### Cadência da comunidade de prática
+
+- **Fórum mensal de comunidade de IA:** facilitado pelo CoE; aberto a squads de produto, plataforma e dados. Objetivo: socializar lições, novos padrões e casos de uso em produção. Dono: CoE (R/A); convocadores: squads voluntários.
+- **Comunicação de mudança de padrão:** todo padrão novo ou alteração material publicada pelo CoE deve ser comunicada via release notes + sessão dedicada no fórum mensal. SLA: até 30 dias entre publicação e socialização ativa.
 
