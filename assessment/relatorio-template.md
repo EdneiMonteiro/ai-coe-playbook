@@ -162,7 +162,7 @@ Em sistemas baseados em **GPAI** sob escopo do EU AI Act, registrar também a di
 | Artefato técnico | Owner nominado | Evidência | Observações |
 |---|---|---|---|
 | Model card | [pessoa/email] | [link] | Intended use, limitações, métricas, vieses conhecidos, versões, mudanças materiais, licença e origem (OSS vs proprietary) quando aplicável. |
-| System card | [pessoa/email] | [link] | Arquitetura do sistema, integrações, guardrails, riscos, incidentes, logs, controles operacionais; GPAI Art. 53 disclosure quando aplicável; check de contaminação treino/eval realizado por [pessoa/equipe]. |
+| System card | [pessoa/email] | [link] | Arquitetura do sistema, integrações, guardrails, riscos, incidentes, logs, controles operacionais; GPAI Art. 53 disclosure quando aplicável; check de contaminação treino/eval realizado por [pessoa/equipe] — **N/A para GPAI/SaaS terceirizado quando o provider não expõe internals; nesse caso declarar "N/A — substituído por contrato/SLA do provider" e referenciar a documentação técnica pública do provider**. |
 | Datasheet de corpus RAG/dataset crítico | [pessoa/email] | [link] | Proveniência, finalidade, base legal, retenção, limitações, atualização, expurgo e owner; status de anonimização do corpus, dos logs de interação e dos embeddings. |
 | Versões de modelos | [pessoa/email] | [link] | Inclui licença e origem (OSS vs proprietary) quando relevante. |
 | Versões de prompts | [pessoa/email] | [link] | [obs] |
@@ -241,8 +241,9 @@ Para organizações sob regulação setorial brasileira, mapear cada controle do
 
 | Setor | Regulador / norma principal | Mapeamento típico no assessment |
 |---|---|---|
-| Financeiro (bancos, instituições de pagamento) | BACEN Res. 4.658/2018 (cibersegurança); CMN Res. 4.557/2017 (risco operacional) | Reforçar Governança e risco, Operação e melhoria contínua, Plataforma e arquitetura; gates de incidente integrados ao reporte BACEN. |
+| Financeiro (bancos e cooperativas) | CMN Res. 4.893/2021 (segurança cibernética — bancos e cooperativas); CMN Res. 4.557/2017 (risco operacional) | Reforçar Governança e risco, Operação e melhoria contínua, Plataforma e arquitetura; gates de incidente integrados ao reporte BACEN. |
+| Financeiro (instituições de pagamento e demais autorizadas pelo BCB) | BCB Res. 85/2021 (segurança cibernética — substitui a antiga BACEN Res. 4.658/2018, revogada em 01/07/2023, no escopo das IPs e demais entidades reguladas pelo BCB) | Reforçar Governança e risco, Operação e melhoria contínua, Plataforma e arquitetura; gates de incidente integrados ao reporte BCB. |
 | Mercado de capitais | CVM Res. 35/2021 (gestão de riscos e controles internos) | Reforçar Governança e risco e Portfólio e valor; documentação técnica alinhada ao reporte CVM. |
-| Saúde suplementar | ANS Res. 593/2023 (segurança da informação) | Reforçar Dados e conhecimento (dados sensíveis de saúde) e Governança e risco; FRIA/DPIA obrigatória em casos de alto risco. |
+| Saúde suplementar | ANS RN 501/2022 (controles internos e gestão de riscos em operadoras de saúde suplementar) | Reforçar Dados e conhecimento (dados sensíveis de saúde), Governança e risco e Operação e melhoria contínua; FRIA/DPIA obrigatória em casos de alto risco. |
 | Setor elétrico, telecom, água | ANEEL, ANATEL, agências setoriais | Reforçar Operação e melhoria contínua (resiliência, continuidade) e Plataforma e arquitetura (infraestrutura crítica). |
 | Saúde / dispositivos médicos | ANVISA | Reforçar Dados e conhecimento, Governança e risco e LLMOps/MLOps (rastreabilidade clínica e pós-mercado). |

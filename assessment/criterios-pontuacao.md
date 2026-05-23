@@ -108,6 +108,14 @@ Depois aplique regras de contenção, gates operacionais e regras de consistênc
 | Governança e risco < 3,0 | Nível geral máximo = 3 |
 | Operação e melhoria contínua < 3,0 com produção crítica | Nível geral máximo = 3 |
 
+### Trava genérica anti-gaming para perguntas críticas
+
+| Regra | Efeito |
+|---|---|
+| Qualquer pergunta marcada como **crítica** (em qualquer dimensão) com nota < 2 e sem gate operacional/contenção específica declarada | Acionar gate de revisão obrigatória: o relatório deve declarar explicitamente (a) por que o caso de uso pode permanecer em produção apesar da nota baixa, **OU** (b) registrar veto operacional aberto até remediação. O board pack deve refletir essa decisão; nota crítica < 2 não pode ser invisibilizada na destilação executiva. |
+
+Esta trava genérica evita que uma pergunta crítica receba nota baixa sem consequência operacional ou executiva, mesmo quando não há contenção específica nominada nas regras acima. Não substitui as contenções nomeadas; complementa-as como rede de segurança.
+
 ## Regras de consistência cruzada
 
 | Regra | Interpretação | Ação obrigatória |
