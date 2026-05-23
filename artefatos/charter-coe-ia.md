@@ -16,7 +16,7 @@ O CoE não é dono permanente de produtos de IA, não substitui squads de produt
 
 ## 4. Princípios de decisão
 
-Padrões antes de escala; build-to-transfer; governança embutida na plataforma; menor privilégio para agentes e ferramentas; avaliação contínua; transparência sobre risco, custo e limitações.
+Padrões antes de escala; build-to-transfer; governança embutida na plataforma; menor privilégio para agentes e ferramentas; avaliação contínua; transparência sobre risco, custo e limitações. Evitar concentração crítica em provider único: para casos de alto/crítico risco dependentes de modelo externo, o CoE documenta e testa provider alternativo (exit testado ≥ 1×/ano). Concentração em provider único é registrada como risco contratual e reportada ao Sponsor.
 
 ## 5. Direitos de decisão
 
@@ -43,10 +43,10 @@ Cada métrica deve ter unidade, baseline e meta documentadas, revisadas anualmen
 
 ## 7. Cadência de governança
 
-Revisão quinzenal de portfólio (convocador: CoE), comitê mensal com sponsor executivo (convocador: CoE), revisão trimestral de padrões (convocador: CoE com participação de Plataforma) e avaliação semestral do modelo operacional do CoE (convocador: Sponsor executivo).
+Revisão quinzenal de portfólio (convocador: CoE), comitê mensal com sponsor executivo (convocador: CoE), revisão trimestral de padrões (convocador: CoE com participação de Plataforma), avaliação semestral do modelo operacional do CoE (convocador: Sponsor executivo) e revisão anual de mandato e escopo do CoE pelo Sponsor executivo.
 
 ### Cadência da comunidade de prática
 
 - **Fórum mensal de comunidade de IA:** facilitado pelo CoE; aberto a squads de produto, plataforma e dados. Objetivo: socializar lições, novos padrões e casos de uso em produção. Dono e convocador primário: CoE (R/A); squads atuam como co-facilitadores e podem propor pautas. Se nenhum squad propuser pauta, CoE garante conteúdo mínimo (release notes, métricas de adoção).
-- **Comunicação de mudança de padrão:** todo padrão novo ou alteração material publicada pelo CoE deve ser comunicada via release notes + sessão dedicada no fórum mensal. SLA: até 30 dias entre publicação e socialização ativa.
+- **Comunicação de mudança de padrão:** todo padrão novo ou alteração material publicada pelo CoE deve ser comunicada via release notes + sessão dedicada no fórum mensal. SLA: até 30 dias entre publicação e socialização ativa. Mudanças críticas de segurança (vulnerabilidade em modelo em produção, comportamento adversarial confirmado, CVE com impacto em output): comunicação em até 48h via canal de incidente + sessão extraordinária no fórum dentro de 5 dias úteis.
 
