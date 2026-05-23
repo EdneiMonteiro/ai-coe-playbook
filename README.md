@@ -11,6 +11,7 @@ Este repositório começou com o artigo **Centro de Excelência em Inteligência
 - [`artefatos/raci-coe-ia.md`](artefatos/raci-coe-ia.md) — RACI de referência
 - [`artefatos/charter-coe-ia.md`](artefatos/charter-coe-ia.md) — charter-modelo resumido
 - [`artefatos/template-avaliacao-risco-ia.md`](artefatos/template-avaliacao-risco-ia.md) — template de avaliação de risco operacional
+- [`assessment/README.md`](assessment/README.md) — mecanismo de assessment de maturidade do CoE de IA
 
 ## Estrutura
 
@@ -26,6 +27,12 @@ ai-coe-playbook/
     raci-coe-ia.md
     charter-coe-ia.md
     template-avaliacao-risco-ia.md
+  assessment/
+    README.md
+    modelo-maturidade-coe-ia.md
+    questionario-assessment.md
+    criterios-pontuacao.md
+    relatorio-template.md
   diagramas/
     README.md
   referencias/
@@ -41,4 +48,3 @@ O repositório não substitui avaliação jurídica, regulatória ou arquitetura
 ## Licença
 
 Conteúdo textual, artigos, diagramas e templates estão licenciados sob **Creative Commons Attribution 4.0 International (CC BY 4.0)**. Consulte [`LICENSE.md`](LICENSE.md).
-
