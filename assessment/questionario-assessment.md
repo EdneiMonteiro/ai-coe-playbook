@@ -1,112 +1,115 @@
 # Questionário de assessment de maturidade do CoE de IA
 
-Use a escala definida em [`criterios-pontuacao.md`](criterios-pontuacao.md):
+Use a escala definida em [`criterios-pontuacao.md`](criterios-pontuacao.md). As notas **0** e **1** seguem a régua geral:
 
 - **0** — inexistente ou não evidenciado.
-- **1** — ad hoc, informal, dependente de indivíduos.
-- **2** — definido parcialmente, usado em pilotos ou pelo CoE central.
-- **3** — padronizado, adotado por múltiplos times, com evidência recorrente.
-- **4** — medido, otimizado, auditável e continuamente melhorado.
+- **1** — ad hoc, informal, dependente de indivíduos ou aplicado em caso isolado.
 
-Cada resposta deve citar evidências: documentos, links, atas, repositórios, dashboards, exemplos de projetos, políticas, runbooks, logs ou registros de decisão.
+As tabelas abaixo detalham, por pergunta, o que caracteriza notas **2**, **3** e **4**. Cada resposta deve citar evidências verificáveis: documentos, links, atas, repositórios, dashboards, exemplos de projetos, políticas, runbooks, logs, registros de decisão ou amostras de soluções.
+
+Perguntas marcadas como **críticas** podem acionar contenções ou veto operacional quando relacionadas a produção, produção crítica, exposição externa, GenAI/RAG, agentes, dados sensíveis ou alto risco.
 
 ## 1. Estratégia e mandato
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| E1 | Existe charter formal do CoE de IA com missão, escopo, fora de escopo e sponsor? | Charter aprovado, ata de aprovação, sponsor definido. |
-| E2 | O CoE possui roadmap conectado à estratégia de negócio e tecnologia? | Roadmap, OKRs, plano anual, estratégia corporativa. |
-| E3 | Há critérios explícitos para decidir o que o CoE centraliza e o que federa? | Modelo operacional, direitos de decisão, RACI. |
-| E4 | O funding do CoE e das iniciativas de IA é claro e recorrente? | Orçamento, modelo de chargeback/showback, plano de capacidade. |
-| E5 | Existem métricas executivas de valor, risco, adoção, custo e qualidade? | Dashboard executivo, KPIs, reports periódicos. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| E1 | Existe charter formal do CoE de IA com missão, escopo, fora de escopo e sponsor? | Charter existe, mas ainda é recente, parcial ou pouco usado. | Charter aprovado, sponsor ativo e papéis conhecidos por pelo menos dois domínios/BUs. | Charter revisado periodicamente com decisões registradas e métricas de efetividade. | Charter aprovado, ata de aprovação, sponsor definido, revisão periódica. |
+| E2 | O CoE possui roadmap conectado à estratégia de negócio e tecnologia? | Roadmap existe, mas cobre principalmente iniciativas do CoE. | Roadmap conecta casos, plataforma, governança e prioridades de negócio. | Roadmap é revisado por valor, risco, custo, dependências e capacidade executiva. | Roadmap, OKRs, plano anual, estratégia corporativa. |
+| E3 | Há critérios explícitos para decidir o que o CoE centraliza e o que federa? | Critérios documentados, mas aplicados caso a caso. | Critérios usados em múltiplos domínios para separar padrões centrais e execução distribuída. | Critérios evoluem com métricas de gargalo, handoff, qualidade e risco. | Modelo operacional, direitos de decisão, RACI, decisões de handoff. |
+| E4 | O funding do CoE e das iniciativas de IA é claro e recorrente? | Orçamento inicial ou pontual existe. | Funding recorrente, capacidade planejada e showback/chargeback ou mecanismo equivalente. | Decisões de funding usam custo unitário, valor realizado, risco e capacidade por sponsor. | Orçamento, modelo de funding, showback/chargeback, plano de capacidade. |
+| E5 | Existem métricas executivas de valor, risco, adoção, custo e qualidade? | Métricas definidas, mas incompletas ou pouco usadas. | Dashboard executivo recorrente com valor, risco, adoção, custo e qualidade. | Métricas orientam decisões de investimento, contenção, priorização e descontinuação. | Dashboard executivo, KPIs, reports periódicos, decisões baseadas em métricas. |
 
 ## 2. Modelo operacional
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| M1 | Existe processo de intake para novos casos de uso de IA? | Formulário, workflow, backlog, critérios de triagem. |
-| M2 | Os papéis de CoE, produto, plataforma, dados e risco/compliance estão definidos? | RACI, operating model, organograma, comunidades. |
-| M3 | Há critérios de handoff de PoC/MVP para squad de produto? | Definition of Done, checklist de transição, ownership formal. |
-| M4 | O CoE atua como habilitador, não apenas como fábrica de software? | Templates, consultorias, office hours, squads autônomos. |
-| M5 | Existem fóruns regulares para priorização, governança e revisão de portfólio? | Atas, calendário, comitês, decisões registradas. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| M1 | Existe processo de intake para novos casos de uso de IA? | Formulário ou canal existe, mas triagem é manual ou irregular. | Workflow padronizado com critérios de valor, risco, dados, viabilidade e owner. | Intake mede lead time, taxa de aprovação, gargalos, valor esperado e descarte de ideias. | Formulário, workflow, backlog, critérios de triagem. |
+| M2 | Os papéis de CoE, produto, plataforma, dados e risco/compliance estão definidos? | Papéis definidos em documento ou piloto. | RACI usado em múltiplos casos, com accountability claro. | RACI é revisado a partir de incidentes, handoffs, auditorias e feedback dos times. | RACI, operating model, organograma, comunidades, atas. |
+| M3 | Há critérios de handoff de PoC/MVP para squad de produto? | Critérios existem, mas handoff depende do CoE caso a caso. | Definition of Done de transição usado em múltiplas soluções, com owner-alvo definido. | Dívida de transição é medida e reduzida: idade, volume e plano de saída de produtos presos no CoE. | DoD de transição, checklist, inventário de produtos, ownership formal. |
+| M4 | O CoE atua como habilitador, não apenas como fábrica de software? | CoE entrega e também publica alguns guias/templates. | Squads conseguem desenvolver sob padrões do CoE sem depender da execução central. | CoE mede redução de gargalos, adoção de templates e satisfação dos times consumidores. | Templates, office hours, squads autônomos, métricas de suporte. |
+| M5 | Existem fóruns regulares para priorização, governança e revisão de portfólio? | Fóruns existem, mas decisões são pouco rastreáveis. | Fóruns recorrentes com decisões registradas, owners e acompanhamento. | Fóruns usam métricas de valor, risco, custo, capacidade e incidentes para ajustar portfólio. | Atas, calendário, comitês, decisões registradas. |
 
 ## 3. Governança e risco
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| G1 | Casos de uso são classificados por risco antes de desenvolvimento com dados reais? | Template de avaliação, registros de classificação, aprovações. |
-| G2 | Existem gates proporcionais ao risco para PoC, MVP e produção? | Workflow de aprovação, policy-as-code, evidências de gate. |
-| G3 | Segurança, privacidade, jurídico, risco e compliance participam dos casos relevantes? | Atas, pareceres, aprovações, exceções registradas. |
-| G4 | Há prática de AI red teaming para casos de alto risco, agentes ou exposição externa? | Relatórios de red teaming, backlog de remediação, retestes. |
-| G5 | Existe processo de incidente para falhas, abuso, vazamento, alucinações críticas ou uso indevido? | Runbook, canal de incidente, simulações, postmortems. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| G1 **crítica** | Casos de uso são classificados por risco antes de desenvolvimento com dados reais? | Template existe e é usado em pilotos ou pelo CoE. | Todo MVP, produção e expansão com dados reais tem classificação formal, owner de risco e aprovação. | Classificações são auditadas, comparadas com incidentes e ajustadas por mudanças regulatórias. | Template de avaliação, registros de classificação, aprovações, trilha de decisão. |
+| G2 **crítica** | Existem gates proporcionais ao risco para PoC, MVP, produção e expansão? | Gates definidos, mas aplicados manualmente ou sem bloqueio efetivo. | Gates bloqueiam produção/expansão quando controles mínimos não são atendidos. | Gates são automatizados quando possível e revisados por exceções, incidentes e auditorias. | Workflow de aprovação, policy-as-code, evidências de gate, exceções. |
+| G3 | Segurança, privacidade, jurídico, risco e compliance participam dos casos relevantes? | Participação ocorre em casos selecionados, sem critério uniforme. | Critérios de acionamento são claros e aplicados a casos de risco, dados sensíveis ou exposição externa. | Participação é medida por SLA, qualidade de parecer, exceções e redução de retrabalho. | Atas, pareceres, aprovações, matriz de acionamento. |
+| G4 **crítica** | Há prática de AI red teaming para casos de alto risco, agentes ou exposição externa? | Red teaming é executado em alguns casos relevantes. | Casos de alto risco, agentes com ferramentas e exposição externa têm red team ou waiver formal antes de produção. | Red teaming é recorrente, versionado, retestado e alimenta controles, evals e backlog de remediação. | Relatórios de red team, backlog, retestes, critérios de waiver. |
+| G5 **crítica** | Existe processo de incidente para falhas, abuso, vazamento, alucinações críticas ou uso indevido? | Runbook existe, mas não foi exercitado ou é genérico. | Produção tem owner, canal de incidente, escalação, severidade e postmortem para incidentes de IA. | Incidentes geram melhoria de controles, simulações, métricas de tempo de resposta e revisão executiva. | Runbook, canal, simulações, postmortems, registros de incidente. |
 
 ## 4. Plataforma e arquitetura
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| P1 | Há arquitetura de referência para RAG, agentes, copilots e ML clássico? | Diagramas, ADRs, blueprints, repositórios-modelo. |
-| P2 | Existe catálogo de modelos, ferramentas, frameworks e serviços aprovados? | Catálogo, critérios de homologação, owners. |
-| P3 | Ambientes de desenvolvimento, teste e produção têm segregação e controles consistentes? | Landing zone, IaC, RBAC, redes, políticas. |
-| P4 | Guardrails técnicos são automatizados sempre que possível? | Policies, CI/CD checks, secrets scanning, filtros, quotas. |
-| P5 | A plataforma oferece observabilidade de qualidade, custo, latência, uso e risco? | Dashboards, logs, traces, métricas de modelos e aplicações. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| P1 | Há arquitetura de referência para RAG, agentes, copilots e ML clássico? | Arquiteturas existem para alguns padrões principais. | Arquiteturas versionadas são usadas por múltiplos times e incluem dados, segurança, evals, operação e custo. | Arquiteturas são revisadas por métricas, incidentes, evolução tecnológica e mudanças regulatórias. | Diagramas, ADRs, blueprints, repositórios-modelo. |
+| P2 | Existe catálogo de modelos, ferramentas, integrações e serviços aprovados? | Catálogo inicial existe, com critérios básicos. | Catálogo cobre modelos, ferramentas, integrações acionáveis por agentes, escopo de dados, owner e ambiente permitido. | Catálogo tem ciclo de homologação, revisão de fornecedor, plano de saída e descontinuação controlada. | Catálogo, critérios de homologação, owners, avaliação de fornecedor. |
+| P3 | Ambientes de desenvolvimento, teste e produção têm segregação e controles consistentes? | Segregação existe para parte dos workloads. | Ambientes têm RBAC, rede, secrets, dados, logging e promoção controlada entre estágios. | Controles são automatizados, testados e auditados periodicamente. | Landing zone, IaC, RBAC, redes, políticas, auditorias. |
+| P4 **crítica** | Guardrails técnicos são automatizados sempre que possível? | Alguns guardrails existem em pipelines ou plataforma. | Guardrails incluem acesso, secrets, quotas, filtros, validação de schema, allowlist de ferramentas e bloqueios de release. | Guardrails são medidos por violações, falsos positivos, bypasses e melhorias contínuas. | Policies, CI/CD checks, schema validation, tool allowlist, quotas. |
+| P5 | A plataforma oferece observabilidade de qualidade, custo, latência, uso e risco? | Dashboards existem, mas não cobrem todos os sinais. | Plataforma oferece logs, traces, métricas, custo e risco para múltiplas soluções. | Observabilidade orienta SLOs, FinOps, incidentes, evals e revisão de padrões. | Dashboards, logs, traces, métricas de plataforma. |
+
+Nota: **P5 mede capacidade oferecida pela plataforma**. O uso efetivo por solução é pontuado em **L4**; a mesma evidência não deve justificar nota alta em ambos sem rastreabilidade por aplicação.
 
 ## 5. Dados e conhecimento
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| D1 | Fontes de dados usadas por IA possuem owner, classificação e política de acesso? | Catálogo de dados, data owners, matriz de acesso. |
-| D2 | Dados pessoais, sensíveis, regulados ou confidenciais são tratados com controles específicos? | DPIA/LIA quando aplicável, mascaramento, retenção, consentimento/base legal. |
-| D3 | Bases de conhecimento para RAG têm curadoria, versionamento e ciclo de atualização? | Pipeline de ingestão, versionamento, owner, SLAs de atualização. |
-| D4 | Há critérios de qualidade, relevância e validade para documentos e datasets? | Regras de qualidade, validações, lineage, testes de recuperação. |
-| D5 | A organização evita duplicação de bases e reutiliza ativos de conhecimento? | Catálogo, reutilização entre produtos, métricas de duplicidade. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| D1 | Fontes de dados usadas por IA possuem owner, classificação e política de acesso? | Owners e classificação existem para fontes principais. | Fontes usadas por IA têm owner, classificação, acesso aprovado e revisão periódica. | Uso de dados é monitorado, auditado e otimizado por qualidade, risco e valor. | Catálogo de dados, data owners, matriz de acesso. |
+| D2 **crítica** | Dados pessoais, sensíveis, regulados ou confidenciais são tratados com controles específicos? | Controles existem para alguns casos ou são manuais. | Base legal/finalidade, retenção, mascaramento, acesso, logs e DPIA/LIA/FRIA quando aplicável são registrados. | Controles são auditados, testados contra vazamento e revisados por incidentes ou mudanças de finalidade. | DPIA/LIA/FRIA, mascaramento, retenção, base legal, controles de acesso. |
+| D3 | Bases de conhecimento para RAG têm curadoria, versionamento e ciclo de atualização? | Bases críticas têm owner e atualização definida. | Corpus, chunks, embeddings, índice vetorial, retriever/reranker e política de recuperação são versionados. | Atualizações disparam regressão, invalidação de cache e rebuild/expurgo de embeddings quando aplicável. | Pipeline de ingestão, versionamento, hash/snapshot, SLAs de atualização. |
+| D4 | Há critérios de qualidade, relevância e validade para documentos e datasets? | Critérios existem, mas são aplicados irregularmente. | Qualidade, validade, lineage, cobertura e testes de recuperação são verificados antes de produção. | Qualidade é monitorada continuamente e vinculada a erros, feedback e degradação de respostas. | Regras de qualidade, validações, lineage, testes de recuperação. |
+| D5 | A organização evita duplicação de bases e reutiliza ativos de conhecimento? | Catálogo ou reuso existe em alguns domínios. | Ativos de dados/conhecimento são catalogados, reutilizados e têm ownership claro. | Reuso é medido, duplicidades são reduzidas e ativos obsoletos são descontinuados. | Catálogo, reutilização entre produtos, métricas de duplicidade. |
 
 ## 6. LLMOps/MLOps e evals
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| L1 | Prompts, modelos, embeddings, datasets e configurações são versionados? | Repositórios, tags, model registry, prompt registry. |
-| L2 | Existem evals mínimos para qualidade, segurança, groundedness, viés, custo e latência? | Suites de eval, relatórios, thresholds, critérios de aceite. |
-| L3 | Mudanças de modelo, prompt, ferramenta ou política de recuperação disparam regressão? | Golden datasets, pipeline de regressão, histórico de resultados. |
-| L4 | Há monitoramento em produção para drift, degradação, alucinação e incidentes? | Dashboards, alertas, amostragem, revisão humana. |
-| L5 | Existem mecanismos de fallback, rollback e desligamento controlado? | Runbooks, feature flags, rollback plan, kill switch. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| L1 | Prompts, modelos, embeddings, datasets, índices vetoriais, tool schemas e configurações são versionados? | Versionamento cobre modelos/prompts principais. | Release é rastreável até modelo, prompt, embedding, corpus, índice, chunking, retriever/reranker, tool schema e guardrails. | Versionamento permite auditoria, reprodução, comparação entre releases e rollback seletivo. | Repositórios, registry, hash/snapshot, release notes. |
+| L2 **crítica** | Existem evals mínimos para qualidade, safety, security, groundedness, viés, custo e latência? | Evals existem para qualidade básica ou casos piloto. | Evals têm golden datasets, thresholds por risco e separam safety de security (injection, jailbreak, excessive agency). | Evals são medidos por tendência, cobertura, falsos positivos/negativos e impacto em release. | Suites de eval, thresholds, golden datasets, relatórios. |
+| L3 **crítica** | Mudanças de modelo, prompt, ferramenta, corpus, índice ou política de recuperação disparam regressão? | Regressão é executada manualmente em mudanças relevantes. | Regressão roda em pipeline ou gate formal e bloqueia release quando degrada qualidade, segurança ou custo. | Regressão usa histórico, análise de causa, rollback e comparação entre estratégias/modelos. | Pipeline de regressão, histórico, gates, resultados por release. |
+| L4 | Há monitoramento em produção para drift, degradação, alucinação, incidentes e custo? | Monitoramento existe para algumas aplicações. | Soluções em produção instrumentam métricas de qualidade, custo, latência, erro, feedback e risco por aplicação. | Monitoramento aciona alertas, revisão humana, incidentes, reavaliação e otimização contínua. | Dashboards por solução, logs, traces, alertas, amostragem. |
+| L5 **crítica** | Existem mecanismos de fallback, rollback, kill switch e desligamento controlado? | Mecanismos existem para parte das soluções. | Produção GenAI/RAG/agentes tem fallback/rollback/kill switch testado; agentes externos/alto risco têm kill switch por agente/fluxo. | Mecanismos são testados periodicamente, medidos por tempo de recuperação e integrados a incident response. | Runbooks, feature flags, rollback plan, kill switch, testes. |
 
 ## 7. Portfólio e valor
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| V1 | Casos de uso são priorizados por valor, risco, viabilidade e alinhamento estratégico? | Scorecard, comitê de portfólio, matriz valor/risco. |
-| V2 | Cada iniciativa possui business case ou hipótese de valor mensurável? | Business case, OKRs, métricas de sucesso, baseline. |
-| V3 | Há critérios para encerrar PoCs sem valor ou com risco/custo desproporcional? | Kill criteria, decisões de descontinuação, lessons learned. |
-| V4 | Benefícios prometidos são acompanhados após entrada em produção? | Realização de benefícios, dashboard, revisão pós-implantação. |
-| V5 | O portfólio equilibra quick wins, fundações de plataforma e casos estratégicos? | Roadmap, capacidade alocada, categorias de investimento. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| V1 | Casos de uso são priorizados por valor, risco, viabilidade e alinhamento estratégico? | Scorecard existe, mas é usado parcialmente. | Priorização combina valor, risco, dados, viabilidade, custo e estratégia em fórum recorrente. | Priorização é recalibrada por valor realizado, incidentes, capacidade e mudanças estratégicas. | Scorecard, comitê, matriz valor/risco, decisões. |
+| V2 | Cada iniciativa possui business case ou hipótese de valor mensurável? | Hipóteses de valor existem para iniciativas principais. | Todo MVP/produção tem baseline, métrica de sucesso, owner e hipótese de valor. | Valor é acompanhado pós-produção e ajusta funding, escala ou encerramento. | Business case, OKRs, baseline, métricas de sucesso. |
+| V3 | Há critérios para encerrar PoCs sem valor ou com risco/custo desproporcional? | Critérios existem, mas pouco usados. | Kill criteria são aplicados e decisões de encerramento ficam registradas. | Encerramentos geram aprendizado, reaproveitamento de ativos e melhoria de triagem. | Kill criteria, decisões de descontinuação, lessons learned. |
+| V4 | Benefícios prometidos são acompanhados após entrada em produção? | Benefícios são revisados em alguns casos. | Realização de benefícios é acompanhada por produto/área com cadência definida. | Benefícios são auditáveis e comparados a custo, risco, adoção e qualidade. | Dashboard, revisão pós-implantação, reports de valor. |
+| V5 | O portfólio equilibra quick wins, fundações de plataforma e casos estratégicos? | Categorias existem, mas capacidade não é gerida por mix. | Roadmap aloca capacidade entre quick wins, plataforma, governança e casos estratégicos. | Mix é otimizado por dependências, valor, risco, capacidade e maturidade da organização. | Roadmap, capacidade alocada, categorias de investimento. |
 
 ## 8. Capacitação e comunidade
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| C1 | Existe programa de AI literacy para usuários, líderes e áreas de negócio? | Conteúdo, trilhas, presença, avaliações. |
-| C2 | Existem trilhas técnicas para engenharia, dados, segurança, arquitetura e produto? | Currículos, bootcamps, certificações, labs. |
-| C3 | Há comunidade de prática ou rede de champions ativa? | Agenda, participação, backlog, contribuições. |
-| C4 | O CoE publica templates, guias e exemplos reutilizáveis? | Repositórios, documentação, playbooks, blueprints. |
-| C5 | A organização mede adoção e efetividade da capacitação? | Métricas de participação, proficiência, NPS, aplicação prática. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| C1 | Existe programa de AI literacy para usuários, líderes e áreas de negócio? | Treinamentos básicos existem. | Programa segmentado por público, com cobertura em múltiplas áreas. | Proficiência e aplicação prática são medidas e usadas para atualizar conteúdo. | Conteúdo, trilhas, presença, avaliações. |
+| C2 | Existem trilhas técnicas para engenharia, dados, segurança, arquitetura e produto? | Trilhas existem para alguns perfis técnicos. | Trilhas cobrem papéis críticos e são conectadas a padrões do CoE. | Trilhas são atualizadas por incidentes, novas tecnologias e lacunas observadas. | Currículos, bootcamps, certificações, labs. |
+| C3 | Há comunidade de prática ou rede de champions ativa? | Comunidade existe, mas com baixa cadência ou participação. | Champions atuam em múltiplos domínios, com agenda, contribuições e feedback. | Comunidade gera ativos reutilizáveis, identifica riscos e reduz dependência do CoE central. | Agenda, participação, backlog, contribuições. |
+| C4 | O CoE publica templates, guias e exemplos reutilizáveis? | Alguns templates/guias existem. | Templates são usados por múltiplos times e têm owner, versão e canal de feedback. | Templates são medidos por adoção, qualidade, incidentes evitados e melhoria contínua. | Repositórios, documentação, playbooks, blueprints. |
+| C5 | A organização mede adoção e efetividade da capacitação? | Participação é medida. | Adoção real, uso ativo, retenção e mudança de processo são medidos por área/BU. | Métricas de capacitação influenciam roadmap, rede de champions e suporte consultivo. | Métricas de participação, proficiência, adoção, NPS, aplicação prática. |
 
 ## 9. FinOps e sustentabilidade
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| F1 | Custos de IA são rastreados por produto, área, ambiente e modelo? | Dashboards, tags, billing export, showback/chargeback. |
-| F2 | Há budgets, alertas e limites de consumo para workloads de IA? | Budgets, quotas, alertas, políticas de consumo. |
-| F3 | Existe otimização recorrente de modelo, prompt, cache, batching e infraestrutura? | Relatórios de otimização, ADRs, experimentos, savings. |
-| F4 | Custo por interação, por documento, por caso ou por decisão é acompanhado? | Métricas unitárias, baseline, tendência. |
-| F5 | Sustentabilidade é considerada em escolhas de modelo, região, treinamento e inferência? | Critérios arquiteturais, documentação, métricas ambientais quando disponíveis. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| F1 | Custos de IA são rastreados por produto, área, ambiente e modelo? | Custos são visíveis para parte dos workloads. | Custos são alocados por produto/área/modelo e sponsor recebe showback/chargeback ou equivalente. | Custos orientam decisões de escala, arquitetura, modelo, funding e encerramento. | Dashboards, tags, billing export, showback/chargeback. |
+| F2 | Há budgets, alertas e limites de consumo para workloads de IA? | Budgets e alertas existem para ambientes principais. | Budgets, quotas e alertas são aplicados por produto/área/modelo, com owner. | Alertas acionam decisões automáticas ou operacionais, incluindo circuit breaker quando aplicável. | Budgets, quotas, alertas, políticas de consumo. |
+| F3 | Existe otimização recorrente de modelo, prompt, cache, batching e infraestrutura? | Otimizações são feitas em casos pontuais. | Há ciclo recorrente com baseline, experimentos, small model first quando aplicável e savings documentados. | Otimização é contínua, vinculada a qualidade, custo unitário, cache hit ratio e sustentabilidade. | Relatórios de otimização, ADRs, baseline, savings. |
+| F4 | Custo por interação, por documento, por resolução ou por decisão é acompanhado? | Algumas métricas unitárias existem. | Custo unitário é medido por caso/produto e aparece em decisões de portfólio ou board pack. | Custo unitário é otimizado por tendência, valor realizado, qualidade e risco residual. | Cost-per-1k-token, cost-per-resolution, baseline, tendência. |
+| F5 | Sustentabilidade é considerada em escolhas de modelo, região, treinamento e inferência? | Critérios qualitativos existem. | Sustentabilidade é considerada em decisões arquiteturais quando há dados disponíveis. | Métricas ambientais ou proxies são acompanhados e influenciam arquitetura e operação. | Critérios arquiteturais, documentação, métricas ambientais quando disponíveis. |
+
+Nota: nesta versão, F5 é critério de maturidade, mas não gera veto operacional automático.
 
 ## 10. Operação e melhoria contínua
 
-| ID | Pergunta | Evidências esperadas |
-|---|---|---|
-| O1 | Soluções de IA em produção têm owner operacional claro? | Owner, RACI, suporte, escalação. |
-| O2 | Existem SLOs/SLAs e runbooks para aplicações críticas de IA? | SLOs, runbooks, planos de suporte, on-call quando aplicável. |
-| O3 | Incidentes e problemas são analisados com postmortems e ações corretivas? | Postmortems, RCA, backlog de remediação. |
-| O4 | O CoE revisa periodicamente padrões, ferramentas, modelos e riscos emergentes? | Revisões trimestrais, ADRs, changelog de padrões. |
-| O5 | Há processo de melhoria contínua baseado em métricas e feedback dos times? | Pesquisas, métricas de adoção, backlog de melhoria, releases do playbook. |
+| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+|---|---|---|---|---|---|
+| O1 **crítica** | Soluções de IA em produção têm owner operacional claro? | Owners existem para soluções principais. | Toda produção tem owner operacional, suporte, escalação e responsabilidade pós-handoff. | Ownership é auditado, medido por incidentes/SLOs e ajustado por mudanças de produto. | Owner, RACI, suporte, escalação, inventário. |
+| O2 **crítica** | Existem SLOs/SLAs e runbooks para aplicações críticas de IA? | Runbooks existem para aplicações principais. | Produção crítica tem SLO/SLA, runbook, on-call/escalação, fallback e simulação. | SLOs e runbooks são testados, revisados por incidentes e melhorados continuamente. | SLOs, runbooks, planos de suporte, testes. |
+| O3 | Incidentes e problemas são analisados com postmortems e ações corretivas? | Postmortems ocorrem em incidentes relevantes. | Incidentes de IA têm RCA, ações corretivas, owner e prazo. | Tendências de incidentes alimentam padrões, gates, evals e treinamento. | Postmortems, RCA, backlog de remediação. |
+| O4 | O CoE revisa periodicamente padrões, ferramentas, modelos e riscos emergentes? | Revisões ocorrem, mas sem cadência fixa. | Revisão periódica atualiza catálogo, padrões, riscos e exceções. | Revisão usa métricas, incidentes, mudanças regulatórias e evolução tecnológica. | Revisões trimestrais, ADRs, changelog de padrões. |
+| O5 | Há processo de melhoria contínua baseado em métricas e feedback dos times? | Feedback é coletado em alguns canais. | Backlog de melhoria do CoE é priorizado por métricas, feedback e incidentes. | Melhoria contínua mede efeito sobre lead time, adoção, qualidade, risco e custo. | Pesquisas, métricas de adoção, backlog, releases do playbook. |
 

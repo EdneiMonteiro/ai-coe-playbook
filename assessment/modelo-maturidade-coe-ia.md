@@ -2,6 +2,8 @@
 
 Este modelo operacionaliza os quatro níveis descritos no artigo principal. Ele é inspirado em lógica de maturidade tipo CMMI, mas adaptado para CoEs de IA, IA generativa, RAG, agentes, governança, plataforma e LLMOps/MLOps.
 
+O modelo mede maturidade organizacional. Ele não autoriza, sozinho, a entrada de um caso de uso em produção. A decisão go/no-go deve aplicar os gates operacionais definidos em [`criterios-pontuacao.md`](criterios-pontuacao.md), especialmente para produção, produção crítica, exposição externa, dados sensíveis, IA generativa, RAG e agentes.
+
 ## Níveis
 
 | Nível | Nome | Característica dominante | Resultado esperado |
@@ -47,9 +49,9 @@ O assessment deve produzir:
 
 - nível por dimensão;
 - nível geral do CoE;
+- vetos operacionais por caso de uso, quando houver;
 - lacunas críticas;
 - evidências usadas;
 - riscos de maturidade;
 - recomendações de evolução;
 - roadmap 30/60/90 dias.
-
