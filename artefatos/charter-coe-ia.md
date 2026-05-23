@@ -12,7 +12,7 @@ O CoE define padrões, mantém catálogo de modelos e ferramentas, orienta arqui
 
 ## 3. Fora de escopo
 
-O CoE não é dono permanente de produtos de IA, não substitui squads de produto, não opera suporte de primeiro nível e não aprova exceções sem registro de risco.
+O CoE não é dono permanente de produtos de IA, não substitui squads de produto, não opera suporte de primeiro nível, não aprova exceções sem registro de risco e **não negocia ou assina contratos com fornecedores** (Procurement, Jurídico e área demandante conduzem; CoE é consultado para validar adequação técnica e padrões).
 
 ## 4. Princípios de decisão
 
@@ -26,9 +26,20 @@ Padrões antes de escala; build-to-transfer; governança embutida na plataforma;
 - **Segurança, risco e compliance:** definem controles obrigatórios e têm poder de veto em casos de alto risco.
 - **Sponsor executivo:** decide trade-offs de investimento, risco residual e go/no-go executivo quando há impacto material.
 
+**Escalada de conflito:** divergência entre CoE e área de veto (Segurança, Risco, Compliance, Jurídico) sobre classificação ou aprovação deve ser registrada, com posicionamento de cada parte, e escalada ao Sponsor Executivo em prazo definido (sugestão: ≤ 5 dias úteis para Alto, ≤ 2 dias úteis para Crítico). O Sponsor decide go/no-go com base nos dois pareceres e formaliza a decisão no instrumento de aprovação.
+
 ## 6. Métricas de sucesso
 
-Adoção de padrões, tempo até produção, valor por caso de uso, cobertura de evals, incidentes críticos, custo por interação, transições bem-sucedidas para squads e satisfação das áreas consumidoras.
+Cada métrica deve ter unidade, baseline e meta documentadas, revisadas anualmente. Exemplos:
+
+- **Adoção de padrões:** % de casos em produção aderentes aos padrões mínimos (baseline ano 1: > 60%; meta ano 2: > 85%).
+- **Time-to-production:** dias entre registro do caso e go-live em produção (baseline depende do contexto).
+- **Valor por caso de uso:** margem de contribuição ou economia recorrente quando aplicável; OKR de negócio quando não-monetizável.
+- **Cobertura de evals:** % de casos com evals automatizados mínimos rodando em CI/CD.
+- **Incidentes críticos:** contagem absoluta por trimestre + MTTR.
+- **Custo:** custo por interação (LLM) ou custo total por caso/mês.
+- **Build-to-transfer:** % de casos em produção > 12 meses com owner em squad de produto (não no CoE).
+- **Satisfação:** NPS interno do CoE pelas áreas consumidoras (medido semestralmente).
 
 ## 7. Cadência de governança
 
