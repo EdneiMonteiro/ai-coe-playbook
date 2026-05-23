@@ -4,6 +4,8 @@ Este diagrama mostra o ciclo operacional de versionamento, avaliação, regress�
 
 ## Pipeline ponta a ponta
 
+**[Descrição acessível]:** flowchart top-bottom com seis subgrupos coloridos: Ingestão & Data Prep (âmbar) com fontes/lineage/embeddings/golden datasets; Desenvolvimento (azul) com versionamento + hash/snapshot; Avaliação (azul) com evals em golden datasets, métricas e harness integrity; Produção (verde) com deploy canary e SLO; Observabilidade (roxo) com métricas, drift e amostragem; Mecanismos de Segurança (vermelho) com fallback, rollback e kill switch. Dois gates amarelos (G1 release; G2 mudança relevante) interrompem o fluxo. Setas mostram que Ingestão alimenta Dev e golden datasets para Eval; falhas no G1 retornam ao Dev; incidentes em produção disparam SAFE que retroalimenta Dev.
+
 ```mermaid
 flowchart TB
     classDef ingest fill:#9a6700,stroke:#633c01,color:#fff
@@ -73,6 +75,8 @@ flowchart TB
 
 ## Trigger de regressão
 
+**[Descrição acessível]:** flowchart esquerda-direita listando seis gatilhos amarelos (troca de modelo, mudança de prompt, tool schema/allowlist, corpus/chunking/retriever, política de recuperação, guardrail) que convergem em um único nó verde "Regressão obrigatória contra golden datasets versionados". A regressão alimenta um gate "Thresholds atendidos?" — sim libera release; não bloqueia e retorna para iteração.
+
 ```mermaid
 flowchart LR
     classDef trigger fill:#fff8c5,stroke:#9a6700,color:#24292f
@@ -100,6 +104,8 @@ flowchart LR
 ```
 
 ## Estados de uma versão em produção
+
+**[Descrição acessível]:** state diagram mostrando o ciclo de vida de uma versão: Em Desenvolvimento → Em Avaliação → (Rejeitado no Gate ou Em Canary) → Em Produção → Em Investigação → (Em Produção / Rolled Back / Kill Switch Ativado). Kill Switch Ativado é estado terminal. Rolled Back e Rejeitado retornam ao Desenvolvimento.
 
 ```mermaid
 stateDiagram-v2

@@ -4,6 +4,8 @@ Este diagrama mostra a separação obrigatória entre **três regimes de dados**
 
 ## Os três regimes
 
+**[Descrição acessível]:** flowchart top-bottom com quatro subgrupos coloridos representando regimes distintos de dados — Regime 1 Treino/Fine-tuning (azul), Regime 2 Inferência/RAG (verde), Regime 3 Logs de Interação (âmbar) e Regime 4 Feedback/Preferência RLHF/RLAIF (roxo). Cada regime declara finalidade, base legal, conteúdo, retenção e direito de apagamento. Setas pontilhadas em itálico mostram restrições de fluxo: TRAIN nunca compartilha com INFER, INFER nunca compartilha com LOG, LOG nunca alimenta TRAIN sem consentimento explícito, INFER vira FEEDBACK só com opt-in, FEEDBACK alimenta retreino do reward model com base legal própria.
+
 ```mermaid
 flowchart TB
     classDef train fill:#1f6feb,stroke:#0d419d,color:#fff
@@ -41,14 +43,16 @@ flowchart TB
         F4["<b>Controles:</b> opt-in explícito,<br/>opt-out reversível, separação<br/>do regime de logs (3),<br/>auditoria de viés do anotador"]:::feedback
     end
 
-    TRAIN -.->|<i>nunca compartilha</i><br/><i>controle de acesso</i>| INFER
-    INFER -.->|<i>nunca compartilha</i><br/><i>controle de acesso</i>| LOG
-    LOG -.->|<i>nunca alimenta</i><br/><i>treino sem consentimento</i><br/><i>explícito</i>| TRAIN
-    INFER -.->|<i>vira feedback apenas</i><br/><i>com opt-in explícito</i>| FEEDBACK
-    FEEDBACK -.->|<i>alimenta retreino</i><br/><i>do reward model</i><br/><i>com base legal própria</i>| TRAIN
+    TRAIN -.->|*nunca compartilha*<br/>*controle de acesso*| INFER
+    INFER -.->|*nunca compartilha*<br/>*controle de acesso*| LOG
+    LOG -.->|*nunca alimenta*<br/>*treino sem consentimento*<br/>*explícito*| TRAIN
+    INFER -.->|*vira feedback apenas*<br/>*com opt-in explícito*| FEEDBACK
+    FEEDBACK -.->|*alimenta retreino*<br/>*do reward model*<br/>*com base legal própria*| TRAIN
 ```
 
 ## Controles obrigatórios por regime
+
+**[Descrição acessível]:** flowchart esquerda-direita com três subgrupos paralelos (Controles Treino, Inferência/RAG, Logs) listando 4 controles obrigatórios por regime. Os subgrupos não se conectam (operador `~~~`) — indicando que os controles são independentes por regime e não devem ser misturados.
 
 ```mermaid
 flowchart LR
@@ -81,6 +85,8 @@ flowchart LR
 ```
 
 ## Mapa de risco regulatório
+
+**[Descrição acessível]:** flowchart top-down ligando sete dispositivos regulatórios (LGPD Arts. 6, 11, 18, 33; GDPR Arts. 17, 9; EU AI Act Art. 10) — em amarelo — a quatro anti-patterns de risco (PII em RAG sem direito de apagamento; logs com PII sem retenção; sintéticos em eval sem teste de reidentificação; treino com dados pessoais sem base legal) — em vermelho — e finalmente a quatro controles obrigatórios (rebuild de embeddings; mascaramento+retenção+tombstone; proveniência declarada; revisão jurídica) — em verde. As ligações mostram qual dispositivo dispara qual risco e qual controle remedia.
 
 ```mermaid
 flowchart TD

@@ -4,11 +4,14 @@ Este diagrama mostra como a **classificação de risco** (EU AI Act + classifica
 
 ## Mapa EU AI Act → classificação interna
 
+**[Descrição acessível]:** flowchart esquerda-direita mapeando cinco categorias do EU AI Act (Risco inaceitável; Alto risco do Anexo III; Risco limitado Art. 50; Risco mínimo; GPAI Arts. 51-55) — em âmbar — a cinco classificações internas (Proibido em cinza escuro; Crítico em vermelho escuro; Alto em vermelho; Médio em amarelo; Baixo em verde). Setas sólidas indicam mapeamento direto; setas pontilhadas mostram escalonamento condicional (ex.: alto impacto operacional eleva alto risco a crítico; GPAI com risco sistêmico vira crítico).
+
 ```mermaid
 flowchart LR
     classDef eu fill:#9a6700,stroke:#633c01,color:#fff
     classDef int fill:#1f6feb,stroke:#0d419d,color:#fff
-    classDef block fill:#cf222e,stroke:#82071e,color:#fff
+    classDef block fill:#24292f,stroke:#0d1117,color:#fff
+    classDef critical fill:#82071e,stroke:#491111,color:#fff
     classDef high fill:#cf222e,stroke:#82071e,color:#fff
     classDef med fill:#fff8c5,stroke:#9a6700,color:#24292f
     classDef low fill:#1a7f37,stroke:#0a4d20,color:#fff
@@ -20,7 +23,7 @@ flowchart LR
     EU5["<b>GPAI</b><br/>(Arts. 51–55)<br/>modelo de uso geral<br/>integrado ou usado"]:::eu
 
     INT1["<b>Proibido</b>"]:::block
-    INT2["<b>Crítico</b>"]:::high
+    INT2["<b>Crítico</b>"]:::critical
     INT3["<b>Alto</b>"]:::high
     INT4["<b>Médio</b>"]:::med
     INT5["<b>Baixo</b>"]:::low
@@ -36,6 +39,8 @@ flowchart LR
 ```
 
 ## Controles obrigatórios por classificação interna
+
+**[Descrição acessível]:** flowchart top-bottom com cinco subgrupos empilhados — Baixo (verde), Médio (amarelo), Alto (vermelho), Crítico (vermelho escuro), Proibido (cinza escuro). Cada nível adiciona controles aos níveis anteriores (cumulativo): Baixo tem owner, classificação, avaliação básica, aprovação produto+CoE, SLA 5d; Médio adiciona DPIA, transparência, logs, +dados/segurança, SLA 10d; Alto adiciona red teaming, supervisão humana, fallback, +sponsor, SLA 15d; Crítico adiciona comitê de risco, parecer jurídico, FRIA, SLA convocação 5d; Proibido bloqueia decisão imediata D+0 com parecer jurídico do bloqueio. Setas verticais mostram ordem crescente de risco.
 
 ```mermaid
 flowchart TB
@@ -92,6 +97,8 @@ flowchart TB
 ```
 
 ## Gates go/no-go aplicáveis
+
+**[Descrição acessível]:** flowchart top-down mostrando entrada (caso de uso em MVP/produção/expansão) passando por 8 gates sequenciais (G1 classificação; G2 dados/privacidade; G3 FRIA/DPIA; G4 red teaming; G5 IR; G6 evals+regressão; G7 fallback/rollback/kill switch; G8 controles de agentes). Cada gate em amarelo bifurca: "sim ou n/a" segue para o próximo gate; "não" / "aplicável e ausente" direciona para "Veto Operacional Aberto" em vermelho. Sucesso em todos os gates leva a "Aprovado" em verde, com possível ramo para "Aprovado com Restrições" via setas pontilhadas.
 
 ```mermaid
 flowchart TD

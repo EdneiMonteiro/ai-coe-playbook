@@ -4,6 +4,8 @@ Este diagrama mostra o ciclo de vida operacional de um caso de uso de IA dentro 
 
 ## Funil operacional
 
+**[Descrição acessível]:** flowchart top-bottom de funil go/no-go com 4 estágios principais (Intake → PoC → MVP → Produção → Handoff completo) em azul. Entre estágios há quatro gates em amarelo (G1 classificação de risco; G2 FRIA/DPIA; G3 red team/evals/IR; G4 handoff DoD). De cada gate saem dois caminhos vermelhos: "veto aberto" e (quando aplicável) "risco inaceitável → Bloqueado". O fluxo do veto retorna ao G1 após remediação; o handoff completo é estado terminal em roxo.
+
 ```mermaid
 flowchart TB
     classDef stage fill:#1f6feb,stroke:#0d419d,color:#fff
@@ -56,6 +58,8 @@ flowchart TB
 ```
 
 ## Status possíveis em cada gate
+
+**[Descrição acessível]:** state diagram com estado inicial "Em Avaliação" e quatro estados de saída — Aprovado (terminal), Aprovado Com Restrições, Veto Operacional e Bloqueado (terminal). Restrições e vetos voltam ao estado de avaliação após revisão/remediação. Mostra que o gate é dinâmico: maturidade da organização não imuniza casos individuais.
 
 ```mermaid
 stateDiagram-v2

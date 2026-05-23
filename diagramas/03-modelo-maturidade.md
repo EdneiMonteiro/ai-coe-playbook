@@ -4,6 +4,8 @@ Este diagrama mostra a trajetória evolutiva de um CoE de IA em 4 níveis. Cada 
 
 ## Evolução em 4 níveis
 
+**[Descrição acessível]:** flowchart esquerda-direita com quatro estágios em cores progressivas — Nível 1 Reativo (vermelho), Nível 2 Executor (âmbar), Nível 3 Habilitador (azul), Nível 4 Transformador (verde). Cada transição é rotulada com a mudança requerida: "Definir mandato" (N1→N2), "Construir plataforma" (N2→N3), "Habilitar transformação" (N3→N4). A progressão de cor comunica intuitivamente direção de maturidade.
+
 ```mermaid
 flowchart LR
     classDef n1 fill:#cf222e,stroke:#82071e,color:#fff
@@ -25,6 +27,8 @@ flowchart LR
 ```
 
 ## Perfil dominante por dimensão
+
+**[Descrição acessível]:** flowchart top-bottom com quatro subgrupos colados (N1g..N4g) representando perfis dominantes em 4 dimensões — Estratégia, Governança, Plataforma, LLMOps — em cada nível. As cores espelham as do diagrama anterior (vermelho/âmbar/azul/verde). Mostra que cada nível tem um perfil consistente em todas as dimensões dominantes.
 
 ```mermaid
 flowchart TB
@@ -71,6 +75,8 @@ flowchart TB
 ```
 
 ## Sinais de transição entre níveis
+
+**[Descrição acessível]:** flowchart top-down listando sinais de transição em três blocos amarelos (N1→N2, N2→N3, N3→N4) com bullets concretos para cada salto. Um bloco vermelho destaca "Regressão típica" — perdas que tipicamente fazem a organização recuar (padrões sem adoção, casos críticos sem classificação, produção sem IR, sponsor afastado). Setas pontilhadas indicam caminhos de regressão a partir de transições anteriores.
 
 ```mermaid
 flowchart TD

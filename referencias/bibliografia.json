@@ -157,6 +157,7 @@
     "author": [{"literal": "NIST"}],
     "publisher": "National Institute of Standards and Technology",
     "issued": {"date-parts": [[2023]]},
+    "DOI": "10.6028/NIST.AI.100-1",
     "URL": "https://www.nist.gov/itl/ai-risk-management-framework",
     "accessed": {"date-parts": [[2026, 5]]}
   },
@@ -224,7 +225,7 @@
     "page": "2341-2364",
     "issued": {"date-parts": [[2021]]},
     "DOI": "10.3390/jtaer16060129",
-    "URL": "https://api.crossref.org/works/10.3390/jtaer16060129"
+    "URL": "https://doi.org/10.3390/jtaer16060129"
   },
   {
     "id": "kolbjornsrud2024-intelligent",
@@ -234,18 +235,29 @@
     "container-title": "California Management Review",
     "volume": "66",
     "issue": "2",
+    "page": "44-64",
     "issued": {"date-parts": [[2024]]},
+    "DOI": "10.1177/00081256231211020",
     "note": "Versão revisada publicada em CMR 2024; manuscrito promocional disponível desde 2023 (slug 'kolbjornsrud-2023-...' no PDF).",
     "URL": "https://cmr.berkeley.edu/assets/documents/promo/kolbjornsrud-2023-designing-the-intelligent-organization-six-principles-for-human-ai-collaboration.pdf"
   },
   {
     "id": "ribeiro2025-aigovernance",
-    "type": "article",
+    "type": "article-journal",
     "title": "Toward Effective AI Governance: A Review of Principles",
-    "author": [{"family": "Ribeiro", "given": "Danilo Monteiro"}],
+    "author": [
+      {"family": "Ribeiro", "given": "Danilo Monteiro"},
+      {"family": "Rocha", "given": "Thayssa"},
+      {"family": "Pinto", "given": "Gustavo"},
+      {"family": "Cartaxo", "given": "Bruno"},
+      {"family": "Amaral", "given": "Marcelo"},
+      {"family": "Davila", "given": "Nicole"},
+      {"family": "Camargo", "given": "Ana"}
+    ],
     "issued": {"date-parts": [[2025]]},
     "number": "arXiv:2505.23417",
-    "note": "Preprint, not peer-reviewed. arXiv:2505.23417 [cs.SE].",
+    "DOI": "10.48550/arXiv.2505.23417",
+    "note": "Preprint, not peer-reviewed. arXiv:2505.23417 [cs.SE]. Co-autores filiados à Zup Innovation (Brasil).",
     "URL": "https://arxiv.org/pdf/2505.23417"
   }
 ]

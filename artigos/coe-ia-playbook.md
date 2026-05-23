@@ -1083,7 +1083,7 @@ Este template deve ser usado na triagem inicial de casos de uso e atualizado ant
 
 22. **Curry, E. et al.** *A Best Practice Framework for Centres of Excellence in Big Data and Artificial Intelligence.* In: **The Elements of Big Data Value**, Springer, 2021, pp. 203–218. DOI: [10.1007/978-3-030-68176-0_8](https://doi.org/10.1007/978-3-030-68176-0_8).
 
-23. **Rudko, I.; Bonab, A. B.; Bellini, F.** *Organizational Structure and Artificial Intelligence: Modeling the Intraorganizational Response to the AI Contingency.* Journal of Theoretical and Applied Electronic Commerce Research, 2021, 16(6), 2341–2364. DOI: 10.3390/jtaer16060129. Metadados: [Crossref](https://api.crossref.org/works/10.3390/jtaer16060129).
+23. **Rudko, I.; Bonab, A. B.; Bellini, F.** *Organizational Structure and Artificial Intelligence: Modeling the Intraorganizational Response to the AI Contingency.* Journal of Theoretical and Applied Electronic Commerce Research, 2021, 16(6), 2341–2364. DOI: [10.3390/jtaer16060129](https://doi.org/10.3390/jtaer16060129).
 
 24. **Kolbjørnsrud, V.** *Designing the Intelligent Organization: Six Principles for Human-AI Collaboration.* California Management Review, 2024. Disponível em: [cmr.berkeley.edu](https://cmr.berkeley.edu/assets/documents/promo/kolbjornsrud-2023-designing-the-intelligent-organization-six-principles-for-human-ai-collaboration.pdf).
 

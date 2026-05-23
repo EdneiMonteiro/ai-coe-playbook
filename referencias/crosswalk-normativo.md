@@ -8,19 +8,19 @@ Este crosswalk é um mapeamento heurístico entre os principais frameworks e reg
 
 | Tema de governança | NIST AI RMF (função/subcategoria) | ISO/IEC 42001:2023 — Anexo A | EU AI Act — artigos principais | LGPD / GDPR — base correspondente | Nível de cobertura |
 |---|---|---|---|---|---|
-| Política, governança e mandato | Govern 1.1, 1.2, 1.4; Govern 2.1, 2.2 | A.2 Políticas relacionadas à IA; A.3 Funções e responsabilidades; A.4 Recursos para sistemas de IA | Arts. 17, 26 (deveres do deployer) | LGPD Arts. 50, 41 (DPO/agentes); GDPR Arts. 24, 37 | Plena |
+| Política, governança e mandato | Govern 1.1, 1.2, 1.4; Govern 2.1, 2.2 | A.2 Políticas relacionadas à IA; A.3 Funções e responsabilidades; A.4 Recursos para sistemas de IA | Art. 17 (provider — QMS, alto risco); Art. 26 (deployer) | LGPD Arts. 50, 41 (DPO/agentes); GDPR Arts. 24, 37 | Plena |
 | Inventário de sistemas e classificação de risco | Map 1.1, 1.2, 1.3; Map 5.1, 5.2 | A.5 Avaliação de impacto de sistemas de IA; A.6.1 Ciclo de vida de sistemas de IA | Arts. 6, 9 (alto risco); Anexo III | LGPD Arts. 38, 11; GDPR Art. 35 (DPIA) | Plena |
 | Gestão de risco e controles | Manage 1, 2, 3, 4 | A.5 Avaliação de impacto e tratamento de risco; A.6.2 Controles ao longo do ciclo de vida | Arts. 9, 15, 26, 27 | LGPD Art. 5(XVII), 50; GDPR Art. 32 | Plena |
 | Dados e qualidade | Map 2.3; Measure 2.10; Manage 3 | A.7 Dados para sistemas de IA (data for AI systems) | Arts. 10 (data governance), 15 | LGPD Arts. 6 (princípios), 11 (sensíveis), 18 (direitos); GDPR Arts. 5, 9, 15–22 | Plena |
 | Transparência e documentação | Govern 1.4; Map 4.1, 4.2; Measure 3 | A.6.2.3 Documentação técnica de sistemas de IA; A.8 Informação para partes interessadas | Arts. 11, 13, 50, 53 (GPAI) | LGPD Arts. 9, 20 (revisão de decisão); GDPR Arts. 13, 14, 22 | Plena |
 | Avaliação, evals e testes | Measure 1, 2, 3, 4 | A.6.2.4 Verificação e validação | Arts. 9, 15 (acurácia, robustez) | LGPD Art. 38; GDPR Art. 35 | Plena |
 | AI red teaming e segurança | Measure 2.6, 2.7; Manage 4.1 | A.6.2.6 Operação e monitoramento (operação adversarial e robustez) | Arts. 9, 15 (resiliência); Art. 55 (GPAI risco sistêmico) | LGPD Art. 46; GDPR Art. 32 | Parcial |
-| Monitoramento e incidente | Manage 4.2, 4.3 | A.6.2.6 Operação e monitoramento (verificar texto oficial para A.6.2.7) | Arts. 16, 26, 73 (reporte de incidente sério) | LGPD Art. 48; GDPR Art. 33 | Parcial |
+| Monitoramento e incidente | Manage 4.2, 4.3 | A.6.2.6 Operação e monitoramento; A.6.2.7 Documentação técnica do sistema de IA (per ISMS.online, watchdog security; bastion.tech registra "Retirement" — recomenda-se verificação contra texto oficial ISO antes de uso em auditoria credenciada) | Arts. 16, 26, 73 (reporte de incidente sério) | LGPD Art. 48; GDPR Art. 33 | Parcial |
 | Direitos do titular e supervisão humana | Govern 5.2; Map 3.5; Measure 2.8 | A.5 Avaliação de impacto; A.6.2.4 V&V; A.8 Informação para partes interessadas | Arts. 14 (supervisão humana), 26, 27, 86 | LGPD Arts. 18, 20; GDPR Arts. 15–22 | Plena |
 | Transferência internacional e fornecedor | Govern 6; Map 4.1 | A.10 Fornecedores e relações com terceiros | Arts. 25 (provedor), 26 (deployer), 53 (GPAI) | LGPD Arts. 33–36; GDPR Cap. V (Arts. 44–50) | Plena |
 | Modelo de uso geral (GPAI) | Map 1.1; Govern 1.4 | n/a direto; A.6.2 controles aplicáveis | Arts. 51–55 (GPAI), Anexo XI/XII | n/a direto; aplicam-se Art. 5 GDPR / Art. 6 LGPD para uso pessoal | Tangencial |
 
-> **Nota de verificação ISO/IEC 42001:2023.** As referências ao Anexo A acima foram revisadas contra fontes públicas Tier 2 (bastion.tech, kimova.ai, watchdog security) durante a auditoria da rev-01 do comitê de diagramas e referências. Cinco entradas foram corrigidas em relação à versão anterior do crosswalk (notadamente A.6.2.4 V&V, A.6.2.6 Operação e monitoramento, A.7 Dados para IA, A.8 Informação para partes interessadas). Há divergência entre fontes secundárias sobre o objeto exato do controle A.6.2.7 — recomenda-se cruzar contra o texto oficial da norma ISO/IEC 42001:2023 antes de uso em auditoria credenciada.
+> **Nota de verificação ISO/IEC 42001:2023.** As referências ao Anexo A acima foram revisadas contra fontes públicas Tier 2 (ISMS.online, bastion.tech, kimova.ai, watchdog security) durante as auditorias da rev-01 e rev-02 do comitê de diagramas e referências. Cinco entradas foram corrigidas em relação à versão anterior do crosswalk (notadamente A.6.2.4 V&V, A.6.2.6 Operação e monitoramento, A.7 Dados para IA, A.8 Informação para partes interessadas). Após divergência entre fontes secundárias, A.6.2.7 foi padronizado como "Documentação técnica do sistema de IA" com base na fonte Tier 2 dedicada à ISO 42001 (ISMS.online); recomenda-se cruzar contra o texto oficial da norma ISO/IEC 42001:2023 antes de uso em auditoria credenciada.
 
 **Coluna "Nível de cobertura":** indica quão completamente o tema é coberto pela coluna ISO/EU AI Act mais próxima. `Plena` = controle/artigo trata explicitamente o tema; `Parcial` = trata o tema mas exige composição com outro controle ou parecer setorial; `Tangencial` = aplicável por extensão, não como obrigação direta; `Não cobre` = ausência declarada (não usado nesta versão).
 
@@ -33,6 +33,7 @@ Referências evolutivas usadas como linha de base:
 | NIST AI RMF | 1.0 + AI 600-1 (GenAI Profile) | 2023 / 2024 | RMF base + Generative AI Profile como complemento. |
 | ISO/IEC 42001 | 2023 | 2023-12-18 | AIMS — Artificial Intelligence Management System. |
 | EU AI Act | Regulamento 2024/1689 | em vigor desde 02/02/2025 (Cap. I/II); GPAI desde 02/08/2025; Anexo III desde 02/08/2026 | Faseamento por capítulo. |
+| GPAI Code of Practice | Final (10/07/2025) | Aplicável desde 02/08/2025 | Mecanismo voluntário do EU AI Office para operacionalizar Arts. 53 e 55. Signatários presumem conformidade; não-signatários devem provar conformidade diretamente. |
 | LGPD | Lei 13.709/2018 (com Lei 13.853/2019) | vigente | Art. 20 redação atualizada por Lei 13.853/2019. |
 | GDPR | Reg. (UE) 2016/679 | vigente desde 25/05/2018 | — |
 | OWASP LLM Top 10 | v2.0 | 2024-11-18 | Linha de base de segurança aplicada a LLMs. |
@@ -47,6 +48,7 @@ Este crosswalk deve ser reavaliado a cada release major dessas referências.
 | Obrigações do provider | Art. 53 | Documentação técnica, sumário de dados de treino, política de copyright, transparência. |
 | GPAI com risco sistêmico | Art. 55 | Avaliação adversarial, red teaming, reporte de incidentes, cibersegurança. |
 | Obrigações de deployer | Art. 26 + Art. 50 (transparência) | Quem usa GPAI em produção tem deveres mesmo sem ser o provider. |
+| GPAI Code of Practice | Mecanismo voluntário ligado a Arts. 53 e 55 | Publicado pelo EU AI Office em 10/07/2025; aplicável desde 02/08/2025. Signatários presumem conformidade com obrigações dos Arts. 53 e 55; não-signatários precisam comprovar conformidade por outras vias. |
 
 ## Anexo BR — nota setorial para holdings reguladas no Brasil
 

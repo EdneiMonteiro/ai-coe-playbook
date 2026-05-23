@@ -4,6 +4,8 @@ Este diagrama mostra a **plataforma comum** que o CoE de IA mantém: landing zon
 
 ## Camadas da plataforma
 
+**[Descrição acessível]:** flowchart top-bottom em 5 camadas empilhadas. (1) Consumo (verde) com apps das BUs. (2) Governança (vermelho) com policy-as-code, RBAC, red teaming. (3) Plataforma de IA (azul) com 7 capacidades: catálogo de modelos, model registry (MLflow/HF/AzureML), templates IaC, suite de evals, observabilidade, FinOps e guardrails. (4) Fundação (âmbar) com ambientes, rede/secrets/identidade e CI/CD/IaC. (5) Dados (roxo) com catálogo, vector DB e logs. Setas mostram dependência descendente (consumo → governança → plataforma → fundação/dados) e bidirecional entre fundação e dados.
+
 ```mermaid
 flowchart TB
     classDef consumer fill:#1a7f37,stroke:#0a4d20,color:#fff
@@ -59,6 +61,8 @@ flowchart TB
 ```
 
 ## Capacidades por camada
+
+**[Descrição acessível]:** flowchart esquerda-direita com quatro subgrupos (Governança, Plataforma, Fundação, Dados) listando capacidades específicas de cada camada (4 capacidades por camada). Setas mostram que Governança alimenta Plataforma, que alimenta Fundação e Dados em paralelo. Lista compacta usada para checklist de cobertura quando se monta plataforma corporativa de IA.
 
 ```mermaid
 flowchart LR

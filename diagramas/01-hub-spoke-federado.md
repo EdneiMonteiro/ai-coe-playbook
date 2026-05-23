@@ -4,6 +4,8 @@ Este diagrama mostra a essência do modelo operacional de um CoE de IA: um **hub
 
 ## Hub-and-spoke conceitual
 
+**[Descrição acessível]:** flowchart top-bottom mostrando um nó central "CoE de IA — Hub" (azul) com setas saindo para quatro spokes em cinza (Produto/Negócio; Plataforma/Cloud; Dados; Squads de domínio) e setas pontilhadas de feedback retornando dos spokes para o hub. À direita do hub há um nó em amarelo "Segurança, Risco, Compliance, DPO" conectado bidirecionalmente ao hub.
+
 ```mermaid
 flowchart TB
     classDef hub fill:#1f6feb,stroke:#0d419d,color:#fff,stroke-width:2px
@@ -31,6 +33,8 @@ flowchart TB
 ```
 
 ## Direitos de decisão no modelo federado
+
+**[Descrição acessível]:** flowchart esquerda-direita mostrando cinco atores coloridos — CoE de IA (azul), Produto/Negócio (verde), Plataforma/Cloud (âmbar), Segurança/Risco/Compliance (vermelho) e Sponsor Executivo (roxo) — cada um listando suas decisões próprias. Setas sólidas indicam relações de operação ("dentro dos padrões", "operação técnica") entre CoE/Produto/Plataforma; setas pontilhadas mostram veto e caminhos de escalada de Risco/Produto/CoE para o Sponsor.
 
 ```mermaid
 flowchart LR
