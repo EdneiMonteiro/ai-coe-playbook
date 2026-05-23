@@ -97,7 +97,7 @@
 
 ## 8. Matriz de rastreabilidade pergunta-evidência-nota
 
-Em modo diagnóstico interno, as colunas normativas podem ser preenchidas apenas quando relevantes. Em modo auditoria/investimento, uso externo, regulado, funding, due diligence ou M&A, a matriz normativa é obrigatória para perguntas críticas, gates go/no-go e lacunas materiais. A coluna **GPAI Arts. 51–55** é obrigatória quando a organização avaliada usa modelo classificado como GPAI sob o EU AI Act; pode ficar como `n/a` em demais casos. Para crosswalk consolidado entre NIST AI RMF, ISO/IEC 42001, EU AI Act e LGPD, consulte o Anexo C.
+Em modo diagnóstico interno, as colunas normativas podem ser preenchidas apenas quando relevantes. Em modo auditoria/investimento, uso externo, regulado, funding, due diligence ou M&A, a matriz normativa é obrigatória para perguntas críticas, gates go/no-go e lacunas materiais. A coluna **GPAI Arts. 51–55** é obrigatória quando a organização avaliada usa modelo classificado como GPAI sob o EU AI Act; pode ficar como `n/a` em demais casos. Para crosswalk consolidado entre NIST AI RMF, ISO/IEC 42001, EU AI Act e LGPD, consulte o [crosswalk normativo em `referencias/`](../referencias/crosswalk-normativo.md).
 
 | ID | Pergunta resumida | Evidência observada | Evidência negativa | Nota | Confiança | Avaliador | Decisão go/no-go | NIST AI RMF | ISO/IEC 42001 Anexo A | EU AI Act artigo | GPAI Arts. 51–55 | LGPD/GDPR | Tipo de exigência | Owner regulatório | Periodicidade | Ressalvas | Ação recomendada |
 |---|---|---|---|---:|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -213,37 +213,8 @@ Em **modo auditoria/investimento**, a aprovação dos pesos deve ser feita por *
 
 ## Anexo C — Crosswalk normativo NIST AI RMF × ISO/IEC 42001 × EU AI Act × LGPD/GDPR
 
-Este crosswalk é um mapeamento heurístico derivado de fontes públicas (NIST AI RMF Crosswalks, ISO/IEC 42001 Anexo A, texto consolidado do EU AI Act, LGPD e GDPR) e organizado por **tema de governança**, não por enumeração 1-para-1. Use-o para preencher de forma consistente a matriz §8 e para localizar lacunas de cobertura entre frameworks. Não substitui parecer jurídico nem auditoria credenciada.
+O crosswalk normativo foi extraído para vida própria em [`../referencias/crosswalk-normativo.md`](../referencias/crosswalk-normativo.md), permitindo reutilização entre o assessment e o artigo principal sem duplicação.
 
-| Tema de governança | NIST AI RMF (função/subcategoria) | ISO/IEC 42001 — Anexo A | EU AI Act — artigos principais | LGPD / GDPR — base correspondente |
-|---|---|---|---|---|
-| Política, governança e mandato | Govern 1.1, 1.2, 1.4; Govern 2.1, 2.2 | A.2 Políticas; A.3 Estrutura interna; A.4 Recursos | Arts. 17, 26 (deveres do deployer) | LGPD Arts. 50, 41 (DPO/agentes); GDPR Arts. 24, 37 |
-| Inventário de sistemas e classificação de risco | Map 1.1, 1.2, 1.3; Map 5.1, 5.2 | A.5.2 Avaliação de impacto; A.6.1 Ciclo de vida | Arts. 6, 9 (alto risco); Anexo III | LGPD Arts. 38, 11; GDPR Art. 35 (DPIA) |
-| Gestão de risco e controles | Manage 1, 2, 3, 4 | A.5.3 Tratamento de risco; A.6.2 Controles técnicos | Arts. 9, 15, 26, 27 | LGPD Art. 5(XVII), 50; GDPR Art. 32 |
-| Dados e qualidade | Map 2.3; Measure 2.10; Manage 3 | A.7 Recursos para sistemas de IA; A.8 Dados para IA | Arts. 10 (data governance), 15 | LGPD Arts. 6 (princípios), 11 (sensíveis), 18 (direitos); GDPR Arts. 5, 9, 15–22 |
-| Transparência e documentação | Govern 1.4; Map 4.1, 4.2; Measure 3 | A.6.2.3 Documentação técnica; A.6.2.4 Informação ao usuário | Arts. 11, 13, 50, 53 (GPAI) | LGPD Arts. 9, 20 (revisão de decisão); GDPR Arts. 13, 14, 22 |
-| Avaliação, evals e testes | Measure 1, 2, 3, 4 | A.6.2.5 Verificação e validação | Arts. 9, 15 (acurácia, robustez) | LGPD Art. 38; GDPR Art. 35 |
-| AI red teaming e segurança | Measure 2.6, 2.7; Manage 4.1 | A.6.2.6 Segurança de sistemas de IA | Arts. 9, 15 (resiliência); Art. 55 (GPAI risco sistêmico) | LGPD Art. 46; GDPR Art. 32 |
-| Monitoramento e incidente | Manage 4.2, 4.3 | A.6.2.7 Monitoramento; A.6.2.8 Reporte | Arts. 16, 26, 73 (reporte de incidente sério) | LGPD Art. 48; GDPR Art. 33 |
-| Direitos do titular e supervisão humana | Govern 5.2; Map 3.5; Measure 2.8 | A.5.2; A.6.2.4 | Arts. 14 (supervisão humana), 26, 27, 86 | LGPD Arts. 18, 20; GDPR Arts. 15–22 |
-| Transferência internacional e fornecedor | Govern 6; Map 4.1 | A.4 Recursos; A.10 Fornecedores | Arts. 25 (provedor), 26 (deployer), 53 (GPAI) | LGPD Arts. 33–36; GDPR Cap. V (Arts. 44–50) |
-| Modelo de uso geral (GPAI) | Map 1.1; Govern 1.4 | n/a direto; A.6.2 documentação | Arts. 51–55 (GPAI), Anexo XI/XII | n/a direto; aplicam-se Art. 5 GDPR / Art. 6 LGPD para uso pessoal |
+Use o crosswalk consolidado como referência canônica para preencher as colunas normativas da matriz §8 (NIST AI RMF, ISO/IEC 42001 Anexo A, EU AI Act, GPAI Arts. 51–55, LGPD/GDPR), bem como o anexo setorial brasileiro e os instrumentos de transferência internacional de dados.
 
-Observações:
-
-- A correspondência é aproximada e exige verificação para cada implementação. Mudanças regulatórias (faseamento do EU AI Act, atualizações ISO, novas opiniões EDPB/ANPD) podem alterar o mapeamento.
-- **Versionamento normativo.** Referências evolutivas: OWASP Top 10 for LLM Applications v2.0 (2025) como linha de base de segurança aplicada; ISO/IEC 42001:2023 como linha de base do AIMS; NIST AI RMF 1.0 + NIST AI 600-1 (GenAI Profile, 2024) como linha de base de gestão de risco. Este crosswalk deve ser reavaliado a cada release major dessas referências.
-- Para uso externo, regulado, due diligence ou apresentação a regulador, complemente este crosswalk com parecer jurídico setorial.
-
-### Anexo C-BR — nota setorial para holdings reguladas no Brasil
-
-Para organizações sob regulação setorial brasileira, mapear cada controle do crosswalk acima ao respectivo dispositivo setorial aplicável. Esta nota é heurística; aplicação específica exige parecer setorial:
-
-| Setor | Regulador / norma principal | Mapeamento típico no assessment |
-|---|---|---|
-| Financeiro (bancos e cooperativas) | CMN Res. 4.893/2021 (segurança cibernética — bancos e cooperativas); CMN Res. 4.557/2017 (risco operacional) | Reforçar Governança e risco, Operação e melhoria contínua, Plataforma e arquitetura; gates de incidente integrados ao reporte BACEN. |
-| Financeiro (instituições de pagamento e demais autorizadas pelo BCB) | BCB Res. 85/2021 (segurança cibernética — substitui a antiga BACEN Res. 4.658/2018, revogada em 01/07/2023, no escopo das IPs e demais entidades reguladas pelo BCB) | Reforçar Governança e risco, Operação e melhoria contínua, Plataforma e arquitetura; gates de incidente integrados ao reporte BCB. |
-| Mercado de capitais | CVM Res. 35/2021 (gestão de riscos e controles internos) | Reforçar Governança e risco e Portfólio e valor; documentação técnica alinhada ao reporte CVM. |
-| Saúde suplementar | ANS RN 518/2022 (controles internos, gestão de riscos e governança em operadoras de saúde suplementar — revogou RN 443/2019) | Reforçar Dados e conhecimento (dados sensíveis de saúde), Governança e risco e Operação e melhoria contínua; FRIA/DPIA obrigatória em casos de alto risco. |
-| Setor elétrico, telecom, água | ANEEL, ANATEL, agências setoriais | Reforçar Operação e melhoria contínua (resiliência, continuidade) e Plataforma e arquitetura (infraestrutura crítica). |
-| Saúde / dispositivos médicos | ANVISA | Reforçar Dados e conhecimento, Governança e risco e LLMOps/MLOps (rastreabilidade clínica e pós-mercado). |
+> Antes de usar para auditoria/investimento, confirme que o crosswalk foi reavaliado contra a última versão das normas de referência (ver seção "Versionamento normativo" do arquivo).
