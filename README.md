@@ -42,8 +42,8 @@ Este repositório começou com o artigo **Centro de Excelência em Inteligência
 
 ### Referências e bibliografia
 
-- [`referencias/bibliografia.bib`](referencias/bibliografia.bib) — 25 referências em BibTeX (LaTeX/Pandoc/Overleaf)
-- [`referencias/bibliografia.json`](referencias/bibliografia.json) — 25 referências em CSL-JSON (Zotero/Mendeley)
+- [`referencias/bibliografia.bib`](referencias/bibliografia.bib) — 32 entradas em BibTeX (25 referências numeradas do artigo principal + 7 instrumentos normativos citados no crosswalk e diagramas: NIST SP 800-61 Rev. 3, GPAI Code of Practice, OWASP LLM Top 10 v2.0, LGPD, GDPR, ANPD Res. 15/2024, ANPD Res. 19/2024). Para LaTeX/Pandoc/Overleaf.
+- [`referencias/bibliografia.json`](referencias/bibliografia.json) — mesmas 32 entradas em CSL-JSON (Zotero/Mendeley).
 - [`referencias/crosswalk-normativo.md`](referencias/crosswalk-normativo.md) — crosswalk NIST × ISO × EU AI Act × LGPD/GDPR + GPAI + anexo setorial BR
 - [`referencias/matriz-fonte-secao.md`](referencias/matriz-fonte-secao.md) — fonte × seção × recomendação + risco editorial
 - [`referencias/auditoria-referencias.md`](referencias/auditoria-referencias.md) — memória operacional (removidas, correções, política de URLs)

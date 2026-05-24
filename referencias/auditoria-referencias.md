@@ -61,7 +61,7 @@ Nem toda menção normativa em `referencias/crosswalk-normativo.md` exige entrad
 
 ## Política de verificação de URLs
 
-Para o conjunto de **25 referências** atualmente publicadas no artigo principal (`artigos/coe-ia-playbook.md`):
+Para o conjunto de **32 entradas bibliográficas** (25 referências numeradas do artigo principal `artigos/coe-ia-playbook.md` mais 7 instrumentos normativos citados em `crosswalk-normativo.md` e nos diagramas, adicionados ao longo do ciclo de revisão do comitê de diagramas e referências):
 
 - **Frequência:** verificar todas as URLs antes de cada release major do playbook.
 - **Escopo:** status HTTP, presença do título esperado, ausência de redirecionamento para página de erro/login.

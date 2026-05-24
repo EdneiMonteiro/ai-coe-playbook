@@ -6,8 +6,8 @@ Conteúdo operacional sobre as referências do AI CoE Playbook. A bibliografia n
 
 ### Bibliografia citável
 
-- [`bibliografia.bib`](bibliografia.bib) — Exportação **BibTeX** das 25 referências do artigo principal. Para LaTeX, Pandoc, Overleaf.
-- [`bibliografia.json`](bibliografia.json) — Exportação **CSL-JSON** das mesmas 25 referências. Para Zotero, Mendeley e qualquer ferramenta CSL-aware.
+- [`bibliografia.bib`](bibliografia.bib) — Exportação **BibTeX** com 32 entradas: as 25 referências numeradas do artigo principal mais 7 instrumentos normativos citados em `crosswalk-normativo.md` e nos diagramas (NIST SP 800-61 Rev. 3, GPAI Code of Practice, OWASP LLM Top 10 v2.0, LGPD, GDPR, ANPD Res. 15/2024, ANPD Res. 19/2024). Para LaTeX, Pandoc, Overleaf.
+- [`bibliografia.json`](bibliografia.json) — Exportação **CSL-JSON** com as mesmas 32 entradas. Para Zotero, Mendeley e qualquer ferramenta CSL-aware.
 
 ### Operacional
 

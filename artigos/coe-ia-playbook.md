@@ -1066,7 +1066,7 @@ Este template deve ser usado na triagem inicial de casos de uso e atualizado ant
 
 24. **Kolbjørnsrud, V.** *Designing the Intelligent Organization: Six Principles for Human-AI Collaboration.* California Management Review, 2024. Disponível em: [cmr.berkeley.edu](https://cmr.berkeley.edu/assets/documents/promo/kolbjornsrud-2023-designing-the-intelligent-organization-six-principles-for-human-ai-collaboration.pdf).
 
-25. **Toward Effective AI Governance: A Review of Principles.** IEEE/ACM, 2025. arXiv:2505.23417. Disponível em: [arxiv.org/pdf/2505.23417](https://arxiv.org/pdf/2505.23417).
+25. **Ribeiro, D. M.; Rocha, T.; Pinto, G.; Cartaxo, B.; Amaral, M.; Davila, N.; Camargo, A.** *Toward Effective AI Governance: A Review of Principles.* Preprint, arXiv:2505.23417 [cs.SE], 2025 (não revisado por pares; co-autores filiados à Zup Innovation, Brasil). DOI: [10.48550/arXiv.2505.23417](https://doi.org/10.48550/arXiv.2505.23417). Disponível em: [arxiv.org/pdf/2505.23417](https://arxiv.org/pdf/2505.23417).
 
 ---
 
