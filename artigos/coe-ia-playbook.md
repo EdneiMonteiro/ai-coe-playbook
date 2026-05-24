@@ -137,25 +137,19 @@ As fontes analisadas de operating model, especialmente Microsoft CAF e literatur
 
 **Figura 1 — Modelo conceitual hub-and-spoke para CoE de IA**
 
-```
-                    ┌──────────────┐
-                    │   Hub (CoE)  │
-                    │              │
-                    │  Padrões     │
-                    │  Governança  │
-                    │  Plataforma  │
-                    │  Capacitação │
-                    └──────┬───────┘
-                           │
-            ┌──────────────┼──────────────┐
-            │              │              │
-     ┌──────▼──────┐ ┌────▼──────┐ ┌─────▼─────┐
-     │  Spoke      │ │  Spoke    │ │  Spoke    │
-     │  Financeiro │ │  RH       │ │  Operações│
-     │             │ │           │ │           │
-     │  Champion   │ │  Champion │ │  Champion │
-     │  + Squad    │ │  + Squad  │ │  + Squad  │
-     └─────────────┘ └───────────┘ └───────────┘
+```mermaid
+flowchart TB
+    classDef hub fill:#ddf4ff,stroke:#0969da,color:#24292f,stroke-width:2px
+    classDef spoke fill:#ffffff,stroke:#57606a,color:#24292f,stroke-width:2px
+
+    HUB["<b>Hub (CoE)</b><br/>Padrões<br/>Governança<br/>Plataforma<br/>Capacitação"]:::hub
+    FIN["<b>Spoke</b><br/>Financeiro<br/><br/>Champion + Squad"]:::spoke
+    RH["<b>Spoke</b><br/>RH<br/><br/>Champion + Squad"]:::spoke
+    OPS["<b>Spoke</b><br/>Operações<br/><br/>Champion + Squad"]:::spoke
+
+    HUB --> FIN
+    HUB --> RH
+    HUB --> OPS
 ```
 
 ---
@@ -198,22 +192,19 @@ Em termos práticos, este modelo separa capacidades comuns — políticas, padr�
 
 **Figura 2 — Responsabilidades no modelo federado/híbrido**
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   MODELO FEDERADO / HÍBRIDO                 │
-│                                                             │
-│   CoE de IA (Hub)               Squads de Produto (Spokes) │
-│   ┌──────────────┐              ┌──────────────────┐       │
-│   │ Padrões      │─────────────▶│                  │       │
-│   │ Governança   │  Habilitação │  Desenvolvimento │       │
-│   │ Plataforma   │─────────────▶│  Sustentação     │       │
-│   │ Capacitação  │  Transição   │  Operação        │       │
-│   │ PoC/MVP      │─────────────▶│  Evolução        │       │
-│   │              │              │                  │       │
-│   │              │◀ ─ ─ ─ ─ ─ ─│  Feedback        │       │
-│   └──────────────┘  Governança  └──────────────────┘       │
-│                     (contínua)                              │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart LR
+    classDef hub fill:#ddf4ff,stroke:#0969da,color:#24292f,stroke-width:2px
+    classDef spoke fill:#ffffff,stroke:#57606a,color:#24292f,stroke-width:2px
+
+    subgraph MODEL["Modelo federado / híbrido"]
+        COE["<b>CoE de IA (Hub)</b><br/>Padrões<br/>Governança<br/>Plataforma<br/>Capacitação<br/>PoC/MVP"]:::hub
+        SQUADS["<b>Squads de produto (Spokes)</b><br/>Desenvolvimento<br/>Sustentação<br/>Operação<br/>Evolução"]:::spoke
+        COE -->|"Habilitação"| SQUADS
+        COE -->|"Transição"| SQUADS
+        COE -->|"Handoff"| SQUADS
+        SQUADS -. "Feedback / governança contínua" .-> COE
+    end
 ```
 
 ### 4.4. A evolução natural: do executor ao modelo consultivo
@@ -422,31 +413,23 @@ O modelo recomendado é uma plataforma governada, com políticas e padrões cent
 
 **Figura 3 — Plataforma corporativa de IA com governança central e execução distribuída**
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                 PLATAFORMA CORPORATIVA DE IA                     │
-│                                                                  │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │ Governança e padrões                                      │  │
-│  │ Políticas | Risco | Segurança | Dados | FinOps | Catálogo │  │
-│  └──────────────────────────┬─────────────────────────────────┘  │
-│                             │                                    │
-│  ┌──────────────────────────▼─────────────────────────────────┐  │
-│  │ Camada de plataforma                                      │  │
-│  │ IaC | CI/CD | Observabilidade | IAM | APIs | Templates    │  │
-│  └──────────────────────────┬─────────────────────────────────┘  │
-│                             │                                    │
-│          ┌──────────────────┼──────────────────┐                │
-│          ▼                  ▼                  ▼                │
-│  ┌──────────────┐   ┌──────────────┐   ┌──────────────┐        │
-│  │ Produto A    │   │ Produto B    │   │ Produto C    │        │
-│  │ RAG          │   │ Copilot      │   │ ML/Analytics │        │
-│  │ Dados        │   │ APIs         │   │ Modelos      │        │
-│  │ App          │   │ App          │   │ Pipelines    │        │
-│  └──────────────┘   └──────────────┘   └──────────────┘        │
-│                                                                  │
-│  Times executam com autonomia dentro de controles comuns.         │
-└──────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    classDef layer fill:#ffffff,stroke:#57606a,color:#24292f,stroke-width:2px
+    classDef product fill:#f6f8fa,stroke:#57606a,color:#24292f,stroke-width:2px
+
+    subgraph PLATFORM["Plataforma corporativa de IA"]
+        GOV["<b>Governança e padrões</b><br/>Políticas · Risco · Segurança · Dados · FinOps · Catálogo"]:::layer
+        BASE["<b>Camada de plataforma</b><br/>IaC · CI/CD · Observabilidade · IAM · APIs · Templates"]:::layer
+        A["<b>Produto A</b><br/>RAG · Dados · App"]:::product
+        B["<b>Produto B</b><br/>Copilot · APIs · App"]:::product
+        C["<b>Produto C</b><br/>ML/Analytics · Modelos · Pipelines"]:::product
+
+        GOV --> BASE
+        BASE --> A
+        BASE --> B
+        BASE --> C
+    end
 ```
 
 ### 6.3. O que deve ser comum
@@ -503,14 +486,17 @@ O Microsoft CAF (2025) recomenda que o CoE implemente **fluxos estruturados de t
 
 **Figura 4 — Ciclo de vida de uma iniciativa de IA no CoE**
 
-```
- ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐
- │          │   │          │   │          │   │          │   │          │
- │Triagem & │──▶│   PoC    │──▶│   MVP    │──▶│Transição │──▶│ Operação │
- │Prioriz.  │   │          │   │          │   │          │   │          │
- └──────────┘   └──────────┘   └──────────┘   └──────────┘   └──────────┘
-  CoE + Neg.     CoE            CoE            CoE → Squad    Squad
-  (Steering)                                   (handoff)      + CoE Gov.
+```mermaid
+flowchart LR
+    classDef phase fill:#ffffff,stroke:#57606a,color:#24292f,stroke-width:2px
+
+    A["<b>Triagem e priorização</b><br/>CoE + negócio<br/>(steering)"]:::phase
+    B["<b>PoC</b><br/>CoE"]:::phase
+    C["<b>MVP</b><br/>CoE"]:::phase
+    D["<b>Transição</b><br/>CoE → squad<br/>(handoff)"]:::phase
+    E["<b>Operação</b><br/>Squad<br/>+ CoE Gov."]:::phase
+
+    A --> B --> C --> D --> E
 ```
 
 ### 7.2. Detalhamento
@@ -720,23 +706,16 @@ Um CoE de IA evolui ao longo do tempo. Este modelo sintetiza frameworks de matur
 
 **Figura 5 — Evolução de maturidade do CoE de IA**
 
-```
-  Maturidade
-      ▲
-      │
-  N4  │  ★ Transformador ── IA como estratégia de negócio
-      │                     CoE Advisory, expertise distribuída
-      │
-  N3  │  ◆ Habilitador ──── Plataforma + padrões + squads autônomos
-      │                     Landing Zone, FinOps, comunidade ativa
-      │
-  N2  │  ● Executor ─────── CoE centralizado, primeiros PoCs/MVPs
-      │                     Padrões iniciais, plataforma ainda concentrada
-      │
-  N1  │  ○ Reativo ──────── Experimentos isolados, sem coordenação
-      │                     Sem padrões, sem governança
-      │
-      └───────────────────────────────────────────────────▶ Tempo
+```mermaid
+flowchart BT
+    classDef level fill:#ffffff,stroke:#57606a,color:#24292f,stroke-width:2px
+
+    N1["<b>N1 — Reativo</b><br/>Experimentos isolados, sem coordenação<br/>Sem padrões, sem governança"]:::level
+    N2["<b>N2 — Executor</b><br/>CoE centralizado, primeiros PoCs/MVPs<br/>Padrões iniciais, plataforma ainda concentrada"]:::level
+    N3["<b>N3 — Habilitador</b><br/>Plataforma + padrões + squads autônomos<br/>Landing Zone, FinOps, comunidade ativa"]:::level
+    N4["<b>N4 — Transformador</b><br/>IA como estratégia de negócio<br/>CoE Advisory, expertise distribuída"]:::level
+
+    N1 --> N2 --> N3 --> N4
 ```
 
 ---

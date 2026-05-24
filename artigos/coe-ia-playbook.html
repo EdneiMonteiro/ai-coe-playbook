@@ -255,6 +255,60 @@ pre code {
   overflow-x: auto;
 }
 
+.diagram {
+  margin: 1rem 0 1.5rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: #f6f8fa;
+  padding: 1rem;
+}
+
+.diagram svg {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+  height: auto;
+}
+
+.diagram text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  fill: var(--text);
+}
+
+.diagram .frame,
+.diagram .node {
+  fill: #fff;
+  stroke: #57606a;
+  stroke-width: 2;
+}
+
+.diagram .hub {
+  fill: #ddf4ff;
+  stroke: var(--accent);
+}
+
+.diagram .layer {
+  fill: #fff;
+  stroke: #57606a;
+  stroke-width: 2;
+}
+
+.diagram .arrow {
+  fill: none;
+  stroke: #57606a;
+  stroke-width: 2;
+}
+
+.diagram .dashed {
+  stroke-dasharray: 8 7;
+}
+
+.diagram .caption {
+  fill: var(--muted);
+  font-size: 14px;
+}
+
 hr {
   border: 0;
   border-top: 1px solid var(--border);
@@ -563,25 +617,39 @@ strong {
 <li><strong>Spokes (distribuídos):</strong> embaixadores (<em>champions</em>) de IA em cada unidade de negócio, conectados ao hub, responsáveis por identificar oportunidades e implementar soluções localmente.</li>
 </ul>
 <p><strong>Figura 1 — Modelo conceitual hub-and-spoke para CoE de IA</strong></p>
-<pre><code>                    ┌──────────────┐
-                    │   Hub (CoE)  │
-                    │              │
-                    │  Padrões     │
-                    │  Governança  │
-                    │  Plataforma  │
-                    │  Capacitação │
-                    └──────┬───────┘
-                           │
-            ┌──────────────┼──────────────┐
-            │              │              │
-     ┌──────▼──────┐ ┌────▼──────┐ ┌─────▼─────┐
-     │  Spoke      │ │  Spoke    │ │  Spoke    │
-     │  Financeiro │ │  RH       │ │  Operações│
-     │             │ │           │ │           │
-     │  Champion   │ │  Champion │ │  Champion │
-     │  + Squad    │ │  + Squad  │ │  + Squad  │
-     └─────────────┘ └───────────┘ └───────────┘
-</code></pre>
+<figure class="diagram">
+<svg role="img" aria-labelledby="fig1-title fig1-desc" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+<title id="fig1-title">Modelo conceitual hub-and-spoke para CoE de IA</title>
+<desc id="fig1-desc">Um hub central do CoE de IA define padrões, governança, plataforma e capacitação, conectando-se a três spokes: Financeiro, RH e Operações.</desc>
+<defs>
+<marker id="fig1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"></path>
+</marker>
+</defs>
+<rect class="hub node" x="325" y="40" width="250" height="190" rx="14"></rect>
+<text x="450" y="80" text-anchor="middle" font-size="24" font-weight="700">Hub (CoE)</text>
+<text x="450" y="125" text-anchor="middle" font-size="19">Padrões</text>
+<text x="450" y="155" text-anchor="middle" font-size="19">Governança</text>
+<text x="450" y="185" text-anchor="middle" font-size="19">Plataforma</text>
+<text x="450" y="215" text-anchor="middle" font-size="19">Capacitação</text>
+<path class="arrow" marker-end="url(#fig1-arrow)" d="M 450 230 V 285"></path>
+<path class="arrow" marker-end="url(#fig1-arrow)" d="M 450 285 H 190 V 330"></path>
+<path class="arrow" marker-end="url(#fig1-arrow)" d="M 450 285 V 330"></path>
+<path class="arrow" marker-end="url(#fig1-arrow)" d="M 450 285 H 710 V 330"></path>
+<rect class="node" x="70" y="330" width="240" height="150" rx="14"></rect>
+<text x="190" y="370" text-anchor="middle" font-size="23" font-weight="700">Spoke</text>
+<text x="190" y="405" text-anchor="middle" font-size="22">Financeiro</text>
+<text x="190" y="450" text-anchor="middle" font-size="18">Champion + Squad</text>
+<rect class="node" x="330" y="330" width="240" height="150" rx="14"></rect>
+<text x="450" y="370" text-anchor="middle" font-size="23" font-weight="700">Spoke</text>
+<text x="450" y="405" text-anchor="middle" font-size="22">RH</text>
+<text x="450" y="450" text-anchor="middle" font-size="18">Champion + Squad</text>
+<rect class="node" x="590" y="330" width="240" height="150" rx="14"></rect>
+<text x="710" y="370" text-anchor="middle" font-size="23" font-weight="700">Spoke</text>
+<text x="710" y="405" text-anchor="middle" font-size="22">Operações</text>
+<text x="710" y="450" text-anchor="middle" font-size="18">Champion + Squad</text>
+</svg>
+</figure>
 <hr />
 <h2 id="4-modelos-de-atuacao">4. Modelos de Atuação</h2>
 <p>Não existe um modelo único. O melhor formato depende da maturidade da organização, do tamanho da empresa e da cultura de TI. Os três modelos mais comuns, consolidados a partir das fontes analisadas, são:</p>
@@ -602,22 +670,41 @@ strong {
 <p><strong>Vantagem:</strong> equilíbrio entre velocidade e escalabilidade.</p>
 <p><strong>Risco:</strong> requer disciplina para executar a transição. Sem um plano claro, o CoE nunca "solta" os projetos.</p>
 <p><strong>Figura 2 — Responsabilidades no modelo federado/híbrido</strong></p>
-<pre><code>┌─────────────────────────────────────────────────────────────┐
-│                   MODELO FEDERADO / HÍBRIDO                 │
-│                                                             │
-│   CoE de IA (Hub)               Squads de Produto (Spokes) │
-│   ┌──────────────┐              ┌──────────────────┐       │
-│   │ Padrões      │─────────────▶│                  │       │
-│   │ Governança   │  Habilitação │  Desenvolvimento │       │
-│   │ Plataforma   │─────────────▶│  Sustentação     │       │
-│   │ Capacitação  │  Transição   │  Operação        │       │
-│   │ PoC/MVP      │─────────────▶│  Evolução        │       │
-│   │              │              │                  │       │
-│   │              │◀ ─ ─ ─ ─ ─ ─│  Feedback        │       │
-│   └──────────────┘  Governança  └──────────────────┘       │
-│                     (contínua)                              │
-└─────────────────────────────────────────────────────────────┘
-</code></pre>
+<figure class="diagram">
+<svg role="img" aria-labelledby="fig2-title fig2-desc" viewBox="0 0 940 520" xmlns="http://www.w3.org/2000/svg">
+<title id="fig2-title">Responsabilidades no modelo federado/híbrido</title>
+<desc id="fig2-desc">O CoE de IA habilita e transfere padrões para squads de produto. Os squads desenvolvem, sustentam, operam e evoluem produtos, devolvendo feedback para governança contínua.</desc>
+<defs>
+<marker id="fig2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"></path>
+</marker>
+</defs>
+<rect class="frame" x="40" y="40" width="860" height="420" rx="16"></rect>
+<text x="470" y="85" text-anchor="middle" font-size="25" font-weight="700">Modelo federado / híbrido</text>
+<text x="190" y="135" text-anchor="middle" font-size="20" font-weight="700">CoE de IA (Hub)</text>
+<text x="695" y="135" text-anchor="middle" font-size="20" font-weight="700">Squads de produto (Spokes)</text>
+<rect class="hub node" x="95" y="165" width="260" height="230" rx="14"></rect>
+<text x="130" y="205" font-size="19">Padrões</text>
+<text x="130" y="240" font-size="19">Governança</text>
+<text x="130" y="275" font-size="19">Plataforma</text>
+<text x="130" y="310" font-size="19">Capacitação</text>
+<text x="130" y="345" font-size="19">PoC/MVP</text>
+<rect class="node" x="585" y="165" width="260" height="230" rx="14"></rect>
+<text x="625" y="240" font-size="20">Desenvolvimento</text>
+<text x="625" y="280" font-size="20">Sustentação</text>
+<text x="625" y="320" font-size="20">Operação</text>
+<text x="625" y="360" font-size="20">Evolução</text>
+<path class="arrow" marker-end="url(#fig2-arrow)" d="M 355 215 H 570"></path>
+<path class="arrow" marker-end="url(#fig2-arrow)" d="M 355 280 H 570"></path>
+<path class="arrow" marker-end="url(#fig2-arrow)" d="M 355 345 H 570"></path>
+<text x="462" y="205" text-anchor="middle" font-size="16" class="caption">Habilitação</text>
+<text x="462" y="270" text-anchor="middle" font-size="16" class="caption">Transição</text>
+<text x="462" y="335" text-anchor="middle" font-size="16" class="caption">Handoff</text>
+<path class="arrow dashed" marker-end="url(#fig2-arrow)" d="M 585 395 H 370"></path>
+<text x="480" y="425" text-anchor="middle" font-size="16" class="caption">Governança contínua</text>
+<text x="710" y="425" text-anchor="middle" font-size="16" class="caption">Feedback</text>
+</svg>
+</figure>
 <h3 id="44-a-evolucao-natural-do-executor-ao-modelo-consultivo">4.4. A evolução natural: do executor ao modelo consultivo</h3>
 <p>O Microsoft Cloud Adoption Framework (2025) descreve uma <strong>trajetória evolutiva</strong> clara para o CoE:</p>
 <ol>
@@ -849,31 +936,40 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <h3 id="62-modelo-recomendado-governanca-central-execucao-distribuida">6.2. Modelo recomendado: governança central, execução distribuída</h3>
 <p>O modelo recomendado é uma plataforma governada, com políticas e padrões centrais, mas com execução distribuída pelas equipes responsáveis pelos produtos e casos de uso. Esse desenho está alinhado ao Microsoft Cloud Adoption Framework, ao Google Cloud Well-Architected Framework e ao AWS Well-Architected Machine Learning Lens.</p>
 <p><strong>Figura 3 — Plataforma corporativa de IA com governança central e execução distribuída</strong></p>
-<pre><code>┌──────────────────────────────────────────────────────────────────┐
-│                 PLATAFORMA CORPORATIVA DE IA                     │
-│                                                                  │
-│  ┌────────────────────────────────────────────────────────────┐  │
-│  │ Governança e padrões                                      │  │
-│  │ Políticas | Risco | Segurança | Dados | FinOps | Catálogo │  │
-│  └──────────────────────────┬─────────────────────────────────┘  │
-│                             │                                    │
-│  ┌──────────────────────────▼─────────────────────────────────┐  │
-│  │ Camada de plataforma                                      │  │
-│  │ IaC | CI/CD | Observabilidade | IAM | APIs | Templates    │  │
-│  └──────────────────────────┬─────────────────────────────────┘  │
-│                             │                                    │
-│          ┌──────────────────┼──────────────────┐                │
-│          ▼                  ▼                  ▼                │
-│  ┌──────────────┐   ┌──────────────┐   ┌──────────────┐        │
-│  │ Produto A    │   │ Produto B    │   │ Produto C    │        │
-│  │ RAG          │   │ Copilot      │   │ ML/Analytics │        │
-│  │ Dados        │   │ APIs         │   │ Modelos      │        │
-│  │ App          │   │ App          │   │ Pipelines    │        │
-│  └──────────────┘   └──────────────┘   └──────────────┘        │
-│                                                                  │
-│  Times executam com autonomia dentro de controles comuns.         │
-└──────────────────────────────────────────────────────────────────┘
-</code></pre>
+<figure class="diagram">
+<svg role="img" aria-labelledby="fig3-title fig3-desc" viewBox="0 0 1040 760" xmlns="http://www.w3.org/2000/svg">
+<title id="fig3-title">Plataforma corporativa de IA com governança central e execução distribuída</title>
+<desc id="fig3-desc">Camada de governança alimenta camada de plataforma, que distribui controles e capacidades para três produtos executados com autonomia.</desc>
+<defs>
+<marker id="fig3-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"></path>
+</marker>
+</defs>
+<rect class="frame" x="35" y="35" width="970" height="690" rx="18"></rect>
+<text x="520" y="85" text-anchor="middle" font-size="26" font-weight="700">Plataforma corporativa de IA</text>
+<rect class="layer" x="90" y="135" width="860" height="115" rx="14"></rect>
+<text x="120" y="180" font-size="22" font-weight="700">Governança e padrões</text>
+<text x="120" y="220" font-size="19">Políticas · Risco · Segurança · Dados · FinOps · Catálogo</text>
+<path class="arrow" marker-end="url(#fig3-arrow)" d="M 520 250 V 310"></path>
+<rect class="layer" x="90" y="310" width="860" height="115" rx="14"></rect>
+<text x="120" y="355" font-size="22" font-weight="700">Camada de plataforma</text>
+<text x="120" y="395" font-size="19">IaC · CI/CD · Observabilidade · IAM · APIs · Templates</text>
+<path class="arrow" marker-end="url(#fig3-arrow)" d="M 520 425 V 500"></path>
+<path class="arrow" marker-end="url(#fig3-arrow)" d="M 520 500 H 210 V 555"></path>
+<path class="arrow" marker-end="url(#fig3-arrow)" d="M 520 500 V 555"></path>
+<path class="arrow" marker-end="url(#fig3-arrow)" d="M 520 500 H 830 V 555"></path>
+<rect class="node" x="90" y="555" width="240" height="125" rx="14"></rect>
+<text x="210" y="595" text-anchor="middle" font-size="22" font-weight="700">Produto A</text>
+<text x="210" y="630" text-anchor="middle" font-size="18">RAG · Dados · App</text>
+<rect class="node" x="400" y="555" width="240" height="125" rx="14"></rect>
+<text x="520" y="595" text-anchor="middle" font-size="22" font-weight="700">Produto B</text>
+<text x="520" y="630" text-anchor="middle" font-size="18">Copilot · APIs · App</text>
+<rect class="node" x="710" y="555" width="240" height="125" rx="14"></rect>
+<text x="830" y="595" text-anchor="middle" font-size="22" font-weight="700">Produto C</text>
+<text x="830" y="630" text-anchor="middle" font-size="18">ML/Analytics · Modelos · Pipelines</text>
+<text x="520" y="705" text-anchor="middle" font-size="19" class="caption">Times executam com autonomia dentro de controles comuns.</text>
+</svg>
+</figure>
 <h3 id="63-o-que-deve-ser-comum">6.3. O que deve ser comum</h3>
 <ul>
 <li><strong>Políticas de segurança e conformidade</strong> — requisitos mínimos para dados, identidade, rede, auditoria e retenção</li>
@@ -958,14 +1054,40 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <p>O Microsoft CAF (2025) recomenda que o CoE implemente <strong>fluxos estruturados de triagem (<em>intake</em>) e priorização</strong> para avaliar e priorizar solicitações de projetos de IA. Isto garante que os projetos sejam avaliados com critérios consistentes de valor de negócio, viabilidade técnica e requisitos de recursos.</p>
 <h3 id="71-as-fases">7.1. As fases</h3>
 <p><strong>Figura 4 — Ciclo de vida de uma iniciativa de IA no CoE</strong></p>
-<pre><code> ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐
- │          │   │          │   │          │   │          │   │          │
- │Triagem &amp; │──▶│   PoC    │──▶│   MVP    │──▶│Transição │──▶│ Operação │
- │Prioriz.  │   │          │   │          │   │          │   │          │
- └──────────┘   └──────────┘   └──────────┘   └──────────┘   └──────────┘
-  CoE + Neg.     CoE            CoE            CoE → Squad    Squad
-  (Steering)                                   (handoff)      + CoE Gov.
-</code></pre>
+<figure class="diagram">
+<svg role="img" aria-labelledby="fig4-title fig4-desc" viewBox="0 0 1040 260" xmlns="http://www.w3.org/2000/svg">
+<title id="fig4-title">Ciclo de vida de uma iniciativa de IA no CoE</title>
+<desc id="fig4-desc">Fluxo sequencial: triagem e priorização, PoC, MVP, transição e operação, com mudança de responsabilidade do CoE para o squad.</desc>
+<defs>
+<marker id="fig4-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"></path>
+</marker>
+</defs>
+<rect class="node" x="35" y="55" width="160" height="105" rx="14"></rect>
+<text x="115" y="95" text-anchor="middle" font-size="20" font-weight="700">Triagem &amp;</text>
+<text x="115" y="125" text-anchor="middle" font-size="20" font-weight="700">priorização</text>
+<text x="115" y="195" text-anchor="middle" font-size="15" class="caption">CoE + negócio</text>
+<text x="115" y="218" text-anchor="middle" font-size="15" class="caption">(steering)</text>
+<path class="arrow" marker-end="url(#fig4-arrow)" d="M 195 108 H 245"></path>
+<rect class="node" x="245" y="55" width="145" height="105" rx="14"></rect>
+<text x="317.5" y="117" text-anchor="middle" font-size="24" font-weight="700">PoC</text>
+<text x="317.5" y="195" text-anchor="middle" font-size="15" class="caption">CoE</text>
+<path class="arrow" marker-end="url(#fig4-arrow)" d="M 390 108 H 440"></path>
+<rect class="node" x="440" y="55" width="145" height="105" rx="14"></rect>
+<text x="512.5" y="117" text-anchor="middle" font-size="24" font-weight="700">MVP</text>
+<text x="512.5" y="195" text-anchor="middle" font-size="15" class="caption">CoE</text>
+<path class="arrow" marker-end="url(#fig4-arrow)" d="M 585 108 H 635"></path>
+<rect class="node" x="635" y="55" width="165" height="105" rx="14"></rect>
+<text x="717.5" y="117" text-anchor="middle" font-size="22" font-weight="700">Transição</text>
+<text x="717.5" y="195" text-anchor="middle" font-size="15" class="caption">CoE → squad</text>
+<text x="717.5" y="218" text-anchor="middle" font-size="15" class="caption">(handoff)</text>
+<path class="arrow" marker-end="url(#fig4-arrow)" d="M 800 108 H 850"></path>
+<rect class="node" x="850" y="55" width="155" height="105" rx="14"></rect>
+<text x="927.5" y="117" text-anchor="middle" font-size="22" font-weight="700">Operação</text>
+<text x="927.5" y="195" text-anchor="middle" font-size="15" class="caption">Squad</text>
+<text x="927.5" y="218" text-anchor="middle" font-size="15" class="caption">+ CoE Gov.</text>
+</svg>
+</figure>
 <h3 id="72-detalhamento">7.2. Detalhamento</h3>
 <p><strong>Tabela 7 — Fases e entregas do ciclo de vida</strong></p>
 <table>
@@ -1159,23 +1281,37 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li><strong>Referência:</strong> Google classifica como "Transformational" — IA como parte central do negócio. Microsoft CAF descreve a evolução para o modelo consultivo</li>
 </ul>
 <p><strong>Figura 5 — Evolução de maturidade do CoE de IA</strong></p>
-<pre><code>  Maturidade
-      ▲
-      │
-  N4  │  ★ Transformador ── IA como estratégia de negócio
-      │                     CoE Advisory, expertise distribuída
-      │
-  N3  │  ◆ Habilitador ──── Plataforma + padrões + squads autônomos
-      │                     Landing Zone, FinOps, comunidade ativa
-      │
-  N2  │  ● Executor ─────── CoE centralizado, primeiros PoCs/MVPs
-      │                     Padrões iniciais, plataforma ainda concentrada
-      │
-  N1  │  ○ Reativo ──────── Experimentos isolados, sem coordenação
-      │                     Sem padrões, sem governança
-      │
-      └───────────────────────────────────────────────────▶ Tempo
-</code></pre>
+<figure class="diagram">
+<svg role="img" aria-labelledby="fig5-title fig5-desc" viewBox="0 0 1000 440" xmlns="http://www.w3.org/2000/svg">
+<title id="fig5-title">Evolução de maturidade do CoE de IA</title>
+<desc id="fig5-desc">Evolução de maturidade ao longo do tempo, de reativo para executor, habilitador e transformador.</desc>
+<defs>
+<marker id="fig5-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+<path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"></path>
+</marker>
+</defs>
+<path class="arrow" marker-end="url(#fig5-arrow)" d="M 110 365 V 55"></path>
+<path class="arrow" marker-end="url(#fig5-arrow)" d="M 110 365 H 925"></path>
+<text x="80" y="50" text-anchor="middle" font-size="17" font-weight="700">Maturidade</text>
+<text x="925" y="400" text-anchor="middle" font-size="17" font-weight="700">Tempo</text>
+<circle cx="170" cy="310" r="8" fill="#57606a"></circle>
+<text x="75" y="316" font-size="18" font-weight="700">N1</text>
+<text x="205" y="300" font-size="20" font-weight="700">Reativo</text>
+<text x="205" y="330" font-size="17">Experimentos isolados, sem coordenação; sem padrões, sem governança</text>
+<circle cx="170" cy="235" r="8" fill="#0969da"></circle>
+<text x="75" y="241" font-size="18" font-weight="700">N2</text>
+<text x="205" y="225" font-size="20" font-weight="700">Executor</text>
+<text x="205" y="255" font-size="17">CoE centralizado, primeiros PoCs/MVPs; padrões iniciais</text>
+<circle cx="170" cy="160" r="8" fill="#1a7f37"></circle>
+<text x="75" y="166" font-size="18" font-weight="700">N3</text>
+<text x="205" y="150" font-size="20" font-weight="700">Habilitador</text>
+<text x="205" y="180" font-size="17">Plataforma + padrões + squads autônomos; FinOps e comunidade ativa</text>
+<circle cx="170" cy="85" r="8" fill="#8250df"></circle>
+<text x="75" y="91" font-size="18" font-weight="700">N4</text>
+<text x="205" y="75" font-size="20" font-weight="700">Transformador</text>
+<text x="205" y="105" font-size="17">IA como estratégia de negócio; CoE advisory e expertise distribuída</text>
+</svg>
+</figure>
 <hr />
 <h2 id="11-metricas-e-kpis">11. Métricas e KPIs</h2>
 <p>Deloitte, KPMG e Microsoft CAF enfatizam que o CoE deve rastrear métricas que demonstrem <strong>valor de negócio</strong>, não apenas atividade técnica. O Microsoft CAF (2025) recomenda definir KPIs como taxas de adoção, níveis de conformidade e tempos de ciclo de projeto.</p>
