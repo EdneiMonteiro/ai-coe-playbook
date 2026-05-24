@@ -4,32 +4,389 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Centro de Excelência em Inteligência Artificial (CoE de IA)</title>
+  <meta name="description" content="Guia prático para estruturar, operar e escalar Centros de Excelência em IA, com governança, arquitetura, maturidade, métricas e referências normativas.">
   <style>
-:root { color-scheme: light; --bg: #f6f8fa; --paper: #ffffff; --text: #24292f; --muted: #57606a; --border: #d0d7de; --accent: #0969da; --accent-soft: #ddf4ff; --quote: #f6f8fa; }
+:root {
+  color-scheme: light;
+  --bg: #f6f8fa;
+  --paper: #ffffff;
+  --text: #24292f;
+  --muted: #57606a;
+  --border: #d0d7de;
+  --border-subtle: #eaeef2;
+  --accent: #0969da;
+  --accent-strong: #0550ae;
+  --accent-soft: #ddf4ff;
+  --quote: #f6f8fa;
+  --success-soft: #dafbe1;
+  --shadow: 0 12px 36px rgba(31, 35, 40, 0.09);
+}
+
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-main { max-width: 980px; margin: 32px auto; padding: 48px 56px; background: var(--paper); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 8px 28px rgba(31, 35, 40, 0.08); }
-h1, h2, h3, h4 { line-height: 1.25; margin-top: 1.65em; margin-bottom: .6em; }
-h1 { margin-top: 0; padding-bottom: .35em; border-bottom: 1px solid var(--border); font-size: 2.2rem; }
-h2 { padding-bottom: .25em; border-bottom: 1px solid var(--border); font-size: 1.55rem; }
-h3 { font-size: 1.2rem; } h4 { font-size: 1rem; }
-a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
-p, ul, ol, table, blockquote { margin-top: 0; margin-bottom: 1em; }
-ul, ol { padding-left: 1.5em; } li + li { margin-top: .25em; }
-blockquote { border-left: 4px solid var(--accent); background: var(--quote); margin-left: 0; padding: .8em 1em; color: var(--text); }
-blockquote p:last-child { margin-bottom: 0; }
-table { width: 100%; border-collapse: collapse; display: block; overflow-x: auto; }
-th, td { border: 1px solid var(--border); padding: .55em .7em; vertical-align: top; }
-th { background: var(--accent-soft); text-align: left; }
-code { background: #afb8c133; padding: .12em .28em; border-radius: 4px; }
-pre code { display: block; padding: 1em; overflow-x: auto; }
-hr { border: 0; border-top: 1px solid var(--border); margin: 2em 0; }
-strong { font-weight: 700; }
-@media print { body { background: #fff; } main { max-width: none; margin: 0; padding: 0; border: 0; box-shadow: none; } a { color: inherit; text-decoration: underline; } h2 { break-after: avoid; } table, blockquote { break-inside: avoid; } }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(9, 105, 218, 0.12), transparent 34rem),
+    var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 10;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(13rem, 18rem) minmax(0, 80ch);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.toc {
+  align-self: start;
+  position: sticky;
+  top: 1.5rem;
+  max-height: calc(100vh - 3rem);
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 24px rgba(31, 35, 40, 0.06);
+  padding: 1rem;
+}
+
+.toc h2 {
+  margin: 0 0 0.75rem;
+  border: 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.toc li + li {
+  margin-top: 0.45rem;
+}
+
+.toc a {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.toc a:hover,
+.toc a:focus {
+  color: var(--accent-strong);
+}
+
+.paper {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: -0.35rem 0 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.article-meta span,
+.article-meta a {
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  background: #fff;
+  padding: 0.25rem 0.65rem;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  margin-top: 1.75em;
+  margin-bottom: 0.7em;
+  scroll-margin-top: 1.5rem;
+}
+
+h1 {
+  margin-top: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--border);
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--border);
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+  letter-spacing: -0.015em;
+}
+
+h3 { font-size: 1.22rem; }
+h4 { font-size: 1rem; }
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: var(--accent-strong);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 2px;
+  border-radius: 0.2rem;
+}
+
+p, ul, ol, table, blockquote {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ul, ol {
+  padding-left: 1.45em;
+}
+
+li + li {
+  margin-top: 0.28em;
+}
+
+blockquote {
+  border-left: 5px solid var(--accent);
+  border-radius: 0 0.75rem 0.75rem 0;
+  background: var(--quote);
+  margin-left: 0;
+  padding: 1rem 1.25rem;
+  color: var(--text);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.paper > blockquote:first-of-type {
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--accent);
+  background: linear-gradient(135deg, var(--accent-soft), #fff);
+  font-size: 1.08rem;
+}
+
+table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-spacing: 0;
+  border-collapse: separate;
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+}
+
+th, td {
+  border-bottom: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+  padding: 0.65em 0.8em;
+  vertical-align: top;
+}
+
+th:last-child,
+td:last-child {
+  border-right: 0;
+}
+
+tr:last-child td {
+  border-bottom: 0;
+}
+
+th {
+  background: var(--accent-soft);
+  text-align: left;
+  white-space: nowrap;
+}
+
+p:has(+ table) {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+code {
+  background: #afb8c133;
+  padding: 0.12em 0.32em;
+  border-radius: 0.3rem;
+}
+
+pre code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2.25em 0;
+}
+
+strong {
+  font-weight: 700;
+}
+
+:target {
+  background: linear-gradient(90deg, var(--success-soft), transparent 70%);
+}
+
+.page-footer {
+  max-width: 1200px;
+  margin: -2rem auto 2.5rem;
+  padding: 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .layout {
+    display: block;
+    padding-top: 1rem;
+  }
+
+  .toc {
+    position: static;
+    max-height: none;
+    margin-bottom: 1rem;
+  }
+
+  .toc ol {
+    columns: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  .layout {
+    padding-inline: 0.75rem;
+  }
+
+  .paper {
+    border-radius: 0.9rem;
+  }
+
+  .toc ol {
+    columns: 1;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+    font-size: 11pt;
+  }
+
+  .skip-link,
+  .toc,
+  .page-footer {
+    display: none;
+  }
+
+  .layout {
+    display: block;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .paper {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  h2, h3 {
+    break-after: avoid;
+  }
+
+  table, blockquote {
+    break-inside: avoid;
+  }
+}
   </style>
 </head>
 <body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<main id="conteudo" class="layout">
+<aside class="toc" aria-labelledby="sumario">
+<nav aria-label="Sumário do artigo">
+<h2 id="sumario">Sumário</h2>
+<ol>
+<li><a href="#resumo-executivo">Resumo executivo</a></li>
+<li><a href="#1-introducao">1. Introdução</a></li>
+<li><a href="#2-o-que-e-um-coe-de-ia-e-o-que-ele-nao-e">2. O que é um CoE de IA</a></li>
+<li><a href="#3-equipe-e-papeis-chave">3. Equipe e papéis</a></li>
+<li><a href="#4-modelos-de-atuacao">4. Modelos de atuação</a></li>
+<li><a href="#5-os-pilares-do-coe-de-ia">5. Pilares do CoE</a></li>
+<li><a href="#6-arquitetura-de-referencia-e-plataforma-cloud">6. Arquitetura e plataforma</a></li>
+<li><a href="#7-ciclo-de-vida-do-poc-ao-produto">7. Ciclo de vida</a></li>
+<li><a href="#8-o-coe-na-era-da-ia-generativa-e-agentica">8. IA generativa e agêntica</a></li>
+<li><a href="#9-anti-patterns-armadilhas-comuns">9. Anti-patterns</a></li>
+<li><a href="#10-modelo-de-maturidade">10. Maturidade</a></li>
+<li><a href="#11-metricas-e-kpis">11. Métricas e KPIs</a></li>
+<li><a href="#12-checklist-pratico-para-lideres">12. Checklist</a></li>
+<li><a href="#13-roadmap-de-implementacao-baseado-nas-referencias">13. Roadmap</a></li>
+<li><a href="#14-conclusao">14. Conclusão</a></li>
+<li><a href="#apendice-a-raci-de-referencia-para-um-coe-de-ia">Apêndice A — RACI</a></li>
+<li><a href="#apendice-b-charter-modelo-resumido-para-um-coe-de-ia">Apêndice B — Charter</a></li>
+<li><a href="#apendice-c-template-de-avaliacao-de-risco-operacional">Apêndice C — Risco</a></li>
+<li><a href="#referencias">Referências</a></li>
+</ol>
+</nav>
+</aside>
+<article class="paper">
 <h1 id="centro-de-excelencia-em-ia-guia-pratico-para-estruturar-operar-e-escalar">Centro de Excelência em IA: Guia Prático para Estruturar, Operar e Escalar</h1>
+<p class="article-meta"><span>AI CoE Playbook</span><span>Versão recomendada para revisão por pares: v1.0.1</span><a href="https://doi.org/10.5281/zenodo.20357199">DOI 10.5281/zenodo.20357199</a><a href="https://github.com/EdneiMonteiro/ai-coe-playbook">Repositório no GitHub</a><span>CC BY 4.0</span></p>
 <blockquote>
 <p><em>"Um CoE de IA não é uma fábrica de software — é o motor de transformação que orquestra padrões, talentos e cultura para que toda a organização adote IA de forma estratégica, segura e escalável."</em></p>
 </blockquote>
@@ -1507,5 +1864,10 @@ Revisão quinzenal de portfólio, comitê mensal com sponsor executivo, revisão
 </ol>
 <hr />
 <p><em>Artigo elaborado como guia prático para organizações que estão estruturando ou evoluindo seus Centros de Excelência em IA. Última atualização: maio de 2026.</em></p>
+</article>
+</main>
+<footer class="page-footer">
+  <p>AI CoE Playbook · Versão web standalone · <a href="https://github.com/EdneiMonteiro/ai-coe-playbook/releases/tag/v1.0.1">Release v1.0.1</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
+</footer>
 </body>
 </html>
