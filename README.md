@@ -126,8 +126,8 @@ Conteúdo textual, artigos, diagramas e templates estão licenciados sob **Creat
 Esta release está arquivada no **Zenodo** com DOI permanente:
 
 - **Concept DOI (sempre aponta para a versão mais recente):** [10.5281/zenodo.20357199](https://doi.org/10.5281/zenodo.20357199)
-- **Version DOI (v1.0.0):** [10.5281/zenodo.20357200](https://doi.org/10.5281/zenodo.20357200)
+- **Version DOI (v1.0.2 — versão recomendada para revisão por pares):** [10.5281/zenodo.20361901](https://doi.org/10.5281/zenodo.20361901)
 
 Metadados de citação em [`CITATION.cff`](CITATION.cff) (use o botão **"Cite this repository"** no canto superior direito desta página). Exemplo de citação:
 
-> Monteiro, E. (2026). *AI CoE Playbook: Guia Prático para Estruturar, Operar e Escalar um Centro de Excelência em IA* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.20357200
+> Monteiro, E. (2026). *AI CoE Playbook: Guia Prático para Estruturar, Operar e Escalar um Centro de Excelência em IA* (v1.0.2). Zenodo. https://doi.org/10.5281/zenodo.20361901

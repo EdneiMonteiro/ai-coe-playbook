@@ -43,7 +43,7 @@ Sempre que o playbook for usado em apresentações executivas, propostas comerci
 
 > Esta lista será populada a partir da v1.1, conforme as contribuições forem revisadas e incorporadas.
 
-_Nenhum contribuidor adicional listado até v1.0.0. Autoria: Ednei Monteiro._
+_Nenhum contribuidor adicional listado até v1.0.2. Autoria: Ednei Monteiro._
 
 ## Mantenedor principal
 
