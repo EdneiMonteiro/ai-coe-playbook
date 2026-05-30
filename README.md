@@ -1,5 +1,8 @@
 # AI CoE Playbook
 
+[![Last commit](https://img.shields.io/github/last-commit/EdneiMonteiro/ai-coe-playbook)](https://github.com/EdneiMonteiro/ai-coe-playbook/commits)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0006--0765--4201-A6CE39?logo=orcid&logoColor=white)](https://orcid.org/0009-0006-0765-4201)
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20357199.svg)](https://doi.org/10.5281/zenodo.20357199)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
