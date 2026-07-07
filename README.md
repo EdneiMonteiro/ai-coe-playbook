@@ -133,3 +133,8 @@ Esta release está arquivada no **Zenodo** com DOI permanente:
 Metadados de citação em [`CITATION.cff`](CITATION.cff) (use o botão **"Cite this repository"** no canto superior direito desta página). Exemplo de citação:
 
 > Monteiro, E. (2026). *AI CoE Playbook: Guia Prático para Estruturar, Operar e Escalar um Centro de Excelência em IA* (v1.0.2). Zenodo. https://doi.org/10.5281/zenodo.20361901
+
+## 🤝 Contributing
+
+Issue and pull request creation is restricted to collaborators. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for details.
