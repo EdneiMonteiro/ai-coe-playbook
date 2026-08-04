@@ -28,7 +28,7 @@ repository-code: "https://github.com/EdneiMonteiro/ai-coe-playbook"
 url: "https://github.com/EdneiMonteiro/ai-coe-playbook"
 license: CC-BY-4.0
 version: v1.1.0
-doi: 10.5281/zenodo.20361901
+doi: 10.5281/zenodo.21794557
 identifiers:
   - type: doi
     value: 10.5281/zenodo.20357199
@@ -38,7 +38,10 @@ identifiers:
     description: Version DOI — v1.0.0
   - type: doi
     value: 10.5281/zenodo.20361901
-    description: Version DOI — v1.0.2, versão recomendada para revisão por pares
+    description: Version DOI — v1.0.2
+  - type: doi
+    value: 10.5281/zenodo.21794557
+    description: Version DOI — v1.1.0, versão atual recomendada
 keywords:
   - AI Center of Excellence
   - AI CoE
@@ -59,5 +62,5 @@ preferred-citation:
       given-names: Ednei
       orcid: "https://orcid.org/0009-0006-0765-4201"
   year: 2026
-  doi: 10.5281/zenodo.20361901
-  url: "https://doi.org/10.5281/zenodo.20361901"
+  doi: 10.5281/zenodo.21794557
+  url: "https://doi.org/10.5281/zenodo.21794557"
