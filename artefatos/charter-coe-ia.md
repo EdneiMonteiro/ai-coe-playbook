@@ -32,7 +32,7 @@ Padrões antes de escala; build-to-transfer; governança embutida na plataforma;
 
 Cada métrica deve ter unidade, baseline e meta documentadas, revisadas anualmente. Exemplos:
 
-- **Adoção de padrões:** % de casos em produção aderentes aos padrões mínimos (baseline ano 1: > 60%; meta ano 2: > 85%).
+- **Adoção de padrões:** % de casos em produção aderentes aos padrões mínimos (meta ano 1: > 60%; meta ano 2: > 85%).
 - **Time-to-production:** dias entre registro do caso e go-live em produção (baseline depende do contexto).
 - **Valor por caso de uso:** margem de contribuição ou economia recorrente quando aplicável; OKR de negócio quando não-monetizável.
 - **Cobertura de evals:** % de casos com evals automatizados mínimos rodando em CI/CD.
