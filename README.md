@@ -9,6 +9,8 @@ Guia prático, artigos e artefatos operacionais para estruturar, governar e evol
 
 Este repositório começou com o artigo **Centro de Excelência em Inteligência Artificial (CoE de IA)** e evoluiu como um playbook vivo: artigo principal + artefatos operacionais (charter, RACI, avaliação de risco) + mecanismo de assessment de maturidade + diagramas + referências consolidadas.
 
+**Primeira visita?** Comece por [`COMECE-AQUI.md`](COMECE-AQUI.md): o caminho mínimo para cada perfil de leitor, sem precisar ler tudo.
+
 ## Conteúdo principal
 
 ### Artigo
@@ -30,6 +32,8 @@ Este repositório começou com o artigo **Centro de Excelência em Inteligência
 - [`assessment/criterios-pontuacao.md`](assessment/criterios-pontuacao.md): escala, regras de contenção, gates operacionais e amostragem anti-gaming
 - [`assessment/relatorio-template.md`](assessment/relatorio-template.md): relatório auditável completo
 - [`assessment/board-pack-template.md`](assessment/board-pack-template.md): destilação executiva de uma página
+- [`assessment/exemplo-preenchido.md`](assessment/exemplo-preenchido.md): assessment completo de uma organização fictícia, do questionário ao board pack
+- [`assessment/calculadora/`](assessment/calculadora/): script que aplica escala, contenções, pesos e sensibilidade sobre um CSV de notas
 
 ### Diagramas (Mermaid)
 
@@ -104,7 +108,9 @@ O repositório não substitui avaliação jurídica, regulatória ou arquitetura
 
 | Quero… | Comece por |
 |---|---|
+| Um caminho rápido por perfil (15 min) | [`COMECE-AQUI.md`](COMECE-AQUI.md) |
 | Entender o que é um CoE de IA e como estruturá-lo | [`artigos/coe-ia-playbook.md`](artigos/coe-ia-playbook.md) |
+| Ver um assessment aplicado de ponta a ponta | [`assessment/exemplo-preenchido.md`](assessment/exemplo-preenchido.md) |
 | Adaptar artefatos para minha organização | [`artefatos/`](artefatos/): charter, RACI, avaliação de risco |
 | Avaliar a maturidade do meu CoE | [`assessment/README.md`](assessment/README.md) |
 | Ver os fluxos e modelos em imagem | [`diagramas/`](diagramas/): 8 diagramas Mermaid |
