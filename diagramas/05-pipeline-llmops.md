@@ -1,4 +1,4 @@
-# Diagrama 5 — Pipeline LLMOps/MLOps
+# Diagrama 5. Pipeline LLMOps/MLOps
 
 Este diagrama mostra o ciclo operacional de versionamento, avaliação, regressão e operação segura de uma solução de IA. O foco é **rastreabilidade**: cada release é traceable até modelo, prompt, embedding, corpus, retriever, tool schema, guardrail e resultado de evals. Sem isso, rollback seletivo e auditoria pós-incidente ficam inviáveis.
 
@@ -76,7 +76,7 @@ flowchart TB
 
 ## Trigger de regressão
 
-**[Descrição acessível]:** flowchart esquerda-direita listando seis gatilhos amarelos (troca de modelo, mudança de prompt, tool schema/allowlist, corpus/chunking/retriever, política de recuperação, guardrail) que convergem em um único nó verde "Regressão obrigatória contra golden datasets versionados". A regressão alimenta um gate "Thresholds atendidos?" — sim libera release; não bloqueia e retorna para iteração.
+**[Descrição acessível]:** flowchart esquerda-direita listando seis gatilhos amarelos (troca de modelo, mudança de prompt, tool schema/allowlist, corpus/chunking/retriever, política de recuperação, guardrail) que convergem em um único nó verde "Regressão obrigatória contra golden datasets versionados". A regressão alimenta um gate "Thresholds atendidos?": sim libera release, não bloqueia e retorna para iteração.
 
 ```mermaid
 flowchart LR
@@ -127,7 +127,7 @@ stateDiagram-v2
 
 ## Como ler
 
-- **L1 = versionamento total.** Sem versionar embeddings, índices, retriever e tool schemas, não há reprodutibilidade — o release não é auditável. Prompts versionados em D1 são registrados no catálogo de Diag.04/CP1 (modelos, prompts, templates) — o prompt registry vive na plataforma, não na solução.
+- **L1 = versionamento total.** Sem versionar embeddings, índices, retriever e tool schemas, não há reprodutibilidade; o release não é auditável. Prompts versionados em D1 são registrados no catálogo de Diag.04/CP1 (modelos, prompts, templates); o prompt registry vive na plataforma, não na solução.
 - **L2 = evals com harness integrity.** O judge não pode ser da mesma família do gerador (evita circular evaluation). Hash do golden dataset prova que o teste não foi modificado para passar.
 - **L3 = regressão em toda mudança relevante.** Qualquer um dos 6 gatilhos da segunda figura obriga regressão; sem isso, o release não pode ir para produção (gate bloqueia).
 - **L4 = monitoramento por aplicação.** A plataforma oferece capacidade (P5); a solução tem que instrumentar e usar. **M4 (eval online) é distinto de M1/M2**: M1/M2 são métricas operacionais (latência, custo, drift estatístico); M4 é eval semântica contínua em produção (groundedness, faithfulness, qualidade de resposta) via LLM-as-judge ou amostragem humana. Owner: mesmo da suite de evals offline (EVAL); threshold de amostragem define custo e latência de coleta.

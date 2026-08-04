@@ -21,22 +21,22 @@ Fontes consultadas durante as revisões do playbook (artigo principal + assessme
 |---|---|---|
 | FinOps Framework (FinOps Foundation) | release corrente | Disciplina FinOps aplicada a workloads de IA: showback/chargeback, budgets, alertas, otimização, sustentabilidade. Citada em `artigos/coe-ia-playbook.md` §5.4 sem citação direta na bibliografia. |
 | State of FinOps for AI (FinOps Foundation) | edição 2025 | Estado da arte de FinOps aplicado a IA generativa e agentes. Conteúdo absorvido em recomendações de FinOps no artigo e no assessment. |
-| FOCUS — FinOps Open Cost & Usage Specification | v1.3 | Especificação aberta para taxonomia de custo. Linha de base para alinhar billing de provedores. |
+| FOCUS (FinOps Open Cost & Usage Specification) | v1.3 | Especificação aberta para taxonomia de custo. Linha de base para alinhar billing de provedores. |
 
 ## Governança executiva e board
 
 | Fonte | Versão / data | Uso operacional |
 |---|---|---|
-| NACD — AI Oversight Guidance (4-Pillar) | 2024 | Pilares de supervisão executiva: estratégia, talento, risco e ética. Usado para informar §10 (Decisões executivas) do `assessment/relatorio-template.md`. |
-| WEF — AI Governance Alliance / Toolkits | 2024–2025 | Referência cruzada para princípios de governança em conselhos de administração. |
+| NACD, AI Oversight Guidance (4-Pillar) | 2024 | Pilares de supervisão executiva: estratégia, talento, risco e ética. Usado para informar §10 (Decisões executivas) do `assessment/relatorio-template.md`. |
+| WEF, AI Governance Alliance / Toolkits | 2024–2025 | Referência cruzada para princípios de governança em conselhos de administração. |
 
 ## Privacidade e transferência internacional de dados
 
 | Fonte | Versão / data | Uso operacional |
 |---|---|---|
-| ANPD — Resolução CD/ANPD nº 19/2024 (CCPs) | 2024-08-23 (prazo de adequação expirado em 2025-08-23) | Cláusulas-padrão contratuais para transferência internacional de dados pessoais sob LGPD. Citada em `artefatos/template-avaliacao-risco-ia.md` (campo "Dados — transferência internacional") e `referencias/crosswalk-normativo.md`. |
-| EDPB — Opinion 28/2024 | 2024 | Opinião sobre uso de dados pessoais em modelos de IA. URL primária instável; conteúdo sustentado por fontes secundárias. |
-| EDPB — Recommendations 01/2020 (Schrems II) | 2020 | Recomendações sobre Transfer Impact Assessment (TIA) quando provider está sujeito a leis extraterritoriais (CLOUD Act, FISA 702). |
+| ANPD, Resolução CD/ANPD nº 19/2024 (CCPs) | 2024-08-23 (prazo de adequação expirado em 2025-08-23) | Cláusulas-padrão contratuais para transferência internacional de dados pessoais sob LGPD. Citada em `artefatos/template-avaliacao-risco-ia.md` (campo "Dados: transferência internacional") e `referencias/crosswalk-normativo.md`. |
+| EDPB, Opinion 28/2024 | 2024 | Opinião sobre uso de dados pessoais em modelos de IA. URL primária instável; conteúdo sustentado por fontes secundárias. |
+| EDPB, Recommendations 01/2020 (Schrems II) | 2020 | Recomendações sobre Transfer Impact Assessment (TIA) quando provider está sujeito a leis extraterritoriais (CLOUD Act, FISA 702). |
 | LGPD (Lei 13.709/2018 + Lei 13.853/2019) | redação vigente | Base normativa primária no Brasil. Citação de Art. 20 atualizada conforme Lei 13.853/2019. |
 
 ## Documentação de sistemas de IA
@@ -74,8 +74,8 @@ Estas normas foram consideradas para o Anexo BR do crosswalk (`crosswalk-normati
 
 | Fonte | Versão / data | Uso operacional |
 |---|---|---|
-| GHG Protocol Scope 2/3 | versão corrente | Metodologia para inventário de emissões. Backlog v1.2 — sustentabilidade técnica de inferência LLM. |
-| Green Software Foundation — Patterns | release corrente | Padrões de software sustentável. Backlog v1.2. |
+| GHG Protocol Scope 2/3 | versão corrente | Metodologia para inventário de emissões. Backlog v1.2: sustentabilidade técnica de inferência LLM. |
+| Green Software Foundation, Patterns | release corrente | Padrões de software sustentável. Backlog v1.2. |
 
 ## Histórico de revisão
 

@@ -2,7 +2,7 @@
 
 Esta matriz cruza cada uma das **25 fontes** do artigo principal com as seções do playbook onde ela é usada e com a **recomendação prática** que dela deriva. Serve para auditoria de cobertura, para reduzir dependência editorial de uma única fonte e para validar que toda recomendação tem ao menos uma fonte sustentadora.
 
-> **Fonte canônica:** [`bibliografia.bib`](bibliografia.bib) / [`bibliografia.json`](bibliografia.json) / [`../artigos/coe-ia-playbook.md`](../artigos/coe-ia-playbook.md) — seção "Referências".
+> **Fonte canônica:** [`bibliografia.bib`](bibliografia.bib) / [`bibliografia.json`](bibliografia.json) / [`../artigos/coe-ia-playbook.md`](../artigos/coe-ia-playbook.md): seção "Referências".
 
 ## Convenção
 
@@ -62,32 +62,32 @@ Esta matriz cruza cada uma das **25 fontes** do artigo principal com as seções
 
 | Seção | Fontes sustentadoras (principais) | Risco de dependência única |
 |---|---|---|
-| §2 — O que é um CoE | `ibm2026-coe`, `deloitte2025-coe` | Baixo |
-| §3 — Equipe e Papéis-Chave | `curry2021-bdai-coe`, `ibm2026-coe` | Baixo |
-| §4 — Modelos de Atuação | `microsoft2025-coe`, `rudko2021-orgstructure` | Baixo |
-| §4.6 — Vinheta pública | `ibm2025-nationwide` | **Alto** (única vinheta) |
-| §5.1 — Padrões | `deloitte2025-coe`, `kpmg2024-coe` | Baixo |
-| §5.2 — Governança e IA Responsável | `nist2023-airmf`, `iso2023-42001`, `eu2024-aiact`, `oecd2024-aiprinciples`, `google2025-responsibleai`, `ribeiro2025-aigovernance` | Muito baixo |
-| §5.2.6 — AI red teaming | `nist2024-genaiprofile` | **Alto** (única fonte normativa principal) |
-| §5.2.7 — Evals contínuos | `nist2024-genaiprofile`, `nist2023-airmf` | Baixo |
-| §5.3 — Capacitação e Comunidade | `ibm2026-coe` | **Alto** |
-| §5.4 — FinOps para IA | `microsoft2025-sustainableai`, `googlecloud2025-sustainability`, `kpmg2024-coe` | Baixo |
-| §6 — Arquitetura e Plataforma Cloud | `microsoft2025-landingzone`, `microsoft2026-foundry`, `aws2025-mllens`, `googlecloud2025-opex` | Muito baixo |
-| §7 — Ciclo de Vida | `aws2025-mllens`, `googlecloud2025-opex` | Médio |
-| §8 — Era GenAI / Agentic | `mcp2025-spec`, `nist2024-genaiprofile`, `eu2024-aiact`, `kolbjornsrud2024-intelligent`, `aws2025-genai` | Baixo |
-| §10 — Modelo de Maturidade | `googlecloud2025-adoption`, `microsoft2025-coe`, `kolbjornsrud2024-intelligent` | Baixo |
-| §11 — Métricas e KPIs | `kpmg2024-coe`, `deloitte2025-coe`, `microsoft2025-coe` | Baixo |
-| §12 — Checklist Prático | `oracle2026-coe` | **Alto** (única fonte direta de checklist) |
-| §13 — Roadmap de Implementação | `oracle2026-coe`, `aws2025-genai`, `ribeiro2025-aigovernance` | Médio |
+| §2: O que é um CoE | `ibm2026-coe`, `deloitte2025-coe` | Baixo |
+| §3: Equipe e Papéis-Chave | `curry2021-bdai-coe`, `ibm2026-coe` | Baixo |
+| §4: Modelos de Atuação | `microsoft2025-coe`, `rudko2021-orgstructure` | Baixo |
+| §4.6: Vinheta pública | `ibm2025-nationwide` | **Alto** (única vinheta) |
+| §5.1: Padrões | `deloitte2025-coe`, `kpmg2024-coe` | Baixo |
+| §5.2: Governança e IA Responsável | `nist2023-airmf`, `iso2023-42001`, `eu2024-aiact`, `oecd2024-aiprinciples`, `google2025-responsibleai`, `ribeiro2025-aigovernance` | Muito baixo |
+| §5.2.6: AI red teaming | `nist2024-genaiprofile` | **Alto** (única fonte normativa principal) |
+| §5.2.7: Evals contínuos | `nist2024-genaiprofile`, `nist2023-airmf` | Baixo |
+| §5.3: Capacitação e Comunidade | `ibm2026-coe` | **Alto** |
+| §5.4: FinOps para IA | `microsoft2025-sustainableai`, `googlecloud2025-sustainability`, `kpmg2024-coe` | Baixo |
+| §6: Arquitetura e Plataforma Cloud | `microsoft2025-landingzone`, `microsoft2026-foundry`, `aws2025-mllens`, `googlecloud2025-opex` | Muito baixo |
+| §7: Ciclo de Vida | `aws2025-mllens`, `googlecloud2025-opex` | Médio |
+| §8: Era GenAI / Agentic | `mcp2025-spec`, `nist2024-genaiprofile`, `eu2024-aiact`, `kolbjornsrud2024-intelligent`, `aws2025-genai` | Baixo |
+| §10: Modelo de Maturidade | `googlecloud2025-adoption`, `microsoft2025-coe`, `kolbjornsrud2024-intelligent` | Baixo |
+| §11: Métricas e KPIs | `kpmg2024-coe`, `deloitte2025-coe`, `microsoft2025-coe` | Baixo |
+| §12: Checklist Prático | `oracle2026-coe` | **Alto** (única fonte direta de checklist) |
+| §13: Roadmap de Implementação | `oracle2026-coe`, `aws2025-genai`, `ribeiro2025-aigovernance` | Médio |
 
 ## Risco de dependência editorial
 
 Seções com **dependência alta** (uma única fonte principal) devem ser cruzadas com fontes secundárias em futuras revisões:
 
-- **§4.6 (Vinheta Nationwide):** considerar pelo menos uma vinheta adicional ou nota de limitação (já presente — case study de fornecedor, não estudo independente).
+- **§4.6 (Vinheta Nationwide):** considerar pelo menos uma vinheta adicional ou nota de limitação (já presente: case study de fornecedor, não estudo independente).
 - **§5.2.6 (Red teaming):** complementar com OWASP LLM Top 10 v2.0 e MITRE ATLAS quando aplicável.
 - **§5.3 (Capacitação):** acrescentar fonte sobre AI literacy (BCG, MIT) quando disponível.
-- **§12 (Checklist):** o Oracle/CIO é declaradamente um "checklist" — risco editorial é mínimo aqui, mas vale cruzar com KPMG/Deloitte em revisão futura.
+- **§12 (Checklist):** o Oracle/CIO é declaradamente um "checklist"; o risco editorial é mínimo aqui, mas vale cruzar com KPMG/Deloitte em revisão futura.
 
 ## Histórico de revisão
 

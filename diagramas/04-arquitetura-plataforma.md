@@ -1,4 +1,4 @@
-# Diagrama 4 — Arquitetura de referência da plataforma corporativa de IA
+# Diagrama 4. Arquitetura de referência da plataforma corporativa de IA
 
 Este diagrama mostra a **plataforma comum** que o CoE de IA mantém: landing zone, ambientes segregados, catálogo de modelos, guardrails automatizados, observabilidade e FinOps. A plataforma é o que permite squads desenvolverem soluções com autonomia, dentro de padrões definidos pelo hub.
 
@@ -108,7 +108,7 @@ flowchart LR
 
 - **Squads consomem** a plataforma via templates, catálogo e CI/CD; não recriam controles caso a caso.
 - **Governança é embutida**, não tickada manualmente: policy-as-code, RBAC, guardrails e gates rodam automaticamente no pipeline.
-- **Observabilidade e FinOps** ficam na plataforma porque servem múltiplas soluções; cada solução instrumenta (L4) o que a plataforma oferece (P5) — ver consistência cruzada em `assessment/criterios-pontuacao.md`.
+- **Observabilidade e FinOps** ficam na plataforma porque servem múltiplas soluções; cada solução instrumenta (L4) o que a plataforma oferece (P5); ver consistência cruzada em `assessment/criterios-pontuacao.md`.
 - A **camada de dados** é separada da camada de plataforma porque tem ciclo de vida e ownership próprios (data owners, retenção, expurgo).
-- **Fluxo de promoção:** EVAL valida → REG registra versão aprovada → CONSUMERS consomem via CAT. Sem esse lifecycle, CONSUMERS podem acessar modelos não validados — o REG é a fronteira entre "candidato" e "produção autorizada".
+- **Fluxo de promoção:** EVAL valida → REG registra versão aprovada → CONSUMERS consomem via CAT. Sem esse lifecycle, CONSUMERS podem acessar modelos não validados; o REG é a fronteira entre "candidato" e "produção autorizada".
 - **Sem fundação**, não há plataforma; sem plataforma, não há autoatendimento governado. A maturidade do CoE depende dessas três camadas funcionarem bem.

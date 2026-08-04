@@ -2,8 +2,8 @@
 
 O assessment separa duas decisões que não devem ser misturadas:
 
-1. **Maturidade do CoE de IA** — nota 0–4 por pergunta, dimensão e nível geral.
-2. **Go/no-go operacional por caso de uso** — decisão de permitir, restringir, pausar ou bloquear produção/expansão.
+1. Maturidade do CoE de IA: nota 0–4 por pergunta, dimensão e nível geral.
+2. Go/no-go operacional por caso de uso: decisão de permitir, restringir, pausar ou bloquear produção/expansão.
 
 Uma organização pode ter maturidade razoável e, ainda assim, ter **veto operacional** em um caso específico. A pontuação mede capacidade organizacional; os gates protegem produção, clientes, usuários, dados, conformidade e operação.
 
@@ -72,10 +72,10 @@ Mapeamento para nível:
 
 | Média exata da dimensão | Nível |
 |---|---|
-| 0,00 a 1,49 | Nível 1 — Reativo |
-| 1,50 a 2,49 | Nível 2 — Executor |
-| 2,50 a 3,49 | Nível 3 — Habilitador |
-| 3,50 a 4,00 | Nível 4 — Transformador |
+| 0,00 a 1,49 | Nível 1: Reativo |
+| 1,50 a 2,49 | Nível 2: Executor |
+| 2,50 a 3,49 | Nível 3: Habilitador |
+| 3,50 a 4,00 | Nível 4: Transformador |
 
 Não arredonde médias para ativar ou desativar contenções. Uma dimensão com 1,99 continua abaixo de 2,0.
 
@@ -208,7 +208,7 @@ ID da pergunta → evidência observada → evidência negativa → nota → con
 
 | Nível geral | Interpretação | Próximo foco |
 |---|---|---|
-| Nível 1 — Reativo | A organização está experimentando IA sem sistema operacional claro. | Mandato, sponsor, triagem, padrões mínimos e controle de risco básico. |
-| Nível 2 — Executor | O CoE existe e entrega, mas ainda concentra execução e conhecimento. | Minimum Viable Standards, plataforma inicial, handoff e capacitação. |
-| Nível 3 — Habilitador | Adoção começa a escalar com padrões e governança distribuída. | Guardrails automatizados, evals contínuos, FinOps, handoff e comunidades. |
-| Nível 4 — Transformador | IA opera como capacidade organizacional, com CoE consultivo. | Otimização contínua, inovação responsável e evolução do modelo operacional. |
+| Nível 1: Reativo | A organização está experimentando IA sem sistema operacional claro. | Mandato, sponsor, triagem, padrões mínimos e controle de risco básico. |
+| Nível 2: Executor | O CoE existe e entrega, mas ainda concentra execução e conhecimento. | Minimum Viable Standards, plataforma inicial, handoff e capacitação. |
+| Nível 3: Habilitador | Adoção começa a escalar com padrões e governança distribuída. | Guardrails automatizados, evals contínuos, FinOps, handoff e comunidades. |
+| Nível 4: Transformador | IA opera como capacidade organizacional, com CoE consultivo. | Otimização contínua, inovação responsável e evolução do modelo operacional. |

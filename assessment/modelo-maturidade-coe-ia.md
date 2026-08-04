@@ -30,7 +30,7 @@ O modelo mede maturidade organizacional. Ele não autoriza, sozinho, a entrada d
 
 ## Perfil por nível
 
-| Dimensão | Nível 1 — Reativo | Nível 2 — Executor | Nível 3 — Habilitador | Nível 4 — Transformador |
+| Dimensão | Nível 1: Reativo | Nível 2: Executor | Nível 3: Habilitador | Nível 4: Transformador |
 |---|---|---|---|---|
 | Estratégia e mandato | Iniciativas dispersas, sem sponsor claro | CoE formalizado e patrocinado | Estratégia conectada a portfólio e funding | IA integrada à estratégia corporativa |
 | Modelo operacional | Papéis ambíguos | CoE central executa | Modelo federado com handoff | CoE consultivo e comunidades autônomas |

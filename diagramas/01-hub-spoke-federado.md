@@ -1,10 +1,10 @@
-# Diagrama 1 — Hub-and-spoke e modelo federado/híbrido
+# Diagrama 1. Hub-and-spoke e modelo federado/híbrido
 
 Este diagrama mostra a essência do modelo operacional de um CoE de IA: um **hub central** que define padrões, governança, plataforma e ativos reutilizáveis, e **spokes federados** (squads de produto, plataforma e dados) que executam casos de uso dentro desses padrões. O CoE pode incubar PoCs/MVPs estratégicos, mas o ownership operacional é transferido para os spokes via **build-to-transfer**.
 
 ## Hub-and-spoke conceitual
 
-**[Descrição acessível]:** flowchart top-bottom mostrando um nó central "CoE de IA — Hub" (azul) com setas saindo para quatro spokes em cinza (Produto/Negócio; Plataforma/Cloud; Dados; Squads de domínio) e setas pontilhadas de feedback retornando dos spokes para o hub. À direita do hub há um nó em amarelo "Segurança, Risco, Compliance, DPO" conectado bidirecionalmente ao hub.
+**[Descrição acessível]:** flowchart top-bottom mostrando um nó central "CoE de IA (Hub)" (azul) com setas saindo para quatro spokes em cinza (Produto/Negócio; Plataforma/Cloud; Dados; Squads de domínio) e setas pontilhadas de feedback retornando dos spokes para o hub. À direita do hub há um nó em amarelo "Segurança, Risco, Compliance, DPO" conectado bidirecionalmente ao hub.
 
 ```mermaid
 flowchart TB
@@ -12,7 +12,7 @@ flowchart TB
     classDef spoke fill:#f6f8fa,stroke:#57606a,color:#24292f
     classDef gov fill:#fff8c5,stroke:#9a6700,color:#24292f
 
-    HUB["<b>CoE de IA — Hub</b><br/>Padrões · Governança · Plataforma<br/>Capacitação · Catálogo · Evals"]:::hub
+    HUB["<b>CoE de IA (Hub)</b><br/>Padrões · Governança · Plataforma<br/>Capacitação · Catálogo · Evals"]:::hub
 
     GOV["Segurança, Risco<br/>Compliance, DPO"]:::gov
 
@@ -34,7 +34,7 @@ flowchart TB
 
 ## Direitos de decisão no modelo federado
 
-**[Descrição acessível]:** flowchart esquerda-direita mostrando cinco atores coloridos — CoE de IA (azul), Produto/Negócio (verde), Plataforma/Cloud (âmbar), Segurança/Risco/Compliance (vermelho) e Sponsor Executivo (roxo) — cada um listando suas decisões próprias. Setas sólidas indicam relações de operação ("dentro dos padrões", "operação técnica") entre CoE/Produto/Plataforma; setas pontilhadas mostram veto e caminhos de escalada de Risco/Produto/CoE para o Sponsor.
+**[Descrição acessível]:** flowchart esquerda-direita mostrando cinco atores coloridos: CoE de IA (azul), Produto/Negócio (verde), Plataforma/Cloud (âmbar), Segurança/Risco/Compliance (vermelho) e Sponsor Executivo (roxo), cada um listando suas decisões próprias. Setas sólidas indicam relações de operação ("dentro dos padrões", "operação técnica") entre CoE/Produto/Plataforma; setas pontilhadas mostram veto e caminhos de escalada de Risco/Produto/CoE para o Sponsor.
 
 ```mermaid
 flowchart LR

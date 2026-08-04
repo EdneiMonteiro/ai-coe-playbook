@@ -2,8 +2,8 @@
 
 Use a escala definida em [`criterios-pontuacao.md`](criterios-pontuacao.md). As notas **0** e **1** seguem a régua geral:
 
-- **0** — inexistente ou não evidenciado.
-- **1** — ad hoc, informal, dependente de indivíduos ou aplicado em caso isolado.
+- 0: inexistente ou não evidenciado.
+- 1: ad hoc, informal, dependente de indivíduos ou aplicado em caso isolado.
 
 As tabelas abaixo detalham, por pergunta, o que caracteriza notas **2**, **3** e **4**. Cada resposta deve citar evidências verificáveis: documentos, links, atas, repositórios, dashboards, exemplos de projetos, políticas, runbooks, logs, registros de decisão ou amostras de soluções.
 
@@ -11,7 +11,7 @@ Perguntas marcadas como **críticas** podem acionar contenções ou veto operaci
 
 ## 1. Estratégia e mandato
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | E1 | Existe charter formal do CoE de IA com missão, escopo, fora de escopo e sponsor? | Charter existe, mas ainda é recente, parcial ou pouco usado. | Charter aprovado, sponsor ativo e papéis conhecidos por pelo menos dois domínios/BUs. | Charter revisado periodicamente com decisões registradas e métricas de efetividade. | Charter aprovado, ata de aprovação, sponsor definido, revisão periódica. |
 | E2 | O CoE possui roadmap conectado à estratégia de negócio e tecnologia? | Roadmap existe, mas cobre principalmente iniciativas do CoE. | Roadmap conecta casos, plataforma, governança e prioridades de negócio. | Roadmap é revisado por valor, risco, custo, dependências e capacidade executiva. | Roadmap, OKRs, plano anual, estratégia corporativa. |
@@ -21,7 +21,7 @@ Perguntas marcadas como **críticas** podem acionar contenções ou veto operaci
 
 ## 2. Modelo operacional
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | M1 | Existe processo de intake para novos casos de uso de IA? | Formulário ou canal existe, mas triagem é manual ou irregular. | Workflow padronizado com critérios de valor, risco, dados, viabilidade e owner. | Intake mede lead time, taxa de aprovação, gargalos, valor esperado e descarte de ideias. | Formulário, workflow, backlog, critérios de triagem. |
 | M2 | Os papéis de CoE, produto, plataforma, dados e risco/compliance estão definidos? | Papéis definidos em documento ou piloto. | RACI usado em múltiplos casos, com accountability claro. | RACI é revisado a partir de incidentes, handoffs, auditorias e feedback dos times. | RACI, operating model, organograma, comunidades, atas. |
@@ -31,7 +31,7 @@ Perguntas marcadas como **críticas** podem acionar contenções ou veto operaci
 
 ## 3. Governança e risco
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | G1 **crítica** | Casos de uso são classificados por risco antes de desenvolvimento com dados reais? | Template existe e é usado em pilotos ou pelo CoE. | Todo MVP, produção e expansão com dados reais tem classificação formal, owner de risco e aprovação. | Classificações são auditadas, comparadas com incidentes e ajustadas por mudanças regulatórias. | Template de avaliação, registros de classificação, aprovações, trilha de decisão. |
 | G2 **crítica** | Existem gates proporcionais ao risco para PoC, MVP, produção e expansão? | Gates definidos, mas aplicados manualmente ou sem bloqueio efetivo. | Gates bloqueiam produção/expansão quando controles mínimos não são atendidos. | Gates são automatizados quando possível e revisados por exceções, incidentes e auditorias. | Workflow de aprovação, policy-as-code, evidências de gate, exceções. |
@@ -41,7 +41,7 @@ Perguntas marcadas como **críticas** podem acionar contenções ou veto operaci
 
 ## 4. Plataforma e arquitetura
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | P1 | Há arquitetura de referência para RAG, agentes, copilots e ML clássico? | Arquiteturas existem para alguns padrões principais. | Arquiteturas versionadas são usadas por múltiplos times e incluem dados, segurança, evals, operação e custo. | Arquiteturas são revisadas por métricas, incidentes, evolução tecnológica e mudanças regulatórias. | Diagramas, ADRs, blueprints, repositórios-modelo. |
 | P2 | Existe catálogo de modelos, ferramentas, integrações e serviços aprovados? | Catálogo inicial existe, com critérios básicos. | Catálogo cobre modelos, ferramentas, integrações acionáveis por agentes, escopo de dados, owner e ambiente permitido. | Catálogo tem ciclo de homologação, revisão de fornecedor, plano de saída e descontinuação controlada. | Catálogo, critérios de homologação, owners, avaliação de fornecedor. |
@@ -53,17 +53,17 @@ Nota: **P5 mede capacidade oferecida pela plataforma**. O uso efetivo por soluç
 
 ## 5. Dados e conhecimento
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | D1 | Fontes de dados usadas por IA possuem owner, classificação e política de acesso? | Owners e classificação existem para fontes principais. | Fontes usadas por IA têm owner, classificação, acesso aprovado e revisão periódica. | Uso de dados é monitorado, auditado e otimizado por qualidade, risco e valor. | Catálogo de dados, data owners, matriz de acesso. |
-| D2 **crítica** | Dados pessoais, sensíveis, regulados ou confidenciais são tratados com controles específicos? | Controles existem para alguns casos ou são manuais. | Base legal/finalidade, retenção, mascaramento, acesso, logs e DPIA/LIA/FRIA quando aplicável são registrados por regime de dado; fornecedor de GPAI e jurisdição do processamento estão identificados quando dados pessoais saem da organização via API. | Controles são auditados, testados contra vazamento, revisados por incidentes, mudanças de finalidade, mudanças de regime de uso e mudanças de fornecedor/jurisdição. | DPIA/LIA/FRIA, mascaramento, retenção, base legal, controles de acesso e registro separado para: dados de treino/fine-tuning, dados de inferência/RAG e logs de interação, com finalidade, minimização, residência e expurgo por regime; para inferência via API GPAI, identificar fornecedor, jurisdição de processamento e mecanismo formal de transferência internacional (LGPD Art. 33 / GDPR Cap. V) — **quando cláusulas contratuais forem o mecanismo LGPD Art. 33 adotado, exigir CCPs ANPD Res. CD/ANPD nº 19/2024 (prazo de adequação expirado em 23/08/2025)**; para GDPR usar DPA Art. 28 + SCCs Art. 46 aplicáveis; **quando provider estiver sujeito a leis extraterritoriais com poder de acesso governamental (ex.: US CLOUD Act), realizar Transfer Impact Assessment (TIA) ou avaliação equivalente que documente risco de acesso por autoridade estrangeira, medidas suplementares aplicadas e decisão registrada**. |
+| D2 **crítica** | Dados pessoais, sensíveis, regulados ou confidenciais são tratados com controles específicos? | Controles existem para alguns casos ou são manuais. | Base legal/finalidade, retenção, mascaramento, acesso, logs e DPIA/LIA/FRIA quando aplicável são registrados por regime de dado; fornecedor de GPAI e jurisdição do processamento estão identificados quando dados pessoais saem da organização via API. | Controles são auditados, testados contra vazamento, revisados por incidentes, mudanças de finalidade, mudanças de regime de uso e mudanças de fornecedor/jurisdição. | DPIA/LIA/FRIA, mascaramento, retenção, base legal, controles de acesso e registro separado para: dados de treino/fine-tuning, dados de inferência/RAG e logs de interação, com finalidade, minimização, residência e expurgo por regime; para inferência via API GPAI, identificar fornecedor, jurisdição de processamento e mecanismo formal de transferência internacional (LGPD Art. 33 / GDPR Cap. V); **quando cláusulas contratuais forem o mecanismo LGPD Art. 33 adotado, exigir CCPs ANPD Res. CD/ANPD nº 19/2024 (prazo de adequação expirado em 23/08/2025)**; para GDPR usar DPA Art. 28 + SCCs Art. 46 aplicáveis; **quando provider estiver sujeito a leis extraterritoriais com poder de acesso governamental (ex.: US CLOUD Act), realizar Transfer Impact Assessment (TIA) ou avaliação equivalente que documente risco de acesso por autoridade estrangeira, medidas suplementares aplicadas e decisão registrada**. |
 | D3 | Bases de conhecimento para RAG têm curadoria, versionamento e ciclo de atualização? | Bases críticas têm owner e atualização definida. | Corpus, chunks, embeddings, índice vetorial, retriever/reranker e política de recuperação são versionados; status de anonimização ou pseudonimização do corpus e dos logs de interação é declarado. | Atualizações disparam regressão, invalidação de cache e rebuild/expurgo de embeddings quando aplicável; expurgo respeita direito de apagamento. | Pipeline de ingestão, versionamento, hash/snapshot, SLAs de atualização; declaração explícita do status de anonimização do corpus, dos logs de interação e dos embeddings (anonimizado por técnica X / pseudonimizado / não anonimizado), tratando embeddings como dado pseudonimizado por definição. |
 | D4 | Há critérios de qualidade, relevância e validade para documentos e datasets? | Critérios existem, mas são aplicados irregularmente. | Qualidade, validade, lineage, cobertura e testes de recuperação são verificados antes de produção; dados sintéticos usados em treino, teste, evals, demos ou relatórios têm proveniência e aprovação do data owner; em evals, o gerador dos dados sintéticos não pertence à mesma família do modelo avaliado (evita circular evaluation). | Qualidade é monitorada continuamente e vinculada a erros, feedback, degradação de respostas e risco de reidentificação/memorização quando houver dados sintéticos; integridade do harness de eval é registrada (hash do dataset, judge independente do gerador, controle de contaminação treino/eval). | Regras de qualidade, validações, lineage, testes de recuperação; para dados sintéticos: método de geração, finalidade, teste de utilidade, risco de reidentificação/memorização e aprovação do data owner; para evals: hash do golden dataset, identificação do judge, declaração de família do gerador vs família do avaliado e check de contaminação treino/eval. |
 | D5 | A organização evita duplicação de bases e reutiliza ativos de conhecimento? | Catálogo ou reuso existe em alguns domínios. | Ativos de dados/conhecimento são catalogados, reutilizados e têm ownership claro. | Reuso é medido, duplicidades são reduzidas e ativos obsoletos são descontinuados. | Catálogo, reutilização entre produtos, métricas de duplicidade. |
 
 ## 6. LLMOps/MLOps e evals
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | L1 | Prompts, modelos, embeddings, datasets, índices vetoriais, tool schemas e configurações são versionados? | Versionamento cobre modelos/prompts principais. | Release é rastreável até modelo, prompt, embedding, corpus, índice, chunking, retriever/reranker, tool schema e guardrails. | Versionamento permite auditoria, reprodução, comparação entre releases e rollback seletivo. | Repositórios, registry, hash/snapshot, release notes. |
 | L2 **crítica** | Existem evals mínimos para qualidade, safety, security, groundedness, viés, custo e latência? | Evals existem para qualidade básica ou casos piloto. | Evals têm golden datasets versionados (com hash), thresholds por risco, orçamento/frequência proporcional ao risco, separação entre safety e security (injection, jailbreak, excessive agency) e integridade do harness declarada (judge independente da família do gerador, controle de contaminação treino/eval). | Evals são medidos por tendência, cobertura, falsos positivos/negativos, custo por execução, integridade do harness reauditada periodicamente e impacto em release. | Suites de eval, thresholds, golden datasets com hash, relatórios, custo por execução de eval/regressão, orçamento mensal, frequência por classe de risco e declaração de "harness integrity" (judge ≠ família do gerador; contaminação treino/eval verificada). |
@@ -73,7 +73,7 @@ Nota: **P5 mede capacidade oferecida pela plataforma**. O uso efetivo por soluç
 
 ## 7. Portfólio e valor
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | V1 | Casos de uso são priorizados por valor, risco, viabilidade e alinhamento estratégico? | Scorecard existe, mas é usado parcialmente. | Priorização combina valor, risco, dados, viabilidade, custo e estratégia em fórum recorrente. | Priorização é recalibrada por valor realizado, incidentes, capacidade e mudanças estratégicas. | Scorecard, comitê, matriz valor/risco, decisões. |
 | V2 | Cada iniciativa possui business case ou hipótese de valor mensurável? | Hipóteses de valor existem para iniciativas principais. | Todo MVP/produção tem baseline, métrica de sucesso, owner e hipótese de valor. | Valor é acompanhado pós-produção e ajusta funding, escala ou encerramento. | Business case, OKRs, baseline, métricas de sucesso. |
@@ -83,7 +83,7 @@ Nota: **P5 mede capacidade oferecida pela plataforma**. O uso efetivo por soluç
 
 ## 8. Capacitação e comunidade
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | C1 | Existe programa de AI literacy para usuários, líderes e áreas de negócio? | Treinamentos básicos existem. | Programa segmentado por público, com cobertura em múltiplas áreas. | Proficiência e aplicação prática são medidas e usadas para atualizar conteúdo. | Conteúdo, trilhas, presença, avaliações. |
 | C2 | Existem trilhas técnicas para engenharia, dados, segurança, arquitetura e produto? | Trilhas existem para alguns perfis técnicos. | Trilhas cobrem papéis críticos e são conectadas a padrões do CoE. | Trilhas são atualizadas por incidentes, novas tecnologias e lacunas observadas. | Currículos, bootcamps, certificações, labs. |
@@ -93,7 +93,7 @@ Nota: **P5 mede capacidade oferecida pela plataforma**. O uso efetivo por soluç
 
 ## 9. FinOps e sustentabilidade
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | F1 | Custos de IA são rastreados por produto, área, ambiente e modelo? | Custos são visíveis para parte dos workloads. | Custos são alocados por produto/área/modelo, fase do ciclo de vida e licenças SaaS de IA; sponsor recebe showback/chargeback ou equivalente. | Custos orientam decisões de escala, arquitetura, modelo, funding, reclaim de licenças e encerramento. | Dashboards, tags, billing export, showback/chargeback; taxonomia de custo: treino, fine-tuning, inferência online/batch, embeddings/vector DB, tool calls, logging/retenção, evals e SaaS/licenças como Copilot, ChatGPT Enterprise ou equivalentes, com utilização ativa e reclaim. |
 | F2 | Há budgets, alertas e limites de consumo para workloads de IA? | Budgets e alertas existem para ambientes principais. | Budgets, quotas e alertas são aplicados por produto/área/modelo, com owner; **soluções GenAI/RAG/agentes em produção têm circuit breaker financeiro automático (corte automático ao atingir limite) e proteção contra runaway cost por retry/fanout, conectados a alerta de PII em retries de erro**. | Alertas acionam decisões automáticas ou operacionais, incluindo circuit breaker financeiro e por sessão de agente quando aplicável. | Budgets, quotas, alertas, políticas de consumo, evidência de circuit breaker testado e logs de acionamento. |
@@ -105,7 +105,7 @@ Nota: nesta versão, F5 é critério de maturidade, mas não gera veto operacion
 
 ## 10. Operação e melhoria contínua
 
-| ID | Pergunta | Nota 2 — definido parcialmente | Nota 3 — padronizado | Nota 4 — otimizado | Evidências esperadas |
+| ID | Pergunta | Nota 2: definido parcialmente | Nota 3: padronizado | Nota 4: otimizado | Evidências esperadas |
 |---|---|---|---|---|---|
 | O1 **crítica** | Soluções de IA em produção têm owner operacional claro? | Owners existem para soluções principais. | Toda produção tem owner operacional, suporte, escalação e responsabilidade pós-handoff. | Ownership é auditado, medido por incidentes/SLOs e ajustado por mudanças de produto. | Owner, RACI, suporte, escalação, inventário. |
 | O2 **crítica** | Existem SLOs/SLAs e runbooks para aplicações críticas de IA? | Runbooks existem para aplicações principais. | Produção crítica tem SLO/SLA, runbook, on-call/escalação, fallback e simulação. | SLOs e runbooks são testados, revisados por incidentes e melhorados continuamente. | SLOs, runbooks, planos de suporte, testes. |

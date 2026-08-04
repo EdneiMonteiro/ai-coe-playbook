@@ -1,4 +1,4 @@
-# Diagrama 2 — Fluxo de intake a handoff com gates
+# Diagrama 2. Fluxo de intake a handoff com gates
 
 Este diagrama mostra o ciclo de vida operacional de um caso de uso de IA dentro do CoE: da entrada no funil de intake até o handoff para o squad de produto. Os **gates operacionais** (classificação de risco, FRIA/DPIA quando aplicável, red team, incident response, evals, fallback) determinam se um caso pode avançar entre estágios. Esses gates protegem produção, dados, clientes e conformidade.
 
@@ -16,19 +16,19 @@ flowchart TB
 
     INTAKE["<b>Intake</b><br/>formulário, owner de negócio,<br/>owner técnico, hipótese de valor"]:::stage
 
-    G1{"Gate 1 —<br/>Classificação de risco<br/>+ avaliação de dados"}:::gate
+    G1{"Gate 1:<br/>Classificação de risco<br/>+ avaliação de dados"}:::gate
 
     POC["<b>PoC</b><br/>experimento controlado<br/>sem produção real"]:::stage
 
-    G2{"Gate 2 — Pré-MVP<br/>FRIA/DPIA aplicável?<br/>Base legal? Owner de risco?"}:::gate
+    G2{"Gate 2: Pré-MVP<br/>FRIA/DPIA aplicável?<br/>Base legal? Owner de risco?"}:::gate
 
     MVP["<b>MVP</b><br/>piloto limitado<br/>usuários controlados<br/>critérios de sucesso"]:::stage
 
-    G3{"Gate 3 — Pré-produção<br/>Red team? Evals com<br/>thresholds? Incident response?<br/>Fallback/kill switch?"}:::gate
+    G3{"Gate 3: Pré-produção<br/>Red team? Evals com<br/>thresholds? Incident response?<br/>Fallback/kill switch?"}:::gate
 
     PROD["<b>Produção</b><br/>tráfego real<br/>monitoramento contínuo<br/>SLO + on-call"]:::stage
 
-    G4{"Gate 4 — Handoff<br/>DoD: runbook, evals,<br/>métricas, knowledge transfer,<br/>owner em squad por 30 dias"}:::gate
+    G4{"Gate 4: Handoff<br/>DoD: runbook, evals,<br/>métricas, knowledge transfer,<br/>owner em squad por 30 dias"}:::gate
 
     HANDOFF(["<b>Handoff completo</b><br/>squad é R operacional<br/>CoE atua como C"]):::done
 
@@ -59,7 +59,7 @@ flowchart TB
 
 ## Status possíveis em cada gate
 
-**[Descrição acessível]:** state diagram com estado inicial "Em Avaliação" e quatro estados de saída — Aprovado (terminal), Aprovado Com Restrições, Veto Operacional e Bloqueado (terminal). Restrições e vetos voltam ao estado de avaliação após revisão/remediação. Mostra que o gate é dinâmico: maturidade da organização não imuniza casos individuais.
+**[Descrição acessível]:** state diagram com estado inicial "Em Avaliação" e quatro estados de saída: Aprovado (terminal), Aprovado Com Restrições, Veto Operacional e Bloqueado (terminal). Restrições e vetos voltam ao estado de avaliação após revisão/remediação. Mostra que o gate é dinâmico: maturidade da organização não imuniza casos individuais.
 
 ```mermaid
 stateDiagram-v2
@@ -80,5 +80,5 @@ stateDiagram-v2
 
 - Cada **gate** é uma decisão go/no-go que separa maturidade de capacidade organizacional da autorização operacional do caso. Uma organização madura pode, ainda assim, **vetar** um caso específico.
 - Gates 2 e 3 ativam as **regras de contenção** documentadas em `assessment/criterios-pontuacao.md`: FRIA/DPIA, AI red teaming, incident response IA, fallback/rollback/kill switch, evals com thresholds.
-- O **handoff** é o critério prático de **build-to-transfer**: o squad receptor é o R operacional, com o CoE atuando como consultor. Sem DoD atingido, o caso volta para iteração (ver `artefatos/raci-coe-ia.md` — DoD de transferência).
+- O **handoff** é o critério prático de **build-to-transfer**: o squad receptor é o R operacional, com o CoE atuando como consultor. Sem DoD atingido, o caso volta para iteração (ver `artefatos/raci-coe-ia.md`, DoD de transferência).
 - O fluxo é cíclico: **expansão** de um caso existente (novos países, dados, ferramentas, autonomia) é tratada como nova decisão go/no-go.

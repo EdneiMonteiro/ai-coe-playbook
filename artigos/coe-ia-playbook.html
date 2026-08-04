@@ -431,9 +431,9 @@ strong {
 <li><a href="#12-checklist-pratico-para-lideres">12. Checklist</a></li>
 <li><a href="#13-roadmap-de-implementacao-baseado-nas-referencias">13. Roadmap</a></li>
 <li><a href="#14-conclusao">14. Conclusão</a></li>
-<li><a href="#apendice-a-raci-de-referencia-para-um-coe-de-ia">Apêndice A — RACI</a></li>
-<li><a href="#apendice-b-charter-modelo-resumido-para-um-coe-de-ia">Apêndice B — Charter</a></li>
-<li><a href="#apendice-c-template-de-avaliacao-de-risco-operacional">Apêndice C — Risco</a></li>
+<li><a href="#apendice-a-raci-de-referencia-para-um-coe-de-ia">Apêndice A. RACI</a></li>
+<li><a href="#apendice-b-charter-modelo-resumido-para-um-coe-de-ia">Apêndice B. Charter</a></li>
+<li><a href="#apendice-c-template-de-avaliacao-de-risco-operacional">Apêndice C. Risco</a></li>
 <li><a href="#referencias">Referências</a></li>
 </ol>
 </nav>
@@ -441,32 +441,27 @@ strong {
 <article class="paper">
 <h1 id="centro-de-excelencia-em-ia-guia-pratico-para-estruturar-operar-e-escalar">Centro de Excelência em IA: Guia Prático para Estruturar, Operar e Escalar</h1>
 <p class="article-meta"><span>AI CoE Playbook</span><span>Versão recomendada para revisão por pares: v1.0.2</span><a href="https://doi.org/10.5281/zenodo.20361901">DOI 10.5281/zenodo.20361901</a><a href="https://github.com/EdneiMonteiro/ai-coe-playbook">Repositório no GitHub</a><span>CC BY 4.0</span></p>
-<blockquote>
-<p><em>"Um CoE de IA não é uma fábrica de software — é o motor de transformação que orquestra padrões, talentos e cultura para que toda a organização adote IA de forma estratégica, segura e escalável."</em></p>
-</blockquote>
-<hr />
 <h2 id="resumo-executivo">Resumo executivo</h2>
-<p>A tese central deste artigo é simples: <strong>um CoE de IA deve criar as condições para que a organização adote IA com consistência, segurança e valor de negócio — não apenas concentrar conhecimento técnico em um time especializado</strong>.</p>
+<p>A tese central deste artigo: um CoE de IA existe para criar as condições que permitem à organização adotar IA com segurança e valor de negócio. Concentrar conhecimento técnico em um time especializado é meio, não fim.</p>
 <p>As referências convergem em um ponto: no início da jornada, alguma centralização pode acelerar a criação de capacidades, padrões e primeiros pilotos. Com a maturidade, porém, o CoE deve evoluir para um modelo federado ou consultivo (<em>advisory</em>), no qual o núcleo central define estratégia, padrões, governança, avaliação, controles automatizados (<em>guardrails</em>), capacitação e ativos reutilizáveis, enquanto as unidades de negócio e tecnologia executam casos de uso dentro desses padrões.</p>
 <p>Esse modelo não deve ser dogmático: a intensidade dos controles e das métricas precisa variar conforme contexto organizacional, risco, regulação, missão institucional e presença geográfica.</p>
 <p>Em termos práticos, um CoE de IA bem desenhado deve:</p>
 <ol>
-<li><strong>Definir estratégia e critérios de priorização</strong> para iniciativas de IA.</li>
-<li><strong>Publicar padrões e arquiteturas de referência</strong> para RAG, agentes, MCP, MLOps, LLMOps, avaliação, segurança, observabilidade e FinOps.</li>
-<li><strong>Estabelecer governança de IA responsável</strong>, alinhada a NIST AI RMF, ISO/IEC 42001, OECD AI Principles e EU AI Act.</li>
-<li><strong>Criar ativos reutilizáveis e plataformas habilitadoras</strong>, com automação, templates e controles incorporados.</li>
-<li><strong>Capacitar a organização</strong>, formando comunidades de prática e distribuindo conhecimento.</li>
-<li><strong>Medir valor, risco, qualidade, custo e sustentabilidade</strong>, não apenas volume de experimentos ou número de modelos.</li>
+<li>Definir estratégia e critérios de priorização para iniciativas de IA.</li>
+<li>Publicar padrões e arquiteturas de referência para RAG, agentes, MCP, MLOps, LLMOps, avaliação, segurança, observabilidade e FinOps.</li>
+<li>Estabelecer governança de IA responsável, alinhada a NIST AI RMF, ISO/IEC 42001, OECD AI Principles e EU AI Act.</li>
+<li>Criar ativos reutilizáveis e plataformas habilitadoras, com automação, templates e controles incorporados.</li>
+<li>Capacitar a organização, formando comunidades de prática e distribuindo conhecimento.</li>
+<li>Medir valor, risco, qualidade, custo e sustentabilidade, não apenas volume de experimentos ou número de modelos.</li>
 </ol>
 <p><strong>Palavras-chave:</strong> Centro de Excelência em IA; governança de IA; IA generativa; IA agêntica; NIST AI RMF; ISO/IEC 42001; LLMOps; MCP; FinOps.</p>
-<hr />
 <h2 id="1-introducao">1. Introdução</h2>
-<p>A Inteligência Artificial deixou de ser uma aposta de longo prazo para se tornar uma prioridade estratégica imediata. Guias executivos recentes, como o da KPMG (2024), mostram que a pressão por IA e automação já chegou ao topo da agenda corporativa. Entretanto, existe um gap considerável entre a ambição executiva e a capacidade real de implementação — especialmente no que diz respeito à avaliação de retorno e à gestão de riscos associados à IA.</p>
+<p>A Inteligência Artificial deixou de ser uma aposta de longo prazo para se tornar uma prioridade estratégica imediata. Guias executivos recentes, como o da KPMG (2024), mostram que a pressão por IA e automação já chegou ao topo da agenda corporativa. Entretanto, existe um gap considerável entre a ambição executiva e a capacidade real de implementação, especialmente na avaliação de retorno e na gestão de riscos associados à IA.</p>
 <p>Com o avanço dos modelos de linguagem (LLMs), técnicas como RAG (Retrieval-Augmented Generation), arquiteturas multi-agente e a emergência da IA agêntica, as organizações enfrentam um dilema: <strong>como adotar IA de forma coordenada, segura e escalável, sem que cada área reinvente a roda?</strong></p>
-<p>A resposta mais comum — e comprovadamente eficaz — é a criação de um <strong>Centro de Excelência em IA (CoE de IA)</strong>: uma estrutura organizacional dedicada a incentivar a adoção, otimização e governança da IA em toda a organização. O CoE funciona como um hub centralizado de conhecimento especializado, boas práticas e recursos, garantindo que as iniciativas de IA estejam alinhadas aos objetivos estratégicos e gerem valor real de negócio (IBM, 2024).</p>
-<p>Entretanto, muitas organizações tropeçam na execução. O conhecimento técnico especializado necessário para implementar IA frequentemente se encontra <strong>fragmentado entre equipes</strong>, levando a ineficiências, resultados inconsistentes e esforços duplicados (IBM, 2024). Sem uma estrutura dedicada, os projetos de IA proliferam de forma desordenada — cada time escolhe seu próprio stack, define seus próprios padrões (ou nenhum) e cria débito técnico que se acumula silenciosamente.</p>
-<p>Pior ainda: quando o CoE é criado mas assume responsabilidades demais, opera como único executor de iniciativas e não define um caminho claro de transição para times de produto e plataforma, ele — ironicamente — se torna o gargalo que deveria eliminar.</p>
-<p>Este artigo apresenta um <strong>guia prático e abrangente</strong> para estruturar, operar e evoluir um CoE de IA, sintetizando documentação de fornecedores de tecnologia, frameworks de adoção, fontes de mercado publicamente referenciáveis, normas, regulação e pesquisa acadêmica, com ênfase em:</p>
+<p>A resposta mais comum, e comprovadamente eficaz, é a criação de um <strong>Centro de Excelência em IA (CoE de IA)</strong>: uma estrutura organizacional dedicada a incentivar a adoção, otimização e governança da IA em toda a organização. O CoE funciona como um hub centralizado de conhecimento especializado, boas práticas e recursos, para que as iniciativas de IA fiquem alinhadas aos objetivos estratégicos e gerem valor real de negócio (IBM, 2024).</p>
+<p>Entretanto, muitas organizações tropeçam na execução. O conhecimento técnico especializado necessário para implementar IA frequentemente se encontra <strong>fragmentado entre equipes</strong>, levando a ineficiências, resultados inconsistentes e esforços duplicados (IBM, 2024). Sem uma estrutura dedicada, os projetos de IA proliferam de forma desordenada: cada time escolhe seu próprio stack, define seus próprios padrões (ou nenhum) e cria débito técnico que se acumula silenciosamente.</p>
+<p>Pior ainda: quando o CoE é criado mas assume responsabilidades demais, opera como único executor de iniciativas e não define um caminho claro de transição para times de produto e plataforma, ele acaba virando o gargalo que deveria eliminar.</p>
+<p>Este artigo apresenta um <strong>guia prático</strong> para estruturar, operar e evoluir um CoE de IA, sintetizando documentação de fornecedores de tecnologia, frameworks de adoção, fontes de mercado publicamente referenciáveis, normas, regulação e pesquisa acadêmica, com ênfase em:</p>
 <ul>
 <li>Definição, papéis e composição de equipe</li>
 <li>Modelos de atuação e quando usar cada um</li>
@@ -483,9 +478,8 @@ strong {
 <p>As fontes foram incluídas quando atendiam a pelo menos um dos seguintes critérios: (1) serem documentação oficial ou framework de adoção de IA de fornecedor relevante; (2) tratarem diretamente de CoE, operating model, governança, MLOps/LLMOps ou arquitetura de IA; (3) serem norma, regulação ou framework amplamente usado em governança de IA; (4) oferecerem base acadêmica para desenho organizacional, governança ou colaboração humano-IA. A revisão foi atualizada em <strong>21 de maio de 2026</strong>; por isso, referências de 2026 e a nomenclatura atual da Microsoft Foundry foram verificadas nessa janela.</p>
 <p>Como limitação, o artigo sintetiza recomendações e padrões recorrentes, mas não mede estatisticamente a taxa de sucesso de CoEs nem substitui avaliação jurídica, regulatória ou arquitetural específica. Fontes que exigem assinatura ou acesso privado foram excluídas como referência bibliográfica; quando uma fonte pública apresenta bloqueio anti-bot em alguns acessos automatizados, ela é usada apenas como apoio complementar e nunca como única base para uma recomendação crítica. As metas numéricas usadas nas seções de métricas são <strong>exemplos para calibração interna</strong>, não benchmarks universais.</p>
 <p>A presença recorrente do Microsoft Cloud Adoption Framework decorre de sua especificidade para o tema "AI CoE" e de sua documentação operacional sobre transição do CoE de executor para modelo consultivo. Para reduzir dependência editorial de uma única fonte, as recomendações foram cruzadas com IBM, KPMG, Deloitte, Oracle/CIO, Google Cloud, AWS, NIST, ISO/IEC 42001, OECD, EU AI Act e literatura acadêmica.</p>
-<p><strong>Política de termos:</strong> termos em inglês foram mantidos quando são nomes consagrados no mercado ou em documentação técnica — por exemplo, <em>hub-and-spoke</em>, <em>guardrails</em>, <em>LLMOps</em>, <em>MCP</em> e <em>FinOps</em>. Quando possível, o termo em português aparece junto da primeira ocorrência: triagem (<em>intake</em>), consultivo (<em>advisory</em>), embaixadores (<em>champions</em>), autoatendimento governado (<em>self-service</em>) e reversão (<em>rollback</em>).</p>
-<hr />
-<h2 id="2-o-que-e-um-coe-de-ia-e-o-que-ele-nao-e">2. O que é um CoE de IA — e o que ele não é</h2>
+<p><strong>Política de termos:</strong> termos em inglês foram mantidos quando são nomes consagrados no mercado ou em documentação técnica, como <em>hub-and-spoke</em>, <em>guardrails</em>, <em>LLMOps</em>, <em>MCP</em> e <em>FinOps</em>. Quando possível, o termo em português aparece junto da primeira ocorrência: triagem (<em>intake</em>), consultivo (<em>advisory</em>), embaixadores (<em>champions</em>), autoatendimento governado (<em>self-service</em>) e reversão (<em>rollback</em>).</p>
+<h2 id="2-o-que-e-um-coe-de-ia-e-o-que-ele-nao-e">2. O que é (e o que não é) um CoE de IA</h2>
 <h3 id="21-definicao">2.1. Definição</h3>
 <p>Um CoE de IA é uma <strong>estrutura organizacional interna e multidisciplinar</strong> dedicada a impulsionar a adoção, padronização e governança de IA em toda a organização. Ele serve como um hub centralizado que conecta áreas de negócio, TI, dados, conformidade e segurança.</p>
 <p>Diversas referências da indústria convergem para uma definição semelhante:</p>
@@ -493,10 +487,10 @@ strong {
 <p><strong>IBM (2024):</strong> <em>"Um centro de excelência em IA é uma estrutura organizacional dedicada a incentivar a adoção, otimização e governança da IA em toda a organização. Ele serve como um hub de conhecimento especializado, melhores práticas e recursos."</em></p>
 <p><strong>Microsoft CAF (2025):</strong> <em>"Um CoE de IA consiste em um time interno de especialistas que impulsiona resultados de IA bem-sucedidos e valiosos. O CoE previne a adoção fragmentada ou desgovernada de IA."</em></p>
 </blockquote>
-<p>O conceito é uma evolução do modelo mais amplo de "Centro de Excelência", utilizado historicamente em TI, desenvolvimento de software e outros campos especializados (IBM, 2024). Porém, a natureza única da IA — com seus requisitos de dados, ética, regulamentação e evolução tecnológica acelerada — exige adaptações significativas.</p>
+<p>O conceito é uma evolução do modelo mais amplo de "Centro de Excelência", utilizado historicamente em TI, desenvolvimento de software e outros campos especializados (IBM, 2024). Porém, a natureza única da IA, com seus requisitos de dados, ética, regulamentação e evolução tecnológica acelerada, exige adaptações significativas.</p>
 <h3 id="22-funcoes-essenciais">2.2. Funções essenciais</h3>
 <p>De acordo com a síntese de múltiplas fontes (IBM, Microsoft, KPMG, Deloitte), as funções fundamentais de um CoE de IA são:</p>
-<p><strong>Tabela 1 — Funções essenciais de um CoE de IA</strong></p>
+<p><strong>Tabela 1. Funções essenciais de um CoE de IA</strong></p>
 <table>
 <thead>
 <tr>
@@ -540,17 +534,16 @@ strong {
 </table>
 <h3 id="23-o-que-o-coe-nao-e">2.3. O que o CoE <strong>NÃO</strong> é</h3>
 <ul>
-<li><strong>Não é uma fábrica de software</strong> — não deve ser o dono permanente de produtos de IA. Constrói PoCs/MVPs e transfere para squads de produto.</li>
-<li><strong>Não é apenas um time de infraestrutura</strong> — deve definir padrões, controles automatizados (<em>guardrails</em>) e capacidades reutilizáveis, não apenas operar recursos técnicos.</li>
-<li><strong>Não é um comitê bloqueador (<em>gatekeeper</em>)</strong> — não deve paralisar iniciativas; deve acelerá-las com controles claros.</li>
-<li><strong>Não é um time de suporte</strong> — não deve ser acionado para resolver problemas operacionais do dia a dia.</li>
-<li><strong>Não é um projeto com data de término</strong> — é uma capacidade organizacional permanente que evolui com a maturidade da empresa.</li>
+<li>Não é uma fábrica de software: não deve ser o dono permanente de produtos de IA. Constrói PoCs/MVPs e transfere para squads de produto.</li>
+<li>Não é apenas um time de infraestrutura: deve definir padrões, controles automatizados (<em>guardrails</em>) e capacidades reutilizáveis, não apenas operar recursos técnicos.</li>
+<li>Não é um comitê bloqueador (<em>gatekeeper</em>): não deve paralisar iniciativas, e sim acelerá-las com controles claros.</li>
+<li>Não é um time de suporte: não deve ser acionado para resolver problemas operacionais do dia a dia.</li>
+<li>Não é um projeto com data de término: é uma capacidade organizacional permanente que evolui com a maturidade da empresa.</li>
 </ul>
-<hr />
 <h2 id="3-equipe-e-papeis-chave">3. Equipe e Papéis-Chave</h2>
 <p>A composição da equipe é um dos fatores mais críticos para o sucesso do CoE. Segundo o Microsoft Cloud Adoption Framework (2025), o CoE precisa de <strong>liderança, expertise técnica e alinhamento organizacional</strong> adequados. A KPMG (2024) reforça que o time deve funcionar como <strong>ponte entre a liderança executiva e as equipes técnicas</strong>.</p>
 <h3 id="31-papeis-fundamentais">3.1. Papéis fundamentais</h3>
-<p><strong>Tabela 2 — Papéis fundamentais no CoE de IA</strong></p>
+<p><strong>Tabela 2. Papéis fundamentais no CoE de IA</strong></p>
 <table>
 <thead>
 <tr>
@@ -567,7 +560,7 @@ strong {
 </tr>
 <tr>
 <td><strong>Líder do CoE</strong></td>
-<td>Dirige as iniciativas de IA, atua como ponto focal para a estratégia e influencia stakeholders em todos os níveis</td>
+<td>Dirige as iniciativas de IA, atua como ponto focal para a estratégia e influencia as áreas envolvidas em todos os níveis</td>
 <td>Líder sênior com expertise em IA e habilidade de gestão</td>
 </tr>
 <tr>
@@ -609,14 +602,14 @@ strong {
 </table>
 <h3 id="32-posicionamento-organizacional">3.2. Posicionamento organizacional</h3>
 <p>O Microsoft CAF (2025) orienta que, se a organização já opera um <strong>Cloud Center of Excellence (CCoE)</strong>, é preferível <strong>integrar as práticas de IA a esse time existente</strong> em vez de criar uma estrutura isolada. Um CoE de IA standalone só deve ser criado quando os times atuais não conseguem suportar a adoção de IA ou quando existem riscos críticos que justifiquem a separação.</p>
-<p>O objetivo é evitar complexidade desnecessária e construir sobre fundações existentes — infraestrutura cloud, governança de dados, práticas DevOps — em vez de operar isoladamente.</p>
+<p>O objetivo é evitar complexidade desnecessária e construir sobre fundações existentes (infraestrutura cloud, governança de dados, práticas DevOps), em vez de operar isoladamente.</p>
 <h3 id="33-modelo-hub-and-spoke">3.3. Modelo hub-and-spoke</h3>
 <p>As fontes analisadas de operating model, especialmente Microsoft CAF e literatura de arquitetura organizacional, convergem para o modelo <strong>hub-and-spoke</strong>, onde:</p>
 <ul>
 <li><strong>Hub (central):</strong> equipe núcleo do CoE com expertise técnica avançada, responsável por padrões, governança e plataformas.</li>
 <li><strong>Spokes (distribuídos):</strong> embaixadores (<em>champions</em>) de IA em cada unidade de negócio, conectados ao hub, responsáveis por identificar oportunidades e implementar soluções localmente.</li>
 </ul>
-<p><strong>Figura 1 — Modelo conceitual hub-and-spoke para CoE de IA</strong></p>
+<p><strong>Figura 1. Modelo conceitual hub-and-spoke para CoE de IA</strong></p>
 <figure class="diagram">
 <svg role="img" aria-labelledby="fig1-title fig1-desc" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
 <title id="fig1-title">Modelo conceitual hub-and-spoke para CoE de IA</title>
@@ -650,7 +643,6 @@ strong {
 <text x="710" y="450" text-anchor="middle" font-size="18">Champion + Squad</text>
 </svg>
 </figure>
-<hr />
 <h2 id="4-modelos-de-atuacao">4. Modelos de Atuação</h2>
 <p>Não existe um modelo único. O melhor formato depende da maturidade da organização, do tamanho da empresa e da cultura de TI. Os três modelos mais comuns, consolidados a partir das fontes analisadas, são:</p>
 <h3 id="41-modelo-centralizado-executor">4.1. Modelo Centralizado (Executor)</h3>
@@ -659,17 +651,17 @@ strong {
 <p><strong>Vantagem:</strong> velocidade inicial, controle de qualidade, consolidação de expertise.</p>
 <p><strong>Risco:</strong> o CoE vira fábrica de software, cria gargalos de aprovação e não consegue escalar. A equipe do CoE se torna knowledge bottleneck.</p>
 <h3 id="42-modelo-consultivo-advisory">4.2. Modelo consultivo (<em>advisory</em>)</h3>
-<p>O CoE atua como <strong>consultor e guardião de padrões</strong> — define padrões, publica guias, estabelece controles e responde a consultas, mas <strong>não executa</strong> projetos diretamente. As equipes de produto desenvolvem suas próprias soluções sob orientação do CoE.</p>
+<p>O CoE atua como <strong>consultor e guardião de padrões</strong>: define padrões, publica guias, estabelece controles e responde a consultas, mas <strong>não executa</strong> projetos diretamente. As equipes de produto desenvolvem suas próprias soluções sob orientação do CoE.</p>
 <p><strong>Quando usar:</strong> organizações maduras, com squads autônomos que possuem competência técnica em IA. O Microsoft CAF (2025) descreve este como o <strong>estágio evoluído</strong> do CoE.</p>
 <p><strong>Vantagem:</strong> alta escalabilidade, baixo risco de gargalo, inovação descentralizada.</p>
 <p><strong>Risco:</strong> padrões podem ser ignorados se não houver enforcement adequado.</p>
 <h3 id="43-modelo-federado-hibrido-recomendado">4.3. Modelo Federado / Híbrido (Recomendado)</h3>
 <p>O CoE <strong>centraliza padrões, governança e plataforma</strong>, mas <strong>distribui a execução</strong> para squads e unidades de negócio. Constrói as primeiras versões (PoC/MVP), define a arquitetura de referência e <strong>transfere</strong> para squads de produto.</p>
-<p>Em termos práticos, este modelo separa capacidades comuns — políticas, padrões de plataforma, avaliações, controles, catálogo de modelos e controle de custos — daquilo que precisa ficar próximo do domínio de negócio: priorização de casos de uso, desenho de experiência, operação funcional e evolução do produto.</p>
-<p><strong>Quando usar:</strong> maioria dos casos — permite entregar valor rápido enquanto constrói maturidade organizacional.</p>
+<p>Em termos práticos, este modelo separa capacidades comuns (políticas, padrões de plataforma, avaliações, controles, catálogo de modelos e controle de custos) daquilo que precisa ficar próximo do domínio de negócio: priorização de casos de uso, desenho de experiência, operação funcional e evolução do produto.</p>
+<p><strong>Quando usar:</strong> maioria dos casos; permite entregar valor rápido enquanto constrói maturidade organizacional.</p>
 <p><strong>Vantagem:</strong> equilíbrio entre velocidade e escalabilidade.</p>
 <p><strong>Risco:</strong> requer disciplina para executar a transição. Sem um plano claro, o CoE nunca "solta" os projetos.</p>
-<p><strong>Figura 2 — Responsabilidades no modelo federado/híbrido</strong></p>
+<p><strong>Figura 2. Responsabilidades no modelo federado/híbrido</strong></p>
 <figure class="diagram">
 <svg role="img" aria-labelledby="fig2-title fig2-desc" viewBox="0 0 940 520" xmlns="http://www.w3.org/2000/svg">
 <title id="fig2-title">Responsabilidades no modelo federado/híbrido</title>
@@ -708,17 +700,17 @@ strong {
 <h3 id="44-a-evolucao-natural-do-executor-ao-modelo-consultivo">4.4. A evolução natural: do executor ao modelo consultivo</h3>
 <p>O Microsoft Cloud Adoption Framework (2025) descreve uma <strong>trajetória evolutiva</strong> clara para o CoE:</p>
 <ol>
-<li><strong>Reconhecer pontos de inflexão</strong> — monitorar indicadores de que o controle centralizado está prejudicando em vez de ajudar: filas de aprovação, gargalos de conhecimento, times debatendo prioridades em vez de entregando valor</li>
-<li><strong>Embutir a entrega de IA nas operações de plataforma</strong> — transferir a responsabilidade de deploy e operação para times de plataforma, mantendo governança consistente</li>
-<li><strong>Transicionar para o modelo consultivo</strong> — substituir o modelo bloqueador por um modelo de controles e orientação. Distribuir expertise de IA nos times de produto e manter fóruns de governança e supervisão</li>
+<li>Reconhecer pontos de inflexão: monitorar indicadores de que o controle centralizado está prejudicando em vez de ajudar: filas de aprovação, gargalos de conhecimento, times debatendo prioridades em vez de entregando valor</li>
+<li>Embutir a entrega de IA nas operações de plataforma: transferir a responsabilidade de deploy e operação para times de plataforma, mantendo governança consistente</li>
+<li>Transicionar para o modelo consultivo: substituir o modelo bloqueador por um modelo de controles e orientação. Distribuir expertise de IA nos times de produto e manter fóruns de governança e supervisão</li>
 </ol>
 <blockquote>
-<p><em>"Deslocar o CoE para um papel consultivo ajuda os times a inovar rapidamente mantendo padrões e segurança."</em> — Microsoft CAF, 2025</p>
+<p><em>"Deslocar o CoE para um papel consultivo ajuda os times a inovar rapidamente mantendo padrões e segurança."</em> (Microsoft CAF, 2025)</p>
 </blockquote>
 <h3 id="45-direitos-de-decisao-no-modelo-federado">4.5. Direitos de decisão no modelo federado</h3>
 <p>O modelo federado só funciona quando os direitos de decisão são explícitos. Sem essa separação, o CoE vira comitê bloqueador ou os squads passam a tratar padrões corporativos como recomendações opcionais.</p>
 <blockquote>
-<p><strong>Quadro 1 — Direitos de decisão no modelo federado</strong><br />
+<p><strong>Quadro 1. Direitos de decisão no modelo federado</strong><br />
 <strong>CoE de IA:</strong> decide padrões mínimos, catálogo de modelos aprovados, critérios de avaliação, requisitos de observabilidade e Definition of Done para handoff.<br />
 <strong>Produto/negócio:</strong> decide backlog funcional, experiência do usuário, priorização de domínio e evolução do produto, dentro dos padrões aprovados.<br />
 <strong>Plataforma/cloud:</strong> decide padrões de provisionamento, automação, integração, monitoramento e operação técnica.<br />
@@ -728,29 +720,28 @@ strong {
 <h3 id="46-vinheta-publica-nationwide-building-society">4.6. Vinheta pública: Nationwide Building Society</h3>
 <p>Um exemplo público útil vem da Nationwide Building Society, organização financeira do Reino Unido. Segundo case study publicado pela IBM em 2025, a Nationwide iniciou sua jornada de IA generativa com uma estratégia e um modelo operacional em nível institucional, culminando na criação de um <strong>AI Centre of Expertise</strong> apoiado pela IBM Consulting e baseado em Microsoft Azure OpenAI Service.</p>
 <blockquote>
-<p><strong>Quadro 2 — Vinheta pública: CoE em organização financeira regulada</strong><br />
+<p><strong>Quadro 2. Vinheta pública: CoE em organização financeira regulada</strong><br />
 O centro combinou três capacidades: uma equipe de operações para conduzir o ciclo de vida de IA, um conselho multifuncional para avaliar casos de uso e uma função de delivery para construir soluções com LLMs e dados corporativos. Também definiu padrões técnicos, princípios de entrega, plataforma de IA generativa, treinamento, comunicação, processos de implementação e redesenho de governança e gestão de risco envolvendo áreas como jurídico, tecnologia, segurança e dados.  </p>
-<p>A vinheta é relevante porque mostra o CoE como mecanismo de coordenação, prontidão operacional e governança em ambiente regulado — não apenas como squad de chatbot. A própria fonte descreve iniciativas como gestão de contratos, garantia de qualidade, relatórios operacionais e apoio a interações de colaboradores com clientes.  </p>
+<p>A vinheta é relevante porque mostra o CoE como mecanismo de coordenação, prontidão operacional e governança em ambiente regulado, e não apenas como squad de chatbot. A própria fonte descreve iniciativas como gestão de contratos, garantia de qualidade, relatórios operacionais e apoio a interações de colaboradores com clientes.  </p>
 <p>Limite editorial: trata-se de um case study de fornecedor, não de estudo independente revisado por pares. Portanto, ele deve ser lido como vinheta ilustrativa pública, não como benchmark quantitativo universal.</p>
 </blockquote>
-<hr />
 <h2 id="5-os-pilares-do-coe-de-ia">5. Os Pilares do CoE de IA</h2>
 <h3 id="51-padroes-e-arquitetura-de-referencia">5.1. Padrões e Arquitetura de Referência</h3>
 <p>O CoE deve entregar <strong>padrões antes de produtos</strong>. Sem padrões claros, cada projeto toma decisões diferentes e cria débito técnico que se acumula exponencialmente. A Deloitte recomenda manter um <strong>repositório central de assets reutilizáveis</strong>: modelos, dados, frameworks e código.</p>
 <p><strong>Entregas esperadas:</strong></p>
 <ul>
 <li><strong>Arquitetura de referência</strong> para cada padrão de IA (RAG, fine-tuning, agentes, ML clássico)</li>
-<li><strong>Stack tecnológico padrão</strong> — frameworks, bibliotecas, serviços de cloud homologados</li>
-<li><strong>Templates de projeto</strong> — repositórios-modelo com estrutura de código, CI/CD, testes, observabilidade</li>
-<li><strong>Catálogo de serviços de IA</strong> — quais modelos estão homologados, quais APIs estão disponíveis, custos estimados</li>
-<li><strong>Guias de prompt engineering</strong> — boas práticas para uso de LLMs internamente</li>
-<li><strong>Blueprints de infraestrutura</strong> — templates de IaC (Bicep/Terraform) para provisionamento padronizado</li>
+<li>Stack tecnológico padrão: frameworks, bibliotecas, serviços de cloud homologados</li>
+<li>Templates de projeto: repositórios-modelo com estrutura de código, CI/CD, testes, observabilidade</li>
+<li>Catálogo de serviços de IA: quais modelos estão homologados, quais APIs estão disponíveis, custos estimados</li>
+<li>Guias de prompt engineering: boas práticas para uso de LLMs internamente</li>
+<li>Blueprints de infraestrutura: templates de IaC (Bicep/Terraform) para provisionamento padronizado</li>
 </ul>
 <h3 id="52-governanca-e-ia-responsavel">5.2. Governança e IA Responsável</h3>
 <p>A governança é o que diferencia um CoE estratégico de um grupo técnico informal. Com a crescente ênfase regulatória e ética no desenvolvimento de IA, a supervisão centralizada se tornou imprescindível (IBM, 2024).</p>
 <h4 id="521-nist-ai-risk-management-framework-ai-rmf">5.2.1. NIST AI Risk Management Framework (AI RMF)</h4>
-<p>O NIST AI RMF (2023) oferece um framework voluntário com quatro funções centrais que se aplicam diretamente à governança do CoE. Em 2024, o NIST também publicou o <strong>Generative AI Profile (NIST AI 600-1)</strong>, com riscos específicos de IA generativa — como confabulação, vazamento de dados, conteúdo prejudicial, uso indevido e riscos de segurança.</p>
-<p><strong>Tabela 3 — Aplicação do NIST AI RMF ao CoE de IA</strong></p>
+<p>O NIST AI RMF (2023) oferece um framework voluntário com quatro funções centrais que se aplicam diretamente à governança do CoE. Em 2024, o NIST também publicou o <strong>Generative AI Profile (NIST AI 600-1)</strong>, com riscos específicos de IA generativa, como confabulação, vazamento de dados, conteúdo prejudicial, uso indevido e riscos de segurança.</p>
+<p><strong>Tabela 3. Aplicação do NIST AI RMF ao CoE de IA</strong></p>
 <table>
 <thead>
 <tr>
@@ -782,10 +773,10 @@ O centro combinou três capacidades: uma equipe de operações para conduzir o c
 </tr>
 </tbody>
 </table>
-<h4 id="522-isoiec-42001-sistema-de-gestao-de-ia">5.2.2. ISO/IEC 42001 — Sistema de Gestão de IA</h4>
+<h4 id="522-isoiec-42001-sistema-de-gestao-de-ia">5.2.2. ISO/IEC 42001 (Sistema de Gestão de IA)</h4>
 <p>A ISO/IEC 42001:2023 é a primeira norma internacional para <strong>Artificial Intelligence Management System (AIMS)</strong>. Ela especifica requisitos para estabelecer, implementar, manter e melhorar continuamente um sistema de gestão de IA, com foco em uso responsável, rastreabilidade, transparência, confiabilidade e gestão de riscos.</p>
 <p>Para um CoE de IA, a ISO/IEC 42001 é útil porque desloca a discussão de governança de controles pontuais para um <strong>sistema de gestão contínuo</strong>, integrável a práticas já conhecidas em empresas maduras, como ISO 9001 (qualidade) e ISO/IEC 27001 (segurança da informação).</p>
-<h4 id="523-oecd-ai-principles-principios-de-ia-confiavel">5.2.3. OECD AI Principles — Princípios de IA confiável</h4>
+<h4 id="523-oecd-ai-principles-principios-de-ia-confiavel">5.2.3. OECD AI Principles (Princípios de IA confiável)</h4>
 <p>Os princípios da OECD, adotados em 2019 e atualizados em 2024, são uma referência internacional para IA confiável. Eles reforçam cinco dimensões que o CoE deve traduzir em políticas e práticas:</p>
 <ul>
 <li>Crescimento inclusivo, desenvolvimento sustentável e bem-estar</li>
@@ -794,9 +785,9 @@ O centro combinou três capacidades: uma equipe de operações para conduzir o c
 <li>Robustez, segurança e safety</li>
 <li>Accountability</li>
 </ul>
-<h4 id="524-eu-ai-act-classificacao-de-risco">5.2.4. EU AI Act — Classificação de Risco</h4>
-<p>O EU AI Act (2024), a primeira lei abrangente regulando IA no mundo, estabelece uma classificação que o CoE deve adotar como referência:</p>
-<p><strong>Tabela 4 — Classificação de risco inspirada no EU AI Act</strong></p>
+<h4 id="524-eu-ai-act-classificacao-de-risco">5.2.4. Classificação de risco no EU AI Act</h4>
+<p>O EU AI Act (2024), a primeira lei de alcance geral sobre IA no mundo, estabelece uma classificação que o CoE deve adotar como referência:</p>
+<p><strong>Tabela 4. Classificação de risco inspirada no EU AI Act</strong></p>
 <table>
 <thead>
 <tr>
@@ -819,7 +810,7 @@ O centro combinou três capacidades: uma equipe de operações para conduzir o c
 <tr>
 <td><strong>Risco limitado</strong></td>
 <td>Chatbots, deepfakes, reconhecimento de emoção</td>
-<td>Obrigações de transparência — informar que é IA</td>
+<td>Obrigações de transparência: informar que é IA</td>
 </tr>
 <tr>
 <td><strong>Risco mínimo</strong></td>
@@ -830,16 +821,16 @@ O centro combinou três capacidades: uma equipe de operações para conduzir o c
 </table>
 <h4 id="525-pilares-da-governanca-aplicada">5.2.5. Pilares da governança aplicada</h4>
 <ul>
-<li><strong>Ética e viés</strong> — processos para avaliar e mitigar viés algorítmico, com avaliação adversarial (<em>red teaming</em>) regular</li>
-<li><strong>Privacidade e conformidade</strong> — aderência à LGPD, GDPR, regulamentações setoriais e EU AI Act</li>
-<li><strong>Segurança</strong> — proteção contra prompt injection, data leakage, excessive agency, model poisoning</li>
-<li><strong>Observabilidade</strong> — monitoramento de alucinações, drift de modelos, custos e performance</li>
-<li><strong>Ciclo de vida de modelos</strong> — da criação à desativação, com versionamento, auditoria e reversão (<em>rollback</em>)</li>
-<li><strong>Explainability</strong> — rastreabilidade de decisões, especialmente em sistemas RAG (link para fontes recuperadas)</li>
-<li><strong>Resposta a incidentes</strong> — plano de escalação para falhas, uso indevido ou alucinações críticas</li>
+<li>Ética e viés: processos para avaliar e mitigar viés algorítmico, com avaliação adversarial (<em>red teaming</em>) regular</li>
+<li>Privacidade e conformidade: aderência à LGPD, GDPR, regulamentações setoriais e EU AI Act</li>
+<li>Segurança: proteção contra prompt injection, data leakage, excessive agency, model poisoning</li>
+<li>Observabilidade: monitoramento de alucinações, drift de modelos, custos e performance</li>
+<li>Ciclo de vida de modelos: da criação à desativação, com versionamento, auditoria e reversão (<em>rollback</em>)</li>
+<li>Explainability: rastreabilidade de decisões, especialmente em sistemas RAG (link para fontes recuperadas)</li>
+<li>Resposta a incidentes: plano de escalação para falhas, uso indevido ou alucinações críticas</li>
 </ul>
 <p>A classificação interna abaixo deriva da taxonomia do EU AI Act, adaptada para uso interno do CoE. Ela funciona como uma camada de tradução operacional: transforma categorias regulatórias amplas em níveis de controle aplicáveis ao ciclo de vida de projetos.</p>
-<p><strong>Tabela 5 — Exemplo de classificação de risco e controles progressivos</strong></p>
+<p><strong>Tabela 5. Exemplo de classificação de risco e controles progressivos</strong></p>
 <table>
 <thead>
 <tr>
@@ -875,67 +866,66 @@ O centro combinou três capacidades: uma equipe de operações para conduzir o c
 <p>O CoE que não capacita outros times está condenado a ser um gargalo eterno. A IBM (2024) enfatiza que o CoE deve organizar <strong>programas de treinamento, workshops e conferências internas</strong> para aprimorar as habilidades dos funcionários, promovendo uma cultura de aprendizado contínuo.</p>
 <p><strong>Estratégias de capacitação:</strong></p>
 <ul>
-<li><strong>AI Literacy Program</strong> — treinamento básico para toda a organização (o que é IA, como usar ferramentas como Copilot, ChatGPT, quando e quando não usar IA)</li>
-<li><strong>Bootcamps técnicos</strong> — para desenvolvedores e engenheiros (RAG, LangChain, Semantic Kernel, MLOps, LLMOps)</li>
-<li><strong>Certificações</strong> — programas de certificação em cloud AI (Azure AI Engineer, AWS ML Specialty, Google Cloud ML Engineer)</li>
-<li><strong>Comunidades de prática</strong> — encontros regulares para compartilhar experiências, desafios e soluções</li>
-<li><strong>Inner Source</strong> — repositórios internos com código, templates e documentação abertos para contribuição</li>
-<li><strong>Programa de embaixadores (<em>champions</em>)</strong> — representantes de IA em cada área de negócio (modelo hub-and-spoke)</li>
-<li><strong>Hackathons e P&amp;D</strong> — eventos regulares para estimular experimentação e criatividade (IBM, 2024)</li>
-<li><strong>Parcerias acadêmicas</strong> — colaboração com universidades e comunidades de código aberto para atração de talentos</li>
+<li>AI Literacy Program: treinamento básico para toda a organização (o que é IA, como usar ferramentas como Copilot, ChatGPT, quando e quando não usar IA)</li>
+<li>Bootcamps técnicos: para desenvolvedores e engenheiros (RAG, LangChain, Semantic Kernel, MLOps, LLMOps)</li>
+<li>Certificações: programas de certificação em cloud AI (Azure AI Engineer, AWS ML Specialty, Google Cloud ML Engineer)</li>
+<li>Comunidades de prática: encontros regulares para compartilhar experiências, desafios e soluções</li>
+<li>Inner Source: repositórios internos com código, templates e documentação abertos para contribuição</li>
+<li>Programa de embaixadores (<em>champions</em>): representantes de IA em cada área de negócio (modelo hub-and-spoke)</li>
+<li>Hackathons e P&amp;D: eventos regulares para estimular experimentação e criatividade (IBM, 2024)</li>
+<li>Parcerias acadêmicas: colaboração com universidades e comunidades de código aberto para atração de talentos</li>
 </ul>
 <h3 id="54-finops-para-ia">5.4. FinOps para IA</h3>
 <p>Um pilar frequentemente negligenciado é <strong>gerenciar iniciativas de IA como um portfólio de produtos</strong>, com uso vinculado diretamente a valor de negócio e controle financeiro rigoroso. Essa disciplina conecta as recomendações de priorização da KPMG, a ênfase do Microsoft CAF em KPIs e a preocupação dos frameworks well-architected com custo, operação e sustentabilidade.</p>
 <p><strong>Práticas de FinOps para IA:</strong></p>
 <ul>
-<li><strong>Visibilidade de custos</strong> — dashboards por projeto, por modelo, por ambiente (dev/staging/prod)</li>
-<li><strong>Chargeback/showback</strong> — atribuição de custos às áreas consumidoras</li>
-<li><strong>Otimização de modelos</strong> — uso de modelos menores quando possível, caching de respostas, batching de requests</li>
-<li><strong>Gestão de tokens</strong> — monitoramento e limites de consumo de tokens por aplicação</li>
-<li><strong>Budget alerts</strong> — alertas proativos quando custos ultrapassam thresholds definidos</li>
-<li><strong>Right-sizing</strong> — ajuste contínuo de capacidade computacional (GPU, TPU, instâncias)</li>
-<li><strong>Sustentabilidade</strong> — escolha proporcional de modelos, cache, redução de retraining desnecessário e preferência por regiões/arquiteturas mais eficientes quando compatível com requisitos regulatórios e de residência de dados (Microsoft Well-Architected e Google Cloud Well-Architected)</li>
+<li>Visibilidade de custos: dashboards por projeto, por modelo, por ambiente (dev/staging/prod)</li>
+<li>Chargeback/showback: atribuição de custos às áreas consumidoras</li>
+<li>Otimização de modelos: uso de modelos menores quando possível, caching de respostas, batching de requests</li>
+<li>Gestão de tokens: monitoramento e limites de consumo de tokens por aplicação</li>
+<li>Budget alerts: alertas proativos quando custos ultrapassam thresholds definidos</li>
+<li>Right-sizing: ajuste contínuo de capacidade computacional (GPU, TPU, instâncias)</li>
+<li>Sustentabilidade: escolha proporcional de modelos, cache, redução de retraining desnecessário e preferência por regiões/arquiteturas mais eficientes quando compatível com requisitos regulatórios e de residência de dados (Microsoft Well-Architected e Google Cloud Well-Architected)</li>
 </ul>
 <h3 id="55-adaptacao-por-contexto-organizacional">5.5. Adaptação por contexto organizacional</h3>
-<p>Os pilares do CoE — estratégia, padrões, governança, capacitação, plataforma e FinOps — são relativamente estáveis. O que muda é a <strong>intensidade dos controles</strong>, o grau de formalidade do processo decisório, os critérios de risco e a forma como valor é medido. Um CoE maduro não aplica o mesmo desenho operacional a todos os contextos; ele adapta o modelo à regulação, ao risco, à missão institucional e ao tipo de produto digital da organização.</p>
+<p>Os pilares do CoE (estratégia, padrões, governança, capacitação, plataforma e FinOps) são relativamente estáveis. O que muda é a <strong>intensidade dos controles</strong>, o grau de formalidade do processo decisório, os critérios de risco e a forma como valor é medido. Um CoE maduro não aplica o mesmo desenho operacional a todos os contextos; ele adapta o modelo à regulação, ao risco, à missão institucional e ao tipo de produto digital da organização.</p>
 <blockquote>
-<p><strong>Quadro 3 — Organizações reguladas: bancos, saúde, governo, utilities</strong><br />
+<p><strong>Quadro 3. Organizações reguladas: bancos, saúde, governo, utilities</strong><br />
 O CoE deve reforçar classificação de risco, trilhas de auditoria, explicabilidade, human-in-the-loop, segregação de funções, continuidade operacional, privacidade e gestão formal do ciclo de vida dos modelos. O sucesso não é apenas velocidade de adoção; é adoção com rastreabilidade, resiliência e conformidade.<br />
 <strong>Anti-pattern típico:</strong> tratar casos de alto impacto como experimentos comuns, sem evidência auditável, dono de risco e supervisão humana definida.<br />
 <strong>Métrica útil:</strong> percentual de casos de alto risco com avaliação formal, trilha de auditoria, owner de risco e controles de supervisão implementados.</p>
-<p><strong>Quadro 4 — Organizações digitais: SaaS, varejo, marketplaces e plataformas</strong><br />
+<p><strong>Quadro 4. Organizações digitais: SaaS, varejo, marketplaces e plataformas</strong><br />
 O CoE tende a priorizar escala, experimentação rápida, integração com produtos digitais, métricas de adoção, A/B testing, observabilidade de experiência, governança de APIs e FinOps rigoroso. O risco central é proliferar pilotos e features de IA sem padrões comuns de qualidade, segurança e custo.<br />
 <strong>Anti-pattern típico:</strong> lançar funcionalidades de IA em produto sem avaliação contínua, limites de custo, telemetria de qualidade ou critério de reversão (<em>rollback</em>).<br />
 <strong>Métrica útil:</strong> custo por interação, adoção ativa, taxa de conversão experimento→produção e percentual de features com avaliação automatizada em produção.</p>
-<p><strong>Quadro 5 — Setor público ou organizações com função social</strong><br />
-O CoE deve dar peso adicional a transparência, accountability, inclusão, acessibilidade, linguagem simples, auditabilidade pública e impacto sobre cidadãos. A avaliação de uma solução de IA precisa considerar não apenas eficiência operacional, mas também equidade, direito à contestação e confiança institucional.<br />
+<p><strong>Quadro 5. Setor público ou organizações com função social</strong><br />
+O CoE deve dar peso adicional a transparência, accountability, inclusão, acessibilidade, linguagem simples, auditabilidade pública e impacto sobre cidadãos. A avaliação de uma solução de IA precisa considerar, além da eficiência operacional, equidade, direito à contestação e confiança institucional.<br />
 <strong>Anti-pattern típico:</strong> automatizar atendimento ou decisão pública sem explicação compreensível, canal de contestação, acessibilidade ou análise de impacto sobre grupos vulneráveis.<br />
 <strong>Métrica útil:</strong> percentual de interações com aviso de uso de IA, explicação disponível, canal de contestação e conformidade de acessibilidade.</p>
-<p><strong>Quadro 6 — Empresas globais ou multi-país</strong><br />
-O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, transferências internacionais de dados, políticas regionais de uso de modelos e requisitos locais de soberania. O desenho mais robusto costuma combinar princípios globais comuns com controles locais adaptados a cada jurisdição.<br />
+<p><strong>Quadro 6. Empresas globais ou multi-país</strong><br />
+O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, transferências internacionais de dados, políticas regionais de uso de modelos e requisitos locais de soberania. O desenho mais sólido costuma combinar princípios globais comuns com controles locais adaptados a cada jurisdição.<br />
 <strong>Anti-pattern típico:</strong> aplicar uma política global única para todos os países, ignorando requisitos locais de dados, transparência, risco e soberania.<br />
 <strong>Métrica útil:</strong> percentual de iniciativas com mapeamento regulatório por jurisdição, revisão de transferência internacional de dados e aprovação regional antes do rollout.</p>
 </blockquote>
 <p>Essa adaptação por contexto evita dois erros simétricos: tratar IA como um tema puramente técnico, ignorando risco e missão institucional; ou transformar o CoE em uma estrutura excessivamente burocrática, incapaz de acompanhar a velocidade dos produtos digitais.</p>
-<hr />
 <h2 id="6-arquitetura-de-referencia-e-plataforma-cloud">6. Arquitetura de Referência e Plataforma Cloud</h2>
-<p>As referências de Microsoft, Google Cloud e AWS convergem em um princípio: workloads de IA precisam de uma base operacional robusta, com automação, segurança, observabilidade, governança de dados, controle de custos e capacidade de escala. O papel do CoE não é escolher manualmente cada recurso técnico de cada projeto, mas sim definir <strong>arquiteturas de referência e mecanismos de plataforma</strong> que tornem o uso de IA repetível e seguro.</p>
+<p>As referências de Microsoft, Google Cloud e AWS convergem em um princípio: workloads de IA precisam de uma base operacional sólida, com automação, segurança, observabilidade, governança de dados, controle de custos e capacidade de escala. O papel do CoE não é escolher manualmente cada recurso técnico de cada projeto, mas sim definir <strong>arquiteturas de referência e mecanismos de plataforma</strong> que tornem o uso de IA repetível e seguro.</p>
 <h3 id="61-principios-arquiteturais-para-workloads-de-ia">6.1. Princípios arquiteturais para workloads de IA</h3>
 <p>Um ambiente corporativo de IA deve considerar:</p>
 <ul>
-<li><strong>Fundação cloud governada</strong> — landing zones, contas/projetos/ambientes padronizados, identidade, rede, logging e políticas de segurança</li>
-<li><strong>Automação</strong> — infraestrutura como código, pipelines de CI/CD, templates de deploy e workflows reutilizáveis</li>
-<li><strong>Segurança por padrão</strong> — gestão de identidade e acesso, criptografia, segregação de ambientes, proteção de dados e revisão de permissões</li>
-<li><strong>Observabilidade</strong> — logs, métricas, traces, auditoria, monitoramento de modelos e monitoramento de qualidade de respostas</li>
-<li><strong>Governança de dados</strong> — classificação, linhagem, qualidade, retenção e controles de acesso a dados sensíveis</li>
-<li><strong>FinOps</strong> — visibilidade e otimização de custos por workload, área, modelo e ambiente</li>
-<li><strong>Portabilidade de padrões</strong> — arquiteturas de referência que possam ser implementadas em diferentes clouds, ainda que a organização escolha uma cloud principal</li>
-<li><strong>Soberania e residência de dados</strong> — classificação de dados, restrições de transferência internacional, modelos regionais e controles compatíveis com LGPD, GDPR e políticas locais</li>
-<li><strong>Sustentabilidade</strong> — seleção proporcional de modelos, eficiência de inferência, redução de treinamento/reprocessamento desnecessário e medição de impacto ambiental quando aplicável</li>
+<li>Fundação cloud governada: landing zones, contas/projetos/ambientes padronizados, identidade, rede, logging e políticas de segurança</li>
+<li>Automação: infraestrutura como código, pipelines de CI/CD, templates de deploy e workflows reutilizáveis</li>
+<li>Segurança por padrão: gestão de identidade e acesso, criptografia, segregação de ambientes, proteção de dados e revisão de permissões</li>
+<li>Observabilidade: logs, métricas, traces, auditoria, monitoramento de modelos e monitoramento de qualidade de respostas</li>
+<li>Governança de dados: classificação, linhagem, qualidade, retenção e controles de acesso a dados sensíveis</li>
+<li>FinOps: visibilidade e otimização de custos por workload, área, modelo e ambiente</li>
+<li>Portabilidade de padrões: arquiteturas de referência que possam ser implementadas em diferentes clouds, ainda que a organização escolha uma cloud principal</li>
+<li>Soberania e residência de dados: classificação de dados, restrições de transferência internacional, modelos regionais e controles compatíveis com LGPD, GDPR e políticas locais</li>
+<li>Sustentabilidade: seleção proporcional de modelos, eficiência de inferência, redução de treinamento/reprocessamento desnecessário e medição de impacto ambiental quando aplicável</li>
 </ul>
 <h3 id="62-modelo-recomendado-governanca-central-execucao-distribuida">6.2. Modelo recomendado: governança central, execução distribuída</h3>
 <p>O modelo recomendado é uma plataforma governada, com políticas e padrões centrais, mas com execução distribuída pelas equipes responsáveis pelos produtos e casos de uso. Esse desenho está alinhado ao Microsoft Cloud Adoption Framework, ao Google Cloud Well-Architected Framework e ao AWS Well-Architected Machine Learning Lens.</p>
-<p><strong>Figura 3 — Plataforma corporativa de IA com governança central e execução distribuída</strong></p>
+<p><strong>Figura 3. Plataforma corporativa de IA com governança central e execução distribuída</strong></p>
 <figure class="diagram">
 <svg role="img" aria-labelledby="fig3-title fig3-desc" viewBox="0 0 1040 760" xmlns="http://www.w3.org/2000/svg">
 <title id="fig3-title">Plataforma corporativa de IA com governança central e execução distribuída</title>
@@ -972,12 +962,12 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 </figure>
 <h3 id="63-o-que-deve-ser-comum">6.3. O que deve ser comum</h3>
 <ul>
-<li><strong>Políticas de segurança e conformidade</strong> — requisitos mínimos para dados, identidade, rede, auditoria e retenção</li>
-<li><strong>Arquiteturas de referência</strong> — padrões para RAG, agentes, fine-tuning, inferência, MLOps e LLMOps</li>
-<li><strong>Catálogo de serviços e modelos homologados</strong> — modelos aprovados, critérios de uso, limitações e custos esperados</li>
-<li><strong>Templates reutilizáveis</strong> — infraestrutura como código, pipelines, observabilidade, testes e exemplos de implementação</li>
-<li><strong>Critérios de avaliação</strong> — qualidade, risco, bias, segurança, groundedness, custo e impacto de negócio</li>
-<li><strong>Controles técnicos (<em>guardrails</em>)</strong> — filtragem de conteúdo, logging obrigatório, rate limiting, segregação de ambientes e controle de acesso</li>
+<li>Políticas de segurança e conformidade: requisitos mínimos para dados, identidade, rede, auditoria e retenção</li>
+<li>Arquiteturas de referência: padrões para RAG, agentes, fine-tuning, inferência, MLOps e LLMOps</li>
+<li>Catálogo de serviços e modelos homologados: modelos aprovados, critérios de uso, limitações e custos esperados</li>
+<li>Templates reutilizáveis: infraestrutura como código, pipelines, observabilidade, testes e exemplos de implementação</li>
+<li>Critérios de avaliação: qualidade, risco, bias, segurança, groundedness, custo e impacto de negócio</li>
+<li>Controles técnicos (<em>guardrails</em>): filtragem de conteúdo, logging obrigatório, rate limiting, segregação de ambientes e controle de acesso</li>
 </ul>
 <h3 id="64-o-que-deve-ser-responsabilidade-dos-times-de-produto">6.4. O que deve ser responsabilidade dos times de produto</h3>
 <ul>
@@ -989,7 +979,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li><strong>Aderência aos padrões definidos pelo CoE</strong></li>
 </ul>
 <h3 id="65-exemplo-de-mapeamento-por-cloud">6.5. Exemplo de mapeamento por cloud</h3>
-<p><strong>Tabela 6 — Exemplo de mapeamento de capacidades por cloud</strong></p>
+<p><strong>Tabela 6. Exemplo de mapeamento de capacidades por cloud</strong></p>
 <table>
 <thead>
 <tr>
@@ -1042,18 +1032,17 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <p><strong>Nota de nomenclatura Microsoft:</strong> a documentação oficial atual usa <strong>Microsoft Foundry</strong> como plataforma unificada para modelos, agentes, ferramentas, avaliações, observabilidade e governança. A própria documentação da Microsoft mapeia "Azure AI Studio / Azure AI Foundry" como nomenclaturas anteriores e "Microsoft Foundry" como nomenclatura atual. Algumas referências legadas ainda podem aparecer durante a transição.</p>
 </blockquote>
 <h3 id="66-portabilidade-real-versus-lock-in">6.6. Portabilidade real versus lock-in</h3>
-<p>"Portabilidade de padrões" não significa portabilidade perfeita de implementação. Uma arquitetura pode manter princípios portáveis — avaliação, observabilidade, controle de acesso, rastreabilidade, FinOps, classificação de risco — e ainda assim depender de serviços específicos de uma cloud. Esse trade-off deve ser explícito.</p>
+<p>"Portabilidade de padrões" não significa portabilidade perfeita de implementação. Uma arquitetura pode manter princípios portáveis (avaliação, observabilidade, controle de acesso, rastreabilidade, FinOps, classificação de risco) e ainda assim depender de serviços específicos de uma cloud. Essa troca deve ser explícita.</p>
 <p>O papel do CoE é separar <strong>padrões portáveis</strong> de <strong>decisões de plataforma</strong>:</p>
 <ul>
 <li><strong>Portável:</strong> taxonomia de risco, critérios de avaliação, política de logs, métricas de qualidade, catálogo de controles, requisitos de segurança, templates conceituais.</li>
 <li><strong>Dependente de fornecedor:</strong> APIs de agentes, formatos de tracing, serviços de busca, ferramentas de avaliação, SDKs, identidade, redes privadas, mecanismos de quota e billing.</li>
 </ul>
 <p>Quanto maior o risco de lock-in, mais importante se torna manter ADRs (Architecture Decision Records), testes de regressão independentes de fornecedor, contratos de interface bem definidos e plano de saída realista para modelos, embeddings, índices e ferramentas de orquestração.</p>
-<hr />
 <h2 id="7-ciclo-de-vida-do-poc-ao-produto">7. Ciclo de Vida: Do PoC ao Produto</h2>
-<p>O Microsoft CAF (2025) recomenda que o CoE implemente <strong>fluxos estruturados de triagem (<em>intake</em>) e priorização</strong> para avaliar e priorizar solicitações de projetos de IA. Isto garante que os projetos sejam avaliados com critérios consistentes de valor de negócio, viabilidade técnica e requisitos de recursos.</p>
+<p>O Microsoft CAF (2025) recomenda que o CoE implemente <strong>fluxos estruturados de triagem (<em>intake</em>) e priorização</strong> para avaliar e priorizar solicitações de projetos de IA. Assim, os projetos são avaliados com critérios consistentes de valor de negócio, viabilidade técnica e requisitos de recursos.</p>
 <h3 id="71-as-fases">7.1. As fases</h3>
-<p><strong>Figura 4 — Ciclo de vida de uma iniciativa de IA no CoE</strong></p>
+<p><strong>Figura 4. Ciclo de vida de uma iniciativa de IA no CoE</strong></p>
 <figure class="diagram">
 <svg role="img" aria-labelledby="fig4-title fig4-desc" viewBox="0 0 1040 260" xmlns="http://www.w3.org/2000/svg">
 <title id="fig4-title">Ciclo de vida de uma iniciativa de IA no CoE</title>
@@ -1089,7 +1078,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 </svg>
 </figure>
 <h3 id="72-detalhamento">7.2. Detalhamento</h3>
-<p><strong>Tabela 7 — Fases e entregas do ciclo de vida</strong></p>
+<p><strong>Tabela 7. Fases e entregas do ciclo de vida</strong></p>
 <table>
 <thead>
 <tr>
@@ -1135,12 +1124,12 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <h3 id="73-processo-de-triagem-e-priorizacao">7.3. Processo de triagem e priorização</h3>
 <p>Baseado nas recomendações da KPMG (2024) e Microsoft CAF (2025):</p>
 <ol>
-<li><strong>Submissão</strong> — qualquer área pode submeter um caso de uso via formulário padronizado</li>
-<li><strong>Triagem</strong> — CoE avalia viabilidade técnica inicial e alinhamento estratégico</li>
-<li><strong>Avaliação de risco</strong> — classificação de risco conforme NIST AI RMF e EU AI Act</li>
-<li><strong>Avaliação de valor</strong> — estimativa de impacto de negócio, ROI potencial, custo estimado</li>
-<li><strong>Priorização</strong> — Steering Committee prioriza com base em valor × viabilidade × risco</li>
-<li><strong>Aprovação</strong> — decisão go/no-go com definição de responsável e cronograma</li>
+<li>Submissão: qualquer área pode submeter um caso de uso via formulário padronizado</li>
+<li>Triagem: CoE avalia viabilidade técnica inicial e alinhamento estratégico</li>
+<li>Avaliação de risco: classificação de risco conforme NIST AI RMF e EU AI Act</li>
+<li>Avaliação de valor: estimativa de impacto de negócio, ROI potencial, custo estimado</li>
+<li>Priorização: Steering Committee prioriza com base em valor × viabilidade × risco</li>
+<li>Aprovação: decisão go/no-go com definição de responsável e cronograma</li>
 </ol>
 <h3 id="74-criterios-de-transicao-definition-of-done-do-coe">7.4. Critérios de transição (Definition of Done do CoE)</h3>
 <p>O CoE pode transferir uma solução quando:</p>
@@ -1156,27 +1145,26 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li>[ ] Custos estimados e modelo de chargeback definido</li>
 <li>[ ] Conformidade regulatória verificada (LGPD, setorial)</li>
 </ul>
-<hr />
 <h2 id="8-o-coe-na-era-da-ia-generativa-e-agentica">8. O CoE na Era da IA Generativa e Agêntica</h2>
 <p>A chegada dos LLMs e da IA generativa muda significativamente o escopo de um CoE de IA. Não se trata mais apenas de modelos de ML clássico. Um CoE moderno precisa evoluir para lidar com <strong>copilots, agentes autônomos e sistemas multi-agente</strong>, redesenhando governança, avaliação, segurança, integração com ferramentas e controle de custos.</p>
 <h3 id="81-rag-retrieval-augmented-generation">8.1. RAG (Retrieval-Augmented Generation)</h3>
 <p>Padrão arquitetural que combina busca em bases de conhecimento com geração de texto por LLM. É o caso de uso mais comum em CoEs de IA corporativos. O CoE deve definir:</p>
 <ul>
-<li><strong>Padrão de ingestão e chunking</strong> de documentos — tamanho dos chunks, overlap, metadata extraction</li>
-<li><strong>Estratégias de busca</strong> — híbrida (semântica + keyword), reranking, filtros por metadata</li>
-<li><strong>Frameworks de avaliação</strong> — faithfulness, relevance, groundedness, answer correctness, context precision e context recall (por exemplo, em abordagens como RAGAS)</li>
-<li><strong>Templates de arquitetura</strong> — ex.: Azure AI Search + Azure OpenAI + Cosmos DB</li>
-<li><strong>Gestão do índice</strong> — refresh incremental, versionamento de índice, qualidade dos embeddings</li>
-<li><strong>Guardrails de resposta</strong> — citação obrigatória de fontes, fallback quando confiança é baixa</li>
+<li>Padrão de ingestão e chunking de documentos: tamanho dos chunks, overlap, metadata extraction</li>
+<li>Estratégias de busca: híbrida (semântica + keyword), reranking, filtros por metadata</li>
+<li>Frameworks de avaliação: faithfulness, relevance, groundedness, answer correctness, context precision e context recall (por exemplo, em abordagens como RAGAS)</li>
+<li>Templates de arquitetura: ex.: Azure AI Search + Azure OpenAI + Cosmos DB</li>
+<li>Gestão do índice: refresh incremental, versionamento de índice, qualidade dos embeddings</li>
+<li>Guardrails de resposta: citação obrigatória de fontes, fallback quando confiança é baixa</li>
 </ul>
 <h3 id="82-agentes-e-orquestracao-multi-agente">8.2. Agentes e orquestração multi-agente</h3>
 <p>Arquiteturas onde múltiplos agentes de IA colaboram para resolver tarefas complexas. O CoE deve definir:</p>
 <ul>
-<li><strong>Padrões de orquestração</strong> — diferenciar plataformas corporativas e SDKs suportados (por exemplo, Microsoft Foundry Agents/Workflows e Semantic Kernel) de frameworks open source ou comunidades de adoção desigual (por exemplo, LangGraph, AutoGen e CrewAI)</li>
-<li><strong>Controles para agentes</strong> — limites de autonomia, human-in-the-loop, interruptores de segurança, limites de orçamento por agente</li>
-<li><strong>Observabilidade de agentes</strong> — tracing de decisões, custos por agente, latência fim a fim, logs de chamadas de ferramentas</li>
-<li><strong>Segurança</strong> — controle granular de quais ferramentas/APIs cada agente pode acessar (principle of least privilege)</li>
-<li><strong>Riscos específicos</strong> — prompt injection, autonomia excessiva, goal drift, uso indevido de ferramentas e ações irreversíveis</li>
+<li>Padrões de orquestração: diferenciar plataformas corporativas e SDKs suportados (por exemplo, Microsoft Foundry Agents/Workflows e Semantic Kernel) de frameworks open source ou comunidades de adoção desigual (por exemplo, LangGraph, AutoGen e CrewAI)</li>
+<li>Controles para agentes: limites de autonomia, human-in-the-loop, interruptores de segurança, limites de orçamento por agente</li>
+<li>Observabilidade de agentes: tracing de decisões, custos por agente, latência fim a fim, logs de chamadas de ferramentas</li>
+<li>Segurança: controle granular de quais ferramentas/APIs cada agente pode acessar (principle of least privilege)</li>
+<li>Riscos específicos: prompt injection, autonomia excessiva, goal drift, uso indevido de ferramentas e ações irreversíveis</li>
 </ul>
 <h3 id="83-mcp-e-integracao-com-ferramentas">8.3. MCP e integração com ferramentas</h3>
 <p>O <strong>Model Context Protocol (MCP)</strong> tornou-se uma peça relevante para arquiteturas agênticas porque padroniza a conexão entre aplicações de IA, fontes de dados e ferramentas externas. A especificação oficial define MCP como um protocolo aberto baseado em JSON-RPC para compartilhar contexto, expor recursos, prompts e ferramentas, e construir integrações componíveis entre hosts, clientes e servidores.</p>
@@ -1191,21 +1179,20 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <h3 id="84-llmops">8.4. LLMOps</h3>
 <p>Evolução do MLOps para o contexto de LLMs, incorporando práticas específicas:</p>
 <ul>
-<li><strong>Gestão de prompts</strong> — versionamento, testes A/B, prompt registries, prompt evaluation pipelines</li>
-<li><strong>Avaliação contínua</strong> — benchmarks automatizados de qualidade (usando frameworks como Azure AI Evaluation, RAGAS, DeepEval)</li>
-<li><strong>Gestão de custos (FinOps)</strong> — monitoramento de tokens consumidos, caching inteligente de respostas, otimização de modelos (usar modelo menor quando possível)</li>
-<li><strong>Gestão de modelos</strong> — catálogo de modelos homologados, critérios claros para adoção de novos modelos, testes de regressão ao trocar modelo</li>
-<li><strong>Observabilidade</strong> — latência por request, taxa de alucinação, satisfação do usuário, usage analytics</li>
+<li>Gestão de prompts: versionamento, testes A/B, prompt registries, prompt evaluation pipelines</li>
+<li>Avaliação contínua: benchmarks automatizados de qualidade (usando frameworks como Azure AI Evaluation, RAGAS, DeepEval)</li>
+<li>Gestão de custos (FinOps): monitoramento de tokens consumidos, caching inteligente de respostas, otimização de modelos (usar modelo menor quando possível)</li>
+<li>Gestão de modelos: catálogo de modelos homologados, critérios claros para adoção de novos modelos, testes de regressão ao trocar modelo</li>
+<li>Observabilidade: latência por request, taxa de alucinação, satisfação do usuário, usage analytics</li>
 </ul>
 <h3 id="85-copilots-e-ai-assistants">8.5. Copilots e AI assistants</h3>
 <p>Ferramentas como Microsoft 365 Copilot, GitHub Copilot e custom copilots requerem do CoE:</p>
 <ul>
-<li><strong>Políticas de uso</strong> — o que pode e o que não pode ser feito com copilots (dados sensíveis, código proprietário)</li>
-<li><strong>Treinamento</strong> — capacitar toda a organização no uso efetivo</li>
-<li><strong>Medição de produtividade</strong> — métricas de adoção e impacto</li>
-<li><strong>Governança de dados</strong> — garantir que copilots não acessem dados além do permitido (Microsoft Purview, DLP)</li>
+<li>Políticas de uso: o que pode e o que não pode ser feito com copilots (dados sensíveis, código proprietário)</li>
+<li>Treinamento: capacitar toda a organização no uso efetivo</li>
+<li>Medição de produtividade: métricas de adoção e impacto</li>
+<li>Governança de dados: impedir que copilots acessem dados além do permitido (Microsoft Purview, DLP)</li>
 </ul>
-<hr />
 <h2 id="9-anti-patterns-armadilhas-comuns">9. Anti-Patterns: Armadilhas Comuns</h2>
 <p>Baseados em observações práticas e validados por literatura da indústria:</p>
 <h3 id="91-coe-como-fabrica-de-software">9.1. CoE como fábrica de software</h3>
@@ -1223,32 +1210,31 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <h3 id="94-coe-sem-patrocinio-executivo">9.4. CoE sem patrocínio executivo</h3>
 <p><strong>Sintoma:</strong> o CoE existe formalmente, mas não tem autoridade para fazer cumprir padrões ou rejeitar projetos desalinhados. Não há orçamento dedicado.</p>
 <p><strong>Consequência:</strong> os padrões viram sugestões opcionais e o CoE perde relevância. Times fazem "shadow AI" sem supervisão.</p>
-<p><strong>Solução:</strong> garantir sponsorship de C-level (CIO, CTO ou CAIO), com mandato claro, orçamento dedicado e métricas de sucesso reportadas periodicamente (Microsoft CAF, 2025; KPMG, 2024).</p>
+<p><strong>Solução:</strong> obter sponsorship de C-level (CIO, CTO ou CAIO), com mandato claro, orçamento dedicado e métricas de sucesso reportadas periodicamente (Microsoft CAF, 2025; KPMG, 2024).</p>
 <h3 id="95-ignorar-a-gestao-de-mudanca">9.5. Ignorar a gestão de mudança</h3>
 <p><strong>Sintoma:</strong> o CoE foca apenas no aspecto técnico e ignora a transformação cultural necessária para adoção de IA.</p>
 <p><strong>Consequência:</strong> resistência dos times, baixa adoção, soluções tecnicamente boas que ninguém usa.</p>
-<p><strong>Solução:</strong> incluir no CoE competências de change management, comunicação e gestão de stakeholders. Comunicar vitórias rapidamente e demonstrar valor de negócio cedo e com frequência.</p>
+<p><strong>Solução:</strong> incluir no CoE competências de change management, comunicação e gestão das áreas envolvidas. Comunicar vitórias rapidamente e demonstrar valor de negócio cedo e com frequência.</p>
 <h3 id="96-governanca-como-checklist-burocratico">9.6. Governança como checklist burocrático</h3>
-<p><strong>Sintoma:</strong> o CoE trata governança como um exercício burocrático — formulários para preencher, aprovações para carimbar — sem avaliação real de riscos ou impacto.</p>
+<p><strong>Sintoma:</strong> o CoE trata governança como um exercício burocrático (formulários para preencher, aprovações para carimbar), sem avaliação real de riscos ou impacto.</p>
 <p><strong>Consequência:</strong> CoE perde credibilidade, riscos reais passam despercebidos, conformidade regulatória é superficial. Materiais públicos de mercado sobre CoEs de IA, como KPMG (2024), Deloitte e Oracle/CIO, apontam governança fragmentada, falta de priorização e desalinhamento organizacional como fatores recorrentes de falha.</p>
-<p><strong>Solução:</strong> implementar governança como prática integrada ao desenvolvimento — avaliações automatizadas, controles técnicos (não apenas processuais) e revisões periódicas com foco em riscos reais.</p>
+<p><strong>Solução:</strong> implementar governança como prática integrada ao desenvolvimento: avaliações automatizadas, controles técnicos (não apenas processuais) e revisões periódicas com foco em riscos reais.</p>
 <h3 id="97-ausencia-de-metricas-de-valor">9.7. Ausência de métricas de valor</h3>
 <p><strong>Sintoma:</strong> o CoE reporta métricas técnicas (número de modelos, latência, uptime) mas não consegue demonstrar valor de negócio.</p>
 <p><strong>Consequência:</strong> quando vem o primeiro corte de orçamento, o CoE é questionado e potencialmente desmantelado.</p>
-<p><strong>Solução:</strong> definir e rastrear métricas de impacto de negócio desde o início — ROI por caso de uso, tempo economizado, receita gerada, redução de custo operacional (Deloitte, KPMG, Microsoft CAF).</p>
-<hr />
+<p><strong>Solução:</strong> definir e rastrear métricas de impacto de negócio desde o início: ROI por caso de uso, tempo economizado, receita gerada, redução de custo operacional (Deloitte, KPMG, Microsoft CAF).</p>
 <h2 id="10-modelo-de-maturidade">10. Modelo de Maturidade</h2>
 <p>Um CoE de IA evolui ao longo do tempo. Este modelo sintetiza frameworks de maturidade de múltiplas fontes, especialmente Google AI Adoption Framework e Microsoft CAF, em quatro níveis progressivos:</p>
-<h3 id="nivel-1-reativo-ad-hoc-tactical">Nível 1 — Reativo (Ad hoc / Tactical)</h3>
+<h3 id="nivel-1-reativo-ad-hoc-tactical">Nível 1: Reativo (Ad hoc / Tactical)</h3>
 <ul>
 <li>IA é experimentada de forma isolada por indivíduos ou times específicos</li>
 <li>Sem padrões, governança ou coordenação</li>
 <li>Conhecimento concentrado em poucos indivíduos</li>
 <li>Infraestrutura ad hoc (cada um usa o que quer)</li>
-<li><strong>Foco:</strong> criar o CoE, definir missão e garantir patrocínio executivo</li>
-<li><strong>Referência:</strong> Google classifica como "Tactical" — IA usada para resolver problemas pontuais</li>
+<li><strong>Foco:</strong> criar o CoE, definir missão e obter patrocínio executivo</li>
+<li><strong>Referência:</strong> Google classifica esse estágio como "Tactical", com IA usada para resolver problemas pontuais</li>
 </ul>
-<h3 id="nivel-2-executor-construtor-centralized">Nível 2 — Executor (Construtor / Centralized)</h3>
+<h3 id="nivel-2-executor-construtor-centralized">Nível 2: Executor (Construtor / Centralized)</h3>
 <ul>
 <li>CoE formado com equipe dedicada, operando no modelo centralizado</li>
 <li>Desenvolvendo os primeiros PoCs e soluções</li>
@@ -1258,7 +1244,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li><strong>Foco:</strong> entregar Minimum Viable Standards, primeiros PoCs/MVPs e capacitação básica</li>
 <li><strong>Referência:</strong> Microsoft CAF recomenda centralização nesta fase para "consolidar expertise e práticas fundamentais"</li>
 </ul>
-<h3 id="nivel-3-habilitador-plataforma-strategic">Nível 3 — Habilitador (Plataforma / Strategic)</h3>
+<h3 id="nivel-3-habilitador-plataforma-strategic">Nível 3: Habilitador (Plataforma / Strategic)</h3>
 <ul>
 <li>CoE publica padrões, templates e guias completos</li>
 <li>Plataforma de autoatendimento governado com governança central e controles automatizados</li>
@@ -1267,9 +1253,9 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li>Comunidade de prática ativa</li>
 <li>FinOps para IA implementado</li>
 <li><strong>Foco:</strong> escalar, treinar, transferir ownership e medir impacto</li>
-<li><strong>Referência:</strong> Google classifica como "Strategic" — IA integrada aos processos de negócio</li>
+<li><strong>Referência:</strong> Google classifica esse estágio como "Strategic", com IA integrada aos processos de negócio</li>
 </ul>
-<h3 id="nivel-4-transformador-consultivo-transformational">Nível 4 — Transformador (Consultivo / Transformational)</h3>
+<h3 id="nivel-4-transformador-consultivo-transformational">Nível 4: Transformador (Consultivo / Transformational)</h3>
 <ul>
 <li>IA é parte da estratégia de negócio, não apenas de TI</li>
 <li>CoE atua como orientador consultivo e guardião de governança</li>
@@ -1278,9 +1264,9 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li>Inovação contínua com experimentação descentralizada</li>
 <li>IA Responsável integrada à cultura organizacional</li>
 <li><strong>Foco:</strong> impacto de negócio, inovação contínua e IA como diferencial competitivo</li>
-<li><strong>Referência:</strong> Google classifica como "Transformational" — IA como parte central do negócio. Microsoft CAF descreve a evolução para o modelo consultivo</li>
+<li><strong>Referência:</strong> Google classifica esse estágio como "Transformational", com IA como parte central do negócio. Microsoft CAF descreve a evolução para o modelo consultivo</li>
 </ul>
-<p><strong>Figura 5 — Evolução de maturidade do CoE de IA</strong></p>
+<p><strong>Figura 5. Evolução de maturidade do CoE de IA</strong></p>
 <figure class="diagram">
 <svg role="img" aria-labelledby="fig5-title fig5-desc" viewBox="0 0 1000 440" xmlns="http://www.w3.org/2000/svg">
 <title id="fig5-title">Evolução de maturidade do CoE de IA</title>
@@ -1312,12 +1298,11 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <text x="205" y="105" font-size="17">IA como estratégia de negócio; CoE advisory e expertise distribuída</text>
 </svg>
 </figure>
-<hr />
 <h2 id="11-metricas-e-kpis">11. Métricas e KPIs</h2>
 <p>Deloitte, KPMG e Microsoft CAF enfatizam que o CoE deve rastrear métricas que demonstrem <strong>valor de negócio</strong>, não apenas atividade técnica. O Microsoft CAF (2025) recomenda definir KPIs como taxas de adoção, níveis de conformidade e tempos de ciclo de projeto.</p>
-<p>As metas abaixo são <strong>exemplos calibráveis</strong>. Elas não devem ser lidas como benchmark universal: cada organização deve ajustá-las ao baseline, apetite de risco, maturidade de dados, criticidade regulatória e estratégia de adoção. Para evitar o incentivo errado, métricas de volume — como número de casos em produção — devem ser secundárias em relação a valor, qualidade, risco e custo.</p>
+<p>As metas abaixo são <strong>exemplos calibráveis</strong>. Elas não devem ser lidas como benchmark universal: cada organização deve ajustá-las ao baseline, apetite de risco, maturidade de dados, criticidade regulatória e estratégia de adoção. Para evitar o incentivo errado, métricas de volume, como número de casos em produção, devem ser secundárias em relação a valor, qualidade, risco e custo.</p>
 <h3 id="111-metricas-de-adocao-e-escala">11.1. Métricas de adoção e escala</h3>
-<p><strong>Tabela 8 — Métricas de adoção e escala</strong></p>
+<p><strong>Tabela 8. Métricas de adoção e escala</strong></p>
 <table>
 <thead>
 <tr>
@@ -1350,7 +1335,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 </tbody>
 </table>
 <h3 id="112-metricas-de-valor-de-negocio">11.2. Métricas de valor de negócio</h3>
-<p><strong>Tabela 9 — Métricas de valor de negócio</strong></p>
+<p><strong>Tabela 9. Métricas de valor de negócio</strong></p>
 <table>
 <thead>
 <tr>
@@ -1383,7 +1368,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 </tbody>
 </table>
 <h3 id="113-metricas-de-qualidade-e-governanca">11.3. Métricas de qualidade e governança</h3>
-<p><strong>Tabela 10 — Métricas de qualidade e governança</strong></p>
+<p><strong>Tabela 10. Métricas de qualidade e governança</strong></p>
 <table>
 <thead>
 <tr>
@@ -1416,7 +1401,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 </tbody>
 </table>
 <h3 id="114-metricas-de-capacitacao">11.4. Métricas de capacitação</h3>
-<p><strong>Tabela 11 — Métricas de capacitação</strong></p>
+<p><strong>Tabela 11. Métricas de capacitação</strong></p>
 <table>
 <thead>
 <tr>
@@ -1449,7 +1434,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 </tbody>
 </table>
 <h3 id="115-metricas-financeiras-finops">11.5. Métricas financeiras (FinOps)</h3>
-<p><strong>Tabela 12 — Métricas financeiras e de sustentabilidade</strong></p>
+<p><strong>Tabela 12. Métricas financeiras e de sustentabilidade</strong></p>
 <table>
 <thead>
 <tr>
@@ -1488,7 +1473,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 </table>
 <h3 id="116-metricas-por-contexto-organizacional">11.6. Métricas por contexto organizacional</h3>
 <p>As métricas anteriores formam uma base comum. Porém, como discutido na seção 5.5, a maturidade do CoE também depende de escolher métricas compatíveis com o contexto organizacional.</p>
-<p><strong>Tabela 13 — Métricas por contexto organizacional</strong></p>
+<p><strong>Tabela 13. Métricas por contexto organizacional</strong></p>
 <table>
 <thead>
 <tr>
@@ -1521,7 +1506,6 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 </tbody>
 </table>
 <p>Essa camada contextual impede que o CoE use uma métrica única para realidades diferentes. Em ambientes de alto risco, velocidade não pode ser a principal medida. Em empresas digitais, controle excessivo pode matar aprendizado. Em organizações públicas, eficiência sem transparência pode reduzir confiança. Em empresas globais, escala sem governança local pode criar risco regulatório.</p>
-<hr />
 <h2 id="12-checklist-pratico-para-lideres">12. Checklist Prático para Líderes</h2>
 <h3 id="antes-de-criar-o-coe">Antes de criar o CoE</h3>
 <ul>
@@ -1562,19 +1546,18 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li>[ ] CoE mais ocupado operando do que definindo padrões?</li>
 <li>[ ] Mais de 3 soluções em desenvolvimento simultâneo pelo CoE?</li>
 </ul>
-<hr />
 <h2 id="13-roadmap-de-implementacao-baseado-nas-referencias">13. Roadmap de Implementação Baseado nas Referências</h2>
 <p>As referências analisadas sugerem que a criação de um CoE de IA deve ser tratada como uma jornada de capacidade organizacional, não como um projeto isolado. Abaixo está um roadmap genérico, derivado principalmente de Microsoft CAF, KPMG, Deloitte, Google AI Adoption Framework, AWS Well-Architected ML Lens, NIST AI RMF e ISO/IEC 42001.</p>
-<h3 id="131-primeiros-30-dias-mandato-governanca-e-diagnostico">13.1. Primeiros 30 dias — Mandato, governança e diagnóstico</h3>
+<h3 id="131-primeiros-30-dias-mandato-governanca-e-diagnostico">13.1. Primeiros 30 dias: mandato, governança e diagnóstico</h3>
 <p><strong>Objetivo:</strong> estabelecer clareza organizacional e reduzir adoção fragmentada.</p>
 <ul>
 <li>Definir o <strong>charter do CoE</strong>: missão, escopo, papéis, responsabilidades, decision rights e cadência de governança</li>
-<li>Garantir patrocínio executivo e formar um steering committee com negócio, tecnologia, dados, segurança, jurídico/compliance e risco</li>
+<li>Obter patrocínio executivo e formar um steering committee com negócio, tecnologia, dados, segurança, jurídico/compliance e risco</li>
 <li>Mapear iniciativas existentes de IA, capacidades técnicas, lacunas de skills, riscos e ferramentas já utilizadas</li>
 <li>Definir processo inicial de triagem (<em>intake</em>), classificação e priorização de casos de uso</li>
 <li>Estabelecer uma taxonomia de risco alinhada ao NIST AI RMF, ISO/IEC 42001 e EU AI Act</li>
 </ul>
-<h3 id="132-de-30-a-60-dias-padroes-minimos-e-ativos-reutilizaveis">13.2. De 30 a 60 dias — Padrões mínimos e ativos reutilizáveis</h3>
+<h3 id="132-de-30-a-60-dias-padroes-minimos-e-ativos-reutilizaveis">13.2. De 30 a 60 dias: padrões mínimos e ativos reutilizáveis</h3>
 <p><strong>Objetivo:</strong> criar a base comum para que os primeiros casos sejam avaliados e construídos de forma consistente.</p>
 <ul>
 <li>Publicar padrões mínimos viáveis para dados, segurança, privacidade, avaliação, observabilidade e FinOps</li>
@@ -1583,7 +1566,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li>Definir catálogo inicial de modelos, ferramentas e serviços aprovados</li>
 <li>Criar critérios de go/no-go para PoCs e pilotos, incluindo valor de negócio, risco, custo e viabilidade técnica</li>
 </ul>
-<h3 id="133-de-60-a-90-dias-pilotos-plataforma-e-capacitacao">13.3. De 60 a 90 dias — Pilotos, plataforma e capacitação</h3>
+<h3 id="133-de-60-a-90-dias-pilotos-plataforma-e-capacitacao">13.3. De 60 a 90 dias: pilotos, plataforma e capacitação</h3>
 <p><strong>Objetivo:</strong> validar o modelo operacional do CoE em casos reais, sem perder o foco em escalabilidade.</p>
 <ul>
 <li>Selecionar um portfólio pequeno de pilotos com alto valor e risco controlado</li>
@@ -1592,7 +1575,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li>Iniciar programa de AI literacy para áreas de negócio e trilhas técnicas para equipes de tecnologia</li>
 <li>Criar uma comunidade de prática com embaixadores (<em>champions</em>) em áreas de negócio e tecnologia</li>
 </ul>
-<h3 id="134-de-90-a-180-dias-escala-governada">13.4. De 90 a 180 dias — Escala governada</h3>
+<h3 id="134-de-90-a-180-dias-escala-governada">13.4. De 90 a 180 dias: escala governada</h3>
 <p><strong>Objetivo:</strong> evoluir de experimentação para adoção repetível e mensurável.</p>
 <ul>
 <li>Medir adoção, valor de negócio, qualidade, risco e custo por iniciativa</li>
@@ -1601,7 +1584,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li>Expandir o portfólio de casos de uso com base em valor demonstrado</li>
 <li>Revisar periodicamente políticas de IA responsável, segurança, privacidade e conformidade</li>
 </ul>
-<h3 id="135-depois-de-180-dias-evolucao-para-modelo-consultivo">13.5. Depois de 180 dias — Evolução para modelo consultivo</h3>
+<h3 id="135-depois-de-180-dias-evolucao-para-modelo-consultivo">13.5. Depois de 180 dias: evolução para modelo consultivo</h3>
 <p><strong>Objetivo:</strong> reduzir dependência do CoE como executor direto e ampliar sua atuação como habilitador estratégico.</p>
 <ul>
 <li>Distribuir expertise para times de produto, plataforma e dados</li>
@@ -1610,16 +1593,14 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 <li>Auditar periodicamente aderência aos padrões e efetividade dos controles</li>
 <li>Reavaliar o modelo operacional do CoE conforme a maturidade da organização</li>
 </ul>
-<hr />
 <h2 id="14-conclusao">14. Conclusão</h2>
 <p>Um CoE de IA só escala quando é desenhado como <strong>capacidade organizacional</strong>, não como departamento executor de todas as demandas de IA. A implicação prática para líderes de tecnologia é simples: criar padrões antes de multiplicar produtos, construir soluções já pensando na transferência para times de produto e medir valor, risco, qualidade, custo e sustentabilidade com a mesma disciplina.</p>
 <p>A principal decisão de desenho não é "centralizar ou descentralizar", mas <strong>o que centralizar e o que federar</strong>. Políticas, avaliações, arquitetura de referência, catálogo de modelos, controles técnicos e guardrails de agentes devem ser comuns. Priorização de domínio, experiência do usuário, evolução funcional e operação do produto devem ficar próximos dos times que conhecem o processo de negócio.</p>
-<p>O caminho de executor para habilitador — e depois para orientador consultivo — exige disciplina de transição. Sem critérios claros de handoff, o CoE vira fábrica de software; sem plataforma e governança embutidas, a descentralização vira fragmentação; sem métricas de valor, o CoE perde legitimidade executiva.</p>
+<p>O caminho de executor para habilitador, e depois para orientador consultivo, exige disciplina de transição. Sem critérios claros de handoff, o CoE vira fábrica de software; sem plataforma e governança embutidas, a descentralização vira fragmentação; sem métricas de valor, o CoE perde legitimidade executiva.</p>
 <p>Este artigo também tem limites: ele é uma síntese narrativa e prática, não uma pesquisa empírica sobre desempenho de CoEs. Inclui uma vinheta pública baseada em case study de fornecedor, mas não um estudo de caso primário com entrevistas, dados internos ou autorização explícita de uma organização real; isso seria uma evolução substantiva, não apenas polimento editorial. A evolução de agentes, MCP, plataformas como Microsoft Foundry, normas regulatórias e práticas de sustentabilidade exigirá revisão periódica. Os apêndices abaixo oferecem um ponto de partida operacional; em uma versão futura, os próximos complementos naturais seriam um catálogo de controles, exemplos de arquitetura renderizados como diagramas vetoriais e um estudo de caso autorizado.</p>
-<hr />
-<h2 id="apendice-a-raci-de-referencia-para-um-coe-de-ia">Apêndice A — RACI de referência para um CoE de IA</h2>
+<h2 id="apendice-a-raci-de-referencia-para-um-coe-de-ia">Apêndice A. RACI de referência para um CoE de IA</h2>
 <p>Este RACI é um ponto de partida. Em organizações reguladas, jurídico, risco, compliance, auditoria interna e DPO podem exigir papéis mais formais. Em empresas digitais, produto e plataforma tendem a assumir mais responsabilidade operacional.</p>
-<p><strong>Tabela 14 — RACI de referência para atividades do CoE de IA</strong></p>
+<p><strong>Tabela 14. RACI de referência para atividades do CoE de IA</strong></p>
 <table>
 <thead>
 <tr>
@@ -1745,7 +1726,7 @@ O CoE precisa lidar com governança multi-jurisdição: EU AI Act, GDPR, LGPD, t
 </table>
 <p>Legenda: <strong>R</strong> = responsável pela execução; <strong>A</strong> = accountable pela decisão/resultado; <strong>C</strong> = consultado; <strong>I</strong> = informado.</p>
 <p>Nota sobre accountability: o RACI mantém um único <strong>A</strong> por linha, exceto em aprovações de alto risco. Nesses casos, o <strong>A/R</strong> de Segurança/Risco/Compliance representa o dono técnico do veto e dos controles obrigatórios, enquanto o <strong>A</strong> do sponsor representa a decisão executiva de go/no-go e aceite de risco residual.</p>
-<h2 id="apendice-b-charter-modelo-resumido-para-um-coe-de-ia">Apêndice B — Charter-modelo resumido para um CoE de IA</h2>
+<h2 id="apendice-b-charter-modelo-resumido-para-um-coe-de-ia">Apêndice B. Charter-modelo resumido para um CoE de IA</h2>
 <p>Um charter simples evita que o CoE nasça ambíguo. O documento deve caber em poucas páginas e ser aprovado pelo sponsor executivo.</p>
 <p><strong>1. Missão</strong><br />
 Habilitar adoção de IA com segurança, consistência e valor de negócio, por meio de padrões, governança, capacitação, plataforma e ativos reutilizáveis.</p>
@@ -1761,9 +1742,9 @@ Ver seção 4.5. Em resumo: o CoE decide padrões, produto decide evolução fun
 Adoção de padrões, tempo até produção, valor por caso de uso, cobertura de evals, incidentes críticos, custo por interação, transições bem-sucedidas para squads e satisfação das áreas consumidoras.</p>
 <p><strong>7. Cadência de governança</strong><br />
 Revisão quinzenal de portfólio, comitê mensal com sponsor executivo, revisão trimestral de padrões e avaliação semestral do modelo operacional do CoE.</p>
-<h2 id="apendice-c-template-de-avaliacao-de-risco-operacional">Apêndice C — Template de avaliação de risco operacional</h2>
+<h2 id="apendice-c-template-de-avaliacao-de-risco-operacional">Apêndice C. Template de avaliação de risco operacional</h2>
 <p>Este template deve ser usado na triagem inicial de casos de uso e atualizado antes de MVP, produção e mudanças relevantes de modelo, prompt, dados, ferramenta, agente ou política de recuperação. Ele não substitui parecer jurídico, avaliação regulatória formal ou revisão de segurança; sua função é criar uma trilha operacional consistente para decisão do CoE.</p>
-<p><strong>Tabela 15 — Ficha de avaliação de risco para casos de uso de IA</strong></p>
+<p><strong>Tabela 15. Ficha de avaliação de risco para casos de uso de IA</strong></p>
 <table>
 <thead>
 <tr>
@@ -1855,7 +1836,7 @@ Revisão quinzenal de portfólio, comitê mensal com sponsor executivo, revisão
 </tr>
 </tbody>
 </table>
-<p><strong>Tabela 16 — Matriz operacional de decisão</strong></p>
+<p><strong>Tabela 16. Matriz operacional de decisão</strong></p>
 <table>
 <thead>
 <tr>
@@ -1909,7 +1890,6 @@ Revisão quinzenal de portfólio, comitê mensal com sponsor executivo, revisão
 <li>O risco residual foi aceito pelo papel accountable adequado.</li>
 <li>O plano de operação inclui monitoramento, incidente, fallback, rollback e critério de desligamento.</li>
 </ul>
-<hr />
 <h2 id="referencias">Referências</h2>
 <h3 id="fornecedores-de-tecnologia">Fornecedores de tecnologia</h3>
 <ol>
@@ -1998,7 +1978,6 @@ Revisão quinzenal de portfólio, comitê mensal com sponsor executivo, revisão
 <p><strong>Toward Effective AI Governance: A Review of Principles.</strong> IEEE/ACM, 2025. arXiv:2505.23417. Disponível em: <a href="https://arxiv.org/pdf/2505.23417">arxiv.org/pdf/2505.23417</a>.</p>
 </li>
 </ol>
-<hr />
 <p><em>Artigo elaborado como guia prático para organizações que estão estruturando ou evoluindo seus Centros de Excelência em IA. Última atualização: maio de 2026.</em></p>
 </article>
 </main>

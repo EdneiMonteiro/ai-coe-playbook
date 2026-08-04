@@ -6,9 +6,9 @@ Este projeto distingue **autoria** (responsável pela obra) de **contribuição*
 
 A partir da **v1.1**, cada contribuição revisada e incorporada é creditada de três formas:
 
-1. **Release notes** da versão que incorpora a contribuição, com menção nominal e descrição da contribuição.
-2. **CITATION.cff**, no campo apropriado (`authors` quando a contribuição configurar coautoria substantiva conforme política abaixo; menção em comentário ou em `references` quando for contribuição pontual).
-3. **DOI Zenodo próprio** da nova versão (cada release gera um Version DOI distinto sob o mesmo Concept DOI), tornando a contribuição **citável de forma independente e permanente**.
+1. Release notes da versão que incorpora a contribuição, com menção nominal e descrição da contribuição.
+2. CITATION.cff, no campo apropriado (`authors` quando a contribuição configurar coautoria substantiva conforme política abaixo; menção em comentário ou em `references` quando for contribuição pontual).
+3. DOI Zenodo próprio da nova versão (cada release gera um Version DOI distinto sob o mesmo Concept DOI), tornando a contribuição **citável de forma independente e permanente**.
 
 ## Como contribuir
 
@@ -47,7 +47,7 @@ _Nenhum contribuidor adicional listado até v1.0.2. Autoria: Ednei Monteiro._
 
 ## Mantenedor principal
 
-- **Ednei Monteiro** — ORCID: [0009-0006-0765-4201](https://orcid.org/0009-0006-0765-4201)
+- Ednei Monteiro: ORCID: [0009-0006-0765-4201](https://orcid.org/0009-0006-0765-4201)
 
 ## Licença
 

@@ -26,7 +26,7 @@ Padrões antes de escala; build-to-transfer; governança embutida na plataforma;
 - **Segurança, risco e compliance:** definem controles obrigatórios e têm poder de veto em casos de alto risco.
 - **Sponsor executivo:** decide trade-offs de investimento, risco residual e go/no-go executivo quando há impacto material.
 
-**Escalada de conflito:** divergência entre CoE e área de veto (Segurança, Risco, Compliance) sobre classificação ou aprovação deve ser registrada — com **parecer jurídico formal anexado quando aplicável** —, com posicionamento de cada parte, e escalada ao Sponsor Executivo em prazo definido (sugestão: ≤ 5 dias úteis para Alto, ≤ 2 dias úteis para Crítico). O Sponsor decide go/no-go com base nos pareceres e formaliza a decisão no instrumento de aprovação.
+**Escalada de conflito:** divergência entre CoE e área de veto (Segurança, Risco, Compliance) sobre classificação ou aprovação deve ser registrada (com **parecer jurídico formal anexado quando aplicável**), com posicionamento de cada parte, e escalada ao Sponsor Executivo em prazo definido (sugestão: ≤ 5 dias úteis para Alto, ≤ 2 dias úteis para Crítico). O Sponsor decide go/no-go com base nos pareceres e formaliza a decisão no instrumento de aprovação.
 
 ## 6. Métricas de sucesso
 
@@ -49,4 +49,3 @@ Revisão quinzenal de portfólio (convocador: CoE), comitê mensal com sponsor e
 
 - **Fórum mensal de comunidade de IA:** facilitado pelo CoE; aberto a squads de produto, plataforma e dados. Objetivo: socializar lições, novos padrões e casos de uso em produção. Dono e convocador primário: CoE (R/A); squads atuam como co-facilitadores e podem propor pautas. Se nenhum squad propuser pauta, CoE garante conteúdo mínimo (release notes, métricas de adoção).
 - **Comunicação de mudança de padrão:** todo padrão novo ou alteração material publicada pelo CoE deve ser comunicada via release notes + sessão dedicada no fórum mensal. SLA: até 30 dias entre publicação e socialização ativa. Mudanças críticas de segurança (vulnerabilidade em modelo em produção, comportamento adversarial confirmado, CVE com impacto em output): comunicação em até 48h via canal de incidente + sessão extraordinária no fórum dentro de 5 dias úteis.
-

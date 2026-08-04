@@ -35,7 +35,7 @@
 |---|---|
 | Pontuação geral bruta | [0,00–4,00] |
 | Nível bruto | [Nível 1/2/3/4] |
-| Contenções aplicadas | [sim/não — quais] |
+| Contenções aplicadas | [sim/não; quais] |
 | Nível final após contenções | [Nível 1/2/3/4] |
 | Vetos operacionais abertos | [número] |
 | Confiança geral | [alta/média/baixa/inconclusiva] |
@@ -110,7 +110,7 @@ Em modo diagnóstico interno, as colunas normativas podem ser preenchidas apenas
 | Critério de amostragem usado | [aleatório / risco / produção crítica / combinado] |
 | Número de soluções em produção avaliadas | [n] |
 | Número de soluções críticas avaliadas | [n] |
-| Evidências negativas consideradas | [sim/não — quais] |
+| Evidências negativas consideradas | [sim/não; quais] |
 | Perguntas com confiança baixa | [lista] |
 | Perguntas inconclusivas | [lista] |
 | Ajustes de nota por baixa confiança | [lista] |
@@ -157,12 +157,12 @@ Para produção e casos de alto risco, anexar pacote documental mínimo: **model
 
 Em sistemas baseados em **GPAI** sob escopo do EU AI Act, registrar também a divulgação técnica exigida pelo Art. 53 e referências a documentação do provedor.
 
-> **Nota — GPAI e SaaS terceirizado.** Para sistemas baseados em GPAI ou SaaS terceirizado, campos do model card que dependem de internals do modelo (pesos, datasets de treino, métricas internas, ablation studies) podem ser declarados como **N/A — substituído por system card e contrato/SLA do provider**. O system card deve então registrar: identificação do provider, versão do modelo/serviço, escopo de uso, controles contratuais aplicáveis, dependências críticas, plano de saída e referência à documentação técnica pública do provider (incluindo GPAI Art. 53 disclosure quando aplicável).
+> **Nota sobre GPAI e SaaS terceirizado.** Para sistemas baseados em GPAI ou SaaS terceirizado, campos do model card que dependem de internals do modelo (pesos, datasets de treino, métricas internas, ablation studies) podem ser declarados como **N/A (substituído por system card e contrato/SLA do provider)**. O system card deve então registrar: identificação do provider, versão do modelo/serviço, escopo de uso, controles contratuais aplicáveis, dependências críticas, plano de saída e referência à documentação técnica pública do provider (incluindo GPAI Art. 53 disclosure quando aplicável).
 
 | Artefato técnico | Owner nominado | Evidência | Observações |
 |---|---|---|---|
 | Model card | [pessoa/email] | [link] | Intended use, limitações, métricas, vieses conhecidos, versões, mudanças materiais, licença e origem (OSS vs proprietary) quando aplicável. |
-| System card | [pessoa/email] | [link] | Arquitetura do sistema, integrações, guardrails, riscos, incidentes, logs, controles operacionais; GPAI Art. 53 disclosure quando aplicável; check de contaminação treino/eval realizado por [pessoa/equipe] — **N/A para GPAI/SaaS terceirizado quando o provider não expõe internals; nesse caso declarar "N/A — substituído por contrato/SLA do provider" e referenciar a documentação técnica pública do provider**. |
+| System card | [pessoa/email] | [link] | Arquitetura do sistema, integrações, guardrails, riscos, incidentes, logs, controles operacionais; GPAI Art. 53 disclosure quando aplicável; check de contaminação treino/eval realizado por [pessoa/equipe]; **N/A para GPAI/SaaS terceirizado quando o provider não expõe internals; nesse caso declarar "N/A (substituído por contrato/SLA do provider)" e referenciar a documentação técnica pública do provider**. |
 | Datasheet de corpus RAG/dataset crítico | [pessoa/email] | [link] | Proveniência, finalidade, base legal, retenção, limitações, atualização, expurgo e owner; status de anonimização do corpus, dos logs de interação e dos embeddings. |
 | Versões de modelos | [pessoa/email] | [link] | Inclui licença e origem (OSS vs proprietary) quando relevante. |
 | Versões de prompts | [pessoa/email] | [link] | [obs] |
@@ -193,10 +193,10 @@ Em **modo auditoria/investimento**, a aprovação dos pesos deve ser feita por *
 | Cenário worst (−2pp dimensões críticas) | [resultado; mudança de nível/contenção/decisão] |
 | Cenário expected | [resultado] |
 | Cenário best (+2pp dimensões críticas) | [resultado; mudança de nível/contenção/decisão] |
-| Análise de sensibilidade — síntese | [se decisão muda entre cenários, registrar como risco metodológico] |
+| Análise de sensibilidade (síntese) | [se decisão muda entre cenários, registrar como risco metodológico] |
 | Modo de aplicação | [diagnóstico interno / auditoria-investimento] |
 | Owner metodológico | [nome/cargo] |
-| Aprovador dos pesos | [nome/cargo — em modo auditoria, deve ser avaliador independente, não o sponsor avaliado] |
+| Aprovador dos pesos | [nome/cargo; em modo auditoria, deve ser avaliador independente, não o sponsor avaliado] |
 | Sponsor que aceitou risco metodológico | [nome/cargo] |
 
 ## 15. Limitações do assessment
@@ -211,7 +211,7 @@ Em **modo auditoria/investimento**, a aprovação dos pesos deve ser feita por *
 |---|---|---|---|---|
 | [decisão] | [opções] | [recomendação] | [prazo] | [owner] |
 
-## Anexo C — Crosswalk normativo NIST AI RMF × ISO/IEC 42001 × EU AI Act × LGPD/GDPR
+## Anexo C. Crosswalk normativo NIST AI RMF × ISO/IEC 42001 × EU AI Act × LGPD/GDPR
 
 O crosswalk normativo foi extraído para vida própria em [`../referencias/crosswalk-normativo.md`](../referencias/crosswalk-normativo.md), permitindo reutilização entre o assessment e o artigo principal sem duplicação.
 

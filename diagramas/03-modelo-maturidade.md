@@ -1,10 +1,10 @@
-# Diagrama 3 — Modelo de maturidade do CoE de IA
+# Diagrama 3. Modelo de maturidade do CoE de IA
 
 Este diagrama mostra a trajetória evolutiva de um CoE de IA em 4 níveis. Cada nível tem características distintas de operação, governança, plataforma e adoção. O assessment de maturidade (em `assessment/`) mede onde a organização está em cada uma das 10 dimensões; o modelo abaixo mostra o **perfil dominante** de cada nível e os principais sinais de transição.
 
 ## Evolução em 4 níveis
 
-**[Descrição acessível]:** flowchart esquerda-direita com quatro estágios em cores progressivas — Nível 1 Reativo (vermelho), Nível 2 Executor (âmbar), Nível 3 Habilitador (azul), Nível 4 Transformador (verde). Cada transição é rotulada com a mudança requerida: "Definir mandato" (N1→N2), "Construir plataforma" (N2→N3), "Habilitar transformação" (N3→N4). A progressão de cor comunica intuitivamente direção de maturidade.
+**[Descrição acessível]:** flowchart esquerda-direita com quatro estágios em cores progressivas: Nível 1 Reativo (vermelho), Nível 2 Executor (âmbar), Nível 3 Habilitador (azul), Nível 4 Transformador (verde). Cada transição é rotulada com a mudança requerida: "Definir mandato" (N1→N2), "Construir plataforma" (N2→N3), "Habilitar transformação" (N3→N4). A progressão de cor comunica intuitivamente direção de maturidade.
 
 ```mermaid
 flowchart LR
@@ -13,13 +13,13 @@ flowchart LR
     classDef n3 fill:#1f6feb,stroke:#0d419d,color:#fff
     classDef n4 fill:#1a7f37,stroke:#0a4d20,color:#fff
 
-    N1["<b>Nível 1 — Reativo</b><br/>Experimentos isolados<br/>Sem padrões nem governança<br/>Conhecimento concentrado<br/>Infra ad hoc"]:::n1
+    N1["<b>Nível 1: Reativo</b><br/>Experimentos isolados<br/>Sem padrões nem governança<br/>Conhecimento concentrado<br/>Infra ad hoc"]:::n1
 
-    N2["<b>Nível 2 — Executor</b><br/>CoE centralizado<br/>Primeiros PoCs/MVPs<br/>Padrões iniciais<br/>Plataforma concentrada"]:::n2
+    N2["<b>Nível 2: Executor</b><br/>CoE centralizado<br/>Primeiros PoCs/MVPs<br/>Padrões iniciais<br/>Plataforma concentrada"]:::n2
 
-    N3["<b>Nível 3 — Habilitador</b><br/>Plataforma self-service governada<br/>Padrões publicados + guardrails<br/>Squads autônomos<br/>Comunidade ativa · FinOps"]:::n3
+    N3["<b>Nível 3: Habilitador</b><br/>Plataforma self-service governada<br/>Padrões publicados + guardrails<br/>Squads autônomos<br/>Comunidade ativa · FinOps"]:::n3
 
-    N4["<b>Nível 4 — Transformador</b><br/>CoE consultivo<br/>IA na estratégia de negócio<br/>Expertise distribuída<br/>Inovação contínua"]:::n4
+    N4["<b>Nível 4: Transformador</b><br/>CoE consultivo<br/>IA na estratégia de negócio<br/>Expertise distribuída<br/>Inovação contínua"]:::n4
 
     N1 -->|"<b>Definir mandato</b><br/>charter, sponsor,<br/>controle de risco básico"| N2
     N2 -->|"<b>Construir plataforma</b><br/>MVS, governança embutida,<br/>handoff, capacitação"| N3
@@ -28,7 +28,7 @@ flowchart LR
 
 ## Perfil dominante por dimensão
 
-**[Descrição acessível]:** flowchart top-bottom com quatro subgrupos colados (N1g..N4g) representando perfis dominantes em 4 dimensões — Estratégia, Governança, Plataforma, LLMOps — em cada nível. As cores espelham as do diagrama anterior (vermelho/âmbar/azul/verde). Mostra que cada nível tem um perfil consistente em todas as dimensões dominantes.
+**[Descrição acessível]:** flowchart top-bottom com quatro subgrupos colados (N1g..N4g) representando perfis dominantes em 4 dimensões (Estratégia, Governança, Plataforma, LLMOps) em cada nível. As cores espelham as do diagrama anterior (vermelho/âmbar/azul/verde). Mostra que cada nível tem um perfil consistente em todas as dimensões dominantes.
 
 ```mermaid
 flowchart TB
@@ -39,7 +39,7 @@ flowchart TB
     classDef n3 fill:#1f6feb,stroke:#0d419d,color:#fff
     classDef n4 fill:#1a7f37,stroke:#0a4d20,color:#fff
 
-    subgraph N1g["Nível 1 — Reativo"]
+    subgraph N1g["Nível 1: Reativo"]
         direction TB
         D1A["Estratégia<br/>ambígua"]:::n1
         D1B["Governança<br/>informal"]:::n1
@@ -47,7 +47,7 @@ flowchart TB
         D1D["LLMOps<br/>manual"]:::n1
     end
 
-    subgraph N2g["Nível 2 — Executor"]
+    subgraph N2g["Nível 2: Executor"]
         direction TB
         D2A["Sponsor<br/>ativo"]:::n2
         D2B["Controles<br/>por projeto"]:::n2
@@ -55,7 +55,7 @@ flowchart TB
         D2D["Evals<br/>iniciais"]:::n2
     end
 
-    subgraph N3g["Nível 3 — Habilitador"]
+    subgraph N3g["Nível 3: Habilitador"]
         direction TB
         D3A["Portfolio<br/>priorizado"]:::n3
         D3B["Gates<br/>padronizados"]:::n3
@@ -63,7 +63,7 @@ flowchart TB
         D3D["Evals<br/>automatizados"]:::n3
     end
 
-    subgraph N4g["Nível 4 — Transformador"]
+    subgraph N4g["Nível 4: Transformador"]
         direction TB
         D4A["IA na<br/>estratégia"]:::n4
         D4B["Risco<br/>preditivo"]:::n4
@@ -76,7 +76,7 @@ flowchart TB
 
 ## Sinais de transição entre níveis
 
-**[Descrição acessível]:** flowchart top-down listando sinais de transição em três blocos amarelos (N1→N2, N2→N3, N3→N4) com bullets concretos para cada salto. Um bloco vermelho destaca "Regressão típica" — perdas que tipicamente fazem a organização recuar (padrões sem adoção, casos críticos sem classificação, produção sem IR, sponsor afastado). Setas pontilhadas indicam caminhos de regressão a partir de transições anteriores.
+**[Descrição acessível]:** flowchart top-down listando sinais de transição em três blocos amarelos (N1→N2, N2→N3, N3→N4) com bullets concretos para cada salto. Um bloco vermelho destaca "Regressão típica": perdas que tipicamente fazem a organização recuar (padrões sem adoção, casos críticos sem classificação, produção sem IR, sponsor afastado). Setas pontilhadas indicam caminhos de regressão a partir de transições anteriores.
 
 ```mermaid
 flowchart TD
@@ -101,4 +101,4 @@ flowchart TD
 - O assessment mede maturidade **por dimensão** (10) e calcula um **nível geral** (1–4). Veja `assessment/modelo-maturidade-coe-ia.md` para a definição completa.
 - **Maturidade não é monotônica.** Sem manutenção, dimensões críticas (governança, plataforma, operação) podem regredir e disparar contenções automáticas (ver `assessment/criterios-pontuacao.md`).
 - **Cada transição exige investimento diferente.** N1→N2 exige clareza estratégica; N2→N3 exige plataforma e disciplina de handoff; N3→N4 exige cultura, métricas de valor e maturidade de portfólio.
-- O nível pleno **A** do assessment exige convergência das 10 dimensões; um CoE pode estar em N3 médio com algumas dimensões em N4 e outras em N2 — o relatório auditável e o board pack devem refletir essa heterogeneidade.
+- O nível pleno **A** do assessment exige convergência das 10 dimensões; um CoE pode estar em N3 médio com algumas dimensões em N4 e outras em N2; o relatório auditável e o board pack devem refletir essa heterogeneidade.
