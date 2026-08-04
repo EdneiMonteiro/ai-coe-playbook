@@ -20,6 +20,8 @@ Referências a NIST AI RMF, ISO/IEC 42001, EU AI Act e frameworks similares são
 - [`criterios-pontuacao.md`](criterios-pontuacao.md): escala, fórmula, critérios de nivelamento e regras de contenção.
 - [`relatorio-template.md`](relatorio-template.md): relatório auditável completo, com trilha pergunta-evidência-nota.
 - [`board-pack-template.md`](board-pack-template.md): resumo executivo de uma página para decisão de board/C-level.
+- [`exemplo-preenchido.md`](exemplo-preenchido.md): assessment completo de uma organização fictícia, com notas, contenções, vetos e board pack resultante.
+- [`calculadora/`](calculadora/): script que aplica escala, contenções, pesos e análise de sensibilidade sobre um CSV de notas.
 
 ## Como aplicar
 

@@ -1,0 +1,12 @@
+{
+  "_comentario": "Contexto operacional da organização fictícia Meridional Seguros S.A. (ver assessment/exemplo-preenchido.md). Todas as flags são booleanas e refletem o escopo avaliado, não intenção.",
+  "producao": true,
+  "genai_rag_agentes_em_producao": true,
+  "producao_critica_ou_exposicao_externa": true,
+  "sponsor_executivo_claro": true,
+  "caso_alto_risco_sem_classificacao": false,
+  "producao_sem_incident_response": true,
+  "prod_critica_sem_red_teaming_ou_waiver": true,
+  "fria_dpia_aplicavel_ausente": false,
+  "agentes_externos_alto_risco_ou_acao_irreversivel": false
+}

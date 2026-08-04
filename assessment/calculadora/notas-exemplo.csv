@@ -1,0 +1,51 @@
+dimensao,id,critica,nota
+Estratégia e mandato,E1,nao,3
+Estratégia e mandato,E2,nao,3
+Estratégia e mandato,E3,nao,3
+Estratégia e mandato,E4,nao,3
+Estratégia e mandato,E5,nao,3
+Modelo operacional,M1,nao,3
+Modelo operacional,M2,nao,3
+Modelo operacional,M3,nao,3
+Modelo operacional,M4,nao,3
+Modelo operacional,M5,nao,3
+Governança e risco,G1,sim,3
+Governança e risco,G2,sim,2
+Governança e risco,G3,nao,3
+Governança e risco,G4,sim,1
+Governança e risco,G5,sim,1
+Plataforma e arquitetura,P1,nao,3
+Plataforma e arquitetura,P2,nao,3
+Plataforma e arquitetura,P3,nao,3
+Plataforma e arquitetura,P4,sim,3
+Plataforma e arquitetura,P5,nao,3
+Dados e conhecimento,D1,nao,3
+Dados e conhecimento,D2,sim,2
+Dados e conhecimento,D3,nao,3
+Dados e conhecimento,D4,nao,3
+Dados e conhecimento,D5,nao,2
+LLMOps/MLOps e evals,L1,nao,3
+LLMOps/MLOps e evals,L2,sim,2
+LLMOps/MLOps e evals,L3,sim,2
+LLMOps/MLOps e evals,L4,nao,2
+LLMOps/MLOps e evals,L5,sim,1
+Portfólio e valor,V1,nao,3
+Portfólio e valor,V2,nao,3
+Portfólio e valor,V3,nao,2
+Portfólio e valor,V4,nao,3
+Portfólio e valor,V5,nao,2
+Capacitação e comunidade,C1,nao,3
+Capacitação e comunidade,C2,nao,3
+Capacitação e comunidade,C3,nao,3
+Capacitação e comunidade,C4,nao,2
+Capacitação e comunidade,C5,nao,2
+FinOps e sustentabilidade,F1,nao,2
+FinOps e sustentabilidade,F2,nao,2
+FinOps e sustentabilidade,F3,nao,3
+FinOps e sustentabilidade,F4,nao,2
+FinOps e sustentabilidade,F5,nao,1
+Operação e melhoria contínua,O1,sim,3
+Operação e melhoria contínua,O2,sim,2
+Operação e melhoria contínua,O3,nao,3
+Operação e melhoria contínua,O4,nao,2
+Operação e melhoria contínua,O5,nao,2
