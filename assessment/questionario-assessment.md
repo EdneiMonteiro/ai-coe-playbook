@@ -1,5 +1,7 @@
 # Questionário de assessment de maturidade do CoE de IA
 
+> **Verificação regulatória:** referências normativas deste documento conferidas em **maio de 2026**. Datas de vigência, prazos e limites citados exigem revalidação antes de uso em decisão formal. Ver [`referencias/auditoria-referencias.md`](../referencias/auditoria-referencias.md).
+
 Use a escala definida em [`criterios-pontuacao.md`](criterios-pontuacao.md). As notas **0** e **1** seguem a régua geral:
 
 - 0: inexistente ou não evidenciado.

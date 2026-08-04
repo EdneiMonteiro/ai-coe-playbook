@@ -1,5 +1,7 @@
 # Critérios de pontuação do assessment
 
+> **Verificação regulatória:** referências normativas deste documento conferidas em **maio de 2026**. Datas de vigência, prazos e limites citados exigem revalidação antes de uso em decisão formal. Ver [`referencias/auditoria-referencias.md`](../referencias/auditoria-referencias.md).
+
 O assessment separa duas decisões que não devem ser misturadas:
 
 1. Maturidade do CoE de IA: nota 0–4 por pergunta, dimensão e nível geral.

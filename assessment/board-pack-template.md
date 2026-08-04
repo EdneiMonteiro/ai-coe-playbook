@@ -1,5 +1,7 @@
 # Board pack do assessment de maturidade do CoE de IA
 
+> **Verificação regulatória:** referências normativas deste documento conferidas em **maio de 2026**. Datas de vigência, prazos e limites citados exigem revalidação antes de uso em decisão formal. Ver [`referencias/auditoria-referencias.md`](../referencias/auditoria-referencias.md).
+
 > Destilação executiva de uma página. Use junto com o relatório auditável completo em [`relatorio-template.md`](relatorio-template.md).
 
 ## 1. Mensagem única

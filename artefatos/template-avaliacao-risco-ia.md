@@ -1,5 +1,7 @@
 # Template de avaliação de risco operacional para casos de uso de IA
 
+> **Verificação regulatória:** referências normativas deste documento conferidas em **maio de 2026**. Datas de vigência, prazos e limites citados exigem revalidação antes de uso em decisão formal. Ver [`referencias/auditoria-referencias.md`](../referencias/auditoria-referencias.md).
+
 Este template deve ser usado na triagem inicial de casos de uso e atualizado antes de MVP, produção e mudanças relevantes de modelo, prompt, dados, ferramenta, agente ou política de recuperação.
 
 Ele não substitui parecer jurídico, avaliação regulatória formal ou revisão de segurança. Sua função é criar uma trilha operacional consistente para decisão do CoE.

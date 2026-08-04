@@ -12,14 +12,16 @@ A partir da **v1.1**, cada contribuição revisada e incorporada é creditada de
 
 ## Como contribuir
 
+O canal de entrada é [**Discussions**](https://github.com/EdneiMonteiro/ai-coe-playbook/discussions). Issues e pull requests são restritos a colaboradores com acesso `write`; colaboradores usam o mecanismo direto.
+
 | Tipo de contribuição | Mecanismo | Onde fica registrado |
 |---|---|---|
-| Correção de fato (erro, link quebrado, citação incorreta) | Issue ou PR | release notes; commit history |
-| Sugestão de melhoria editorial (clareza, escopo, redação) | Issue ou PR com proposta | release notes; commit history |
-| Adição de seção, exemplo prático ou anexo | PR substantivo | release notes; CITATION.cff (`authors`) se configurar coautoria |
-| Revisão crítica documentada (com comentários nominais sobre seções específicas) | Issue de revisão ou documento anexo | release notes; CONTRIBUTORS.md |
+| Correção de fato (erro, link quebrado, citação incorreta) | Discussion (ou Issue/PR, se colaborador) | release notes; commit history |
+| Sugestão de melhoria editorial (clareza, escopo, redação) | Discussion com proposta | release notes; commit history |
+| Adição de seção, exemplo prático ou anexo | Discussion com o conteúdo proposto; PR se colaborador | release notes; CITATION.cff (`authors`) se configurar coautoria |
+| Revisão crítica documentada (com comentários nominais sobre seções específicas) | Discussion de revisão ou documento anexo | release notes; CONTRIBUTORS.md |
 
-Todo feedback fica versionado no histórico do repositório (Issues, PRs, commits) e é parte do material derivado quando publicado.
+Todo feedback fica versionado no histórico público do repositório (Discussions, Issues, PRs, commits) e é parte do material derivado quando publicado.
 
 ## Critérios para coautoria substantiva
 

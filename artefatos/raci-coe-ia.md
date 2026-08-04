@@ -1,5 +1,7 @@
 # RACI de referência para um CoE de IA
 
+> **Verificação regulatória:** referências normativas deste documento conferidas em **maio de 2026**. Datas de vigência, prazos e limites citados exigem revalidação antes de uso em decisão formal. Ver [`referencias/auditoria-referencias.md`](../referencias/auditoria-referencias.md).
+
 Este RACI é um ponto de partida. Em organizações reguladas, jurídico, risco, compliance, auditoria interna e DPO podem exigir papéis mais formais. Em empresas digitais, produto e plataforma tendem a assumir mais responsabilidade operacional.
 
 | Atividade | CoE de IA | Plataforma/Cloud | Produto/Negócio | Dados | Segurança/Risco/Compliance | Executivo sponsor |

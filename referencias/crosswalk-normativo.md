@@ -1,5 +1,7 @@
 # Crosswalk normativo: NIST AI RMF × ISO/IEC 42001 × EU AI Act × LGPD/GDPR
 
+> **Verificação regulatória:** referências normativas deste documento conferidas em **maio de 2026**. Datas de vigência, prazos e limites citados exigem revalidação antes de uso em decisão formal. Ver [`auditoria-referencias.md`](auditoria-referencias.md).
+
 Este crosswalk é um mapeamento heurístico entre os principais frameworks e regulações de IA, organizado por **tema de governança** (não por enumeração 1-para-1). Use-o para preencher de forma consistente a matriz de rastreabilidade do assessment, para localizar lacunas de cobertura entre frameworks e para orientar a construção de evidências auditáveis.
 
 > **Limitações.** A correspondência é aproximada e exige verificação para cada implementação. Mudanças regulatórias (faseamento do EU AI Act, atualizações ISO, novas opiniões EDPB/ANPD) podem alterar o mapeamento. Este crosswalk **não substitui parecer jurídico, auditoria credenciada nem revisão setorial específica**.

@@ -1,5 +1,7 @@
 # Diagrama 6. Regimes de dados (treino × inferência/RAG × logs)
 
+> **Verificação regulatória:** referências normativas deste documento conferidas em **maio de 2026**. Datas de vigência, prazos e limites citados exigem revalidação antes de uso em decisão formal. Ver [`referencias/auditoria-referencias.md`](../referencias/auditoria-referencias.md).
+
 Este diagrama mostra a separação obrigatória entre **três regimes de dados** em sistemas de IA. Cada regime tem finalidade, base legal, retenção, controles e ciclo de vida próprios. Tratar tudo como "dados de IA" mistura responsabilidades e impede auditoria de privacidade; daí a inclusão como gate operacional em D2 do assessment.
 
 ## Os três regimes

@@ -1,5 +1,7 @@
 # Diagrama 7. Fluxo de incidente de IA
 
+> **Verificação regulatória:** referências normativas deste documento conferidas em **maio de 2026**. Datas de vigência, prazos e limites citados exigem revalidação antes de uso em decisão formal. Ver [`referencias/auditoria-referencias.md`](../referencias/auditoria-referencias.md).
+
 Este diagrama mostra o ciclo de resposta a incidente quando uma solução de IA em produção falha, vaza, alucina criticamente, é usada indevidamente ou exibe comportamento fora do esperado. **Incident response IA não é o mesmo que incident response geral**: tem categorias próprias (alucinação, jailbreak, vazamento, excessive agency, drift material) e mecanismos próprios (kill switch por agente, rollback de modelo/prompt, evals adversariais).
 
 ## Fluxo end-to-end

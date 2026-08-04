@@ -68,6 +68,21 @@ Para o conjunto de **32 entradas bibliográficas** (25 referências numeradas do
 - **Anti-padrão "validator search":** ao adicionar nova norma, exigir busca adversarial ("norma X foi revogada?" "qual é o objeto real?"), não apenas confirmação de existência.
 - **Última verificação consolidada:** maio/2026, antes da publicação do artigo principal: 25/25 URLs OK, 0 restritas, 0 anti-bot.
 
+## Carimbo de verificação por documento
+
+Documentos que fazem afirmações normativas datadas (vigências, prazos, limites de multa, números de artigo) exibem, logo abaixo do título, um carimbo declarando o mês da última verificação. O objetivo é que o leitor saiba o que precisa revalidar, em vez de assumir que o texto está atualizado.
+
+Documentos carimbados: `artefatos/template-avaliacao-risco-ia.md`, `artefatos/raci-coe-ia.md`, `assessment/questionario-assessment.md`, `assessment/criterios-pontuacao.md`, `assessment/board-pack-template.md`, `diagramas/06-regimes-dados.md`, `diagramas/07-fluxo-incidente.md`, `diagramas/08-matriz-risco-controles.md`, `referencias/crosswalk-normativo.md`.
+
+### Checklist de release
+
+Antes de cada release, executar e registrar nesta auditoria:
+
+1. Revalidar as URLs das 32 entradas bibliográficas (política acima).
+2. Revalidar as afirmações datadas dos documentos carimbados: vigências do EU AI Act, prazos ANPD, limites de multa LGPD/GDPR, normas setoriais (CMN, BCB, ANS) e status das normas ISO citadas.
+3. Aplicar a busca adversarial a cada norma citada ("foi revogada?", "mudou de escopo?").
+4. Atualizar o mês do carimbo nos documentos revalidados e registrar aqui o resultado.
+
 ## Universo consultado e não citado (leituras complementares)
 
 Estas fontes apareceram nas revisões do comitê mas **não foram citadas no artigo**. Ficam registradas como universo consultado para evitar dúvida de cobertura em revisões futuras:

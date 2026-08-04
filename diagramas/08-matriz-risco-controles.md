@@ -1,5 +1,7 @@
 # Diagrama 8. Matriz risco × controles
 
+> **Verificação regulatória:** referências normativas deste documento conferidas em **maio de 2026**. Datas de vigência, prazos e limites citados exigem revalidação antes de uso em decisão formal. Ver [`referencias/auditoria-referencias.md`](../referencias/auditoria-referencias.md).
+
 Este diagrama mostra como a **classificação de risco** (EU AI Act + classificação interna) é traduzida em **controles operacionais** específicos. Cada combinação tem um conjunto mínimo de controles e gates; quanto maior o risco, maior a exigência de evidência e accountability.
 
 ## Mapa EU AI Act → classificação interna

@@ -121,6 +121,8 @@ O repositório não substitui avaliação jurídica, regulatória ou arquitetura
 
 Este projeto distingue **autoria** de **contribuição** e credita ambas formalmente (release notes, `CITATION.cff`, `CONTRIBUTORS.md` e DOI Zenodo próprio de cada versão).
 
+O canal de entrada é [**Discussions**](https://github.com/EdneiMonteiro/ai-coe-playbook/discussions): correções de fato, sugestões editoriais, propostas de seção e revisões críticas. Issues e pull requests permanecem restritos a colaboradores; veja [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 Política completa, critérios para coautoria substantiva e mecanismos de atribuição em [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
 
 A partir da **v1.1**, contribuições revisadas e incorporadas são creditadas nominalmente.
@@ -139,8 +141,3 @@ Esta release está arquivada no **Zenodo** com DOI permanente:
 Metadados de citação em [`CITATION.cff`](CITATION.cff) (use o botão **"Cite this repository"** no canto superior direito desta página). Exemplo de citação:
 
 > Monteiro, E. (2026). *AI CoE Playbook: Guia Prático para Estruturar, Operar e Escalar um Centro de Excelência em IA* (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.21794557
-
-## Contributing
-
-Issue and pull request creation is restricted to collaborators. See
-[CONTRIBUTING.md](CONTRIBUTING.md) for details.
