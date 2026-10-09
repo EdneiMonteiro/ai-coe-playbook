@@ -28,7 +28,7 @@ repository-code: "https://github.com/EdneiMonteiro/ai-coe-playbook"
 url: "https://github.com/EdneiMonteiro/ai-coe-playbook"
 license: CC-BY-4.0
 version: v1.1.1
-doi: 10.5281/zenodo.21794557
+doi: 10.5281/zenodo.23251173
 identifiers:
   - type: doi
     value: 10.5281/zenodo.20357199
@@ -41,7 +41,10 @@ identifiers:
     description: Version DOI — v1.0.2
   - type: doi
     value: 10.5281/zenodo.21794557
-    description: Version DOI — v1.1.0, versão atual recomendada
+    description: Version DOI — v1.1.0
+  - type: doi
+    value: 10.5281/zenodo.23251173
+    description: Version DOI — v1.1.1, versão atual recomendada
 keywords:
   - AI Center of Excellence
   - AI CoE
@@ -53,7 +56,7 @@ keywords:
   - ISO/IEC 42001
   - EU AI Act
   - maturity assessment
-date-released: 2026-10-08
+date-released: 2026-10-09
 preferred-citation:
   type: generic
   title: "Centro de Excelência em IA: Guia Prático para Estruturar, Operar e Escalar"
@@ -62,5 +65,5 @@ preferred-citation:
       given-names: Ednei
       orcid: "https://orcid.org/0009-0006-0765-4201"
   year: 2026
-  doi: 10.5281/zenodo.21794557
-  url: "https://doi.org/10.5281/zenodo.21794557"
+  doi: 10.5281/zenodo.23251173
+  url: "https://doi.org/10.5281/zenodo.23251173"
