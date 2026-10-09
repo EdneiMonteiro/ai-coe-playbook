@@ -27,7 +27,7 @@ authors:
 repository-code: "https://github.com/EdneiMonteiro/ai-coe-playbook"
 url: "https://github.com/EdneiMonteiro/ai-coe-playbook"
 license: CC-BY-4.0
-version: v1.1.0
+version: v1.1.1
 doi: 10.5281/zenodo.21794557
 identifiers:
   - type: doi
@@ -53,7 +53,7 @@ keywords:
   - ISO/IEC 42001
   - EU AI Act
   - maturity assessment
-date-released: 2026-08-04
+date-released: 2026-10-08
 preferred-citation:
   type: generic
   title: "Centro de Excelência em IA: Guia Prático para Estruturar, Operar e Escalar"
