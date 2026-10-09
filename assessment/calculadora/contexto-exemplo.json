@@ -1,5 +1,5 @@
 {
-  "_comentario": "Contexto operacional da organização fictícia Meridional Seguros S.A. (ver assessment/exemplo-preenchido.md). Todas as flags são booleanas e refletem o escopo avaliado, não intenção.",
+  "_comentario": "Contexto operacional da organização fictícia Vareleira Seguros S.A. (ver assessment/exemplo-preenchido.md). Todas as flags são booleanas e refletem o escopo avaliado, não intenção.",
   "producao": true,
   "genai_rag_agentes_em_producao": true,
   "producao_critica_ou_exposicao_externa": true,

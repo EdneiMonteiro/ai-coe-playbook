@@ -1,4 +1,4 @@
-# Exemplo preenchido: assessment da Meridional Seguros S.A.
+# Exemplo preenchido: assessment da Vareleira Seguros S.A.
 
 > **Organização fictícia.** Este documento existe para mostrar, de ponta a ponta, como o assessment funciona na prática: notas com evidência, regras de contenção acionadas, vetos operacionais e a destilação para o board pack. Nomes, números e evidências são inventados. Os cálculos podem ser reproduzidos com a calculadora em [`calculadora/`](calculadora/), usando [`notas-exemplo.csv`](calculadora/notas-exemplo.csv) e [`contexto-exemplo.json`](calculadora/contexto-exemplo.json).
 
@@ -6,7 +6,7 @@
 
 | Campo | Valor |
 |---|---|
-| Organização avaliada | Meridional Seguros S.A. (fictícia; seguradora regulada, ~4.000 colaboradores) |
+| Organização avaliada | Vareleira Seguros S.A. (fictícia; seguradora regulada, ~4.000 colaboradores) |
 | Data | Agosto de 2026 |
 | Sponsor executivo | CTO (sponsor do CoE de IA desde março de 2025) |
 | Modo de aplicação | Auditoria/investimento (2 avaliadores, matriz de rastreabilidade completa) |
